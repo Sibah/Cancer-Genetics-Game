@@ -441,7 +441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laneDistance: 2.5
-  forwardSpeed: 10
+  forwardSpeed: 8
 --- !u!1 &451480771
 GameObject:
   m_ObjectHideFlags: 0

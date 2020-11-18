@@ -20,8 +20,6 @@ public class PlayerController : MonoBehaviour
         if (!PlayerManager.isRunning)
             return;
 
-        direction.z = forwardSpeed;
-
         // Game has three lanes and when you swipe to left or right, the player moves.
         if (SwipeManager.swipeRight)
         {
@@ -66,7 +64,7 @@ public class PlayerController : MonoBehaviour
         if (!PlayerManager.isRunning)
             return;
 
-        controller.Move(direction * Time.fixedDeltaTime);
+        controller.Move(Vector3.forward * forwardSpeed * Time.fixedDeltaTime);
     }
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
