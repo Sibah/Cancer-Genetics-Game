@@ -20,6 +20,11 @@ public class MainMenuController : MonoBehaviour
         print("3");
     }
 
+    public void StartBonusGame()
+    {
+        SceneManager.LoadScene("EndlessRunner");
+    }
+
     public void QuitGame()
     {
         print("game quit");
