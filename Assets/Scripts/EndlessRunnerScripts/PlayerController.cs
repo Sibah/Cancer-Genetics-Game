@@ -47,24 +47,17 @@ public class PlayerController : MonoBehaviour
             targetPosition += Vector3.right * laneDistance;
         }
 
-        if (transform.position == targetPosition)
-            return;
+        if (transform.position != targetPosition)
+        {
+            Vector3 diff = targetPosition - transform.position;
+            Vector3 moveDir = diff.normalized * 25 * Time.deltaTime;
 
-        Vector3 diff = targetPosition - transform.position;
-        Vector3 moveDir = diff.normalized * 25 * Time.deltaTime;
-
-        if (moveDir.sqrMagnitude < diff.sqrMagnitude)
-            controller.Move(moveDir);
-        else
-            controller.Move(diff);
-    }
-
-    private void FixedUpdate()
-    {
-        if (!PlayerManager.isRunning)
-            return;
-
-        controller.Move(Vector3.forward * forwardSpeed * Time.fixedDeltaTime);
+            if (moveDir.sqrMagnitude < diff.sqrMagnitude)
+                controller.Move(moveDir);
+            else
+                controller.Move(diff);
+        }
+        controller.Move(Vector3.forward * forwardSpeed * Time.deltaTime);
     }
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
