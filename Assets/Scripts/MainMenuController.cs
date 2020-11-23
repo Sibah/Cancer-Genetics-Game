@@ -12,7 +12,7 @@ public class MainMenuController : MonoBehaviour
 
     public void StartSecondMiniGame()
     {
-        print("2");
+        SceneManager.LoadScene("ConnectionGame");
     }
 
     public void StartThirdMiniGame()
