@@ -20,4 +20,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndlessRunner.unity
     guid: 02dd037946e4c4e4ab16dd6a161e8209
+  - enabled: 1
+    path: Assets/Scenes/InteractiveImages/SoluScene.unity
+    guid: a936581a997b49d4ab890a62fb446314
+  - enabled: 1
+    path: Assets/Scenes/InteractiveImages/DNAScene.unity
+    guid: a94df01530adb8d40a0c649680572c97
+  - enabled: 1
+    path: Assets/Scenes/InteractiveImages/TranslaatioScene.unity
+    guid: cffa5ad5fe96ccb4ab00a1d2b0ef0b7a
   m_configObjects: {}
