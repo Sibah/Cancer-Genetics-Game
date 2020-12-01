@@ -20,6 +20,11 @@ public class MainMenuController : MonoBehaviour
         print("3");
     }
 
+    public void StartInteractiveImages()
+    {
+        SceneManager.LoadScene("SoluScene");
+    }
+
     public void StartBonusGame()
     {
         SceneManager.LoadScene("EndlessRunner");
