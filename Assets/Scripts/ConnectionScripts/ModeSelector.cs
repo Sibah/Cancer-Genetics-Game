@@ -1,12 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ModeSelector : MonoBehaviour
 {
     public GameObject mode1;
-    public GameObject mode2;
-    public GameObject mode3;
+    public GameObject selection;
     public WordLinePrototypeInitializer wordInit;
     
     public List<string[]> testWords = new List<string[]>();
@@ -14,37 +14,41 @@ public class ModeSelector : MonoBehaviour
     public void SelectMode1()
     {
         mode1.SetActive(true);
-        mode2.SetActive(false);
-        mode3.SetActive(false);
-        gameObject.SetActive(false);
+        selection.SetActive(false);
+        BroadcastMessage("ResetTime", SendMessageOptions.RequireReceiver);
+        BroadcastMessage("ResetScore", SendMessageOptions.RequireReceiver);
         string[] a = {"aaaa", "AAAA"};
         string[] b = {"bbbb", "BBBB"};
         string[] c = {"cccc", "CCCC"};
         string[] d = {"dddd", "DDDD"};
+        string[] e = {"eeee", "EEEE"};
+        string[] f = {"ffff", "FFFF"};
+        string[] g = {"gggg", "GGGG"};
         testWords.Add(a);
         testWords.Add(b);
         testWords.Add(c);
         testWords.Add(d);
+        testWords.Add(e);
+        testWords.Add(f);
+        testWords.Add(g);
         //CHANGE THIS!!
-        wordInit.pairs = testWords;
+        foreach(string[] pair in testWords)
+        {
+            wordInit.pairs.Add(pair);
+        }
         wordInit.PlaceWordsInSides();
+        testWords.Clear();
     }
-
-    public void SelectMode2()
+    
+    public void BackToModeSelect()
     {
         mode1.SetActive(false);
-        mode2.SetActive(true);
-        mode3.SetActive(false);
-        gameObject.SetActive(false);
+        wordInit.pairs = new List<string[]>();
+        selection.SetActive(true);
     }
 
-    public void SelectMode3()
+    public void BackToMainMenu()
     {
-        mode1.SetActive(false);
-        mode2.SetActive(false);
-        mode3.SetActive(true);
-        gameObject.SetActive(false);
+        SceneManager.LoadScene("MainMenu");
     }
-
-    private void test(){}
 }

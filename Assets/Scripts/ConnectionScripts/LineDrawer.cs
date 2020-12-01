@@ -6,20 +6,9 @@ public class LineDrawer : MonoBehaviour
     public Object linePrefab;
     public Camera mainCamera;
     public WordHandler currentWord;
-    // Update is called once per frame
-    void Update()
-    {
+    public float removalTime = 0.25f;
 
-    }
-
-    private Vector3 ScreenToWorld(Vector3 position)
-    {
-        Vector3 newPosition = mainCamera.ScreenToWorldPoint(position);
-        newPosition.z = -898f;
-        return newPosition;
-    }
-
-    public void HandleNewPositionData(WordHandler word)
+    public void DrawLine(WordHandler word)
     {
         if(currentWord != null && word != null)
         {
@@ -29,14 +18,28 @@ public class LineDrawer : MonoBehaviour
                 {
                     if(currentWord.onRightSide != word.onRightSide)
                     {
-                        Vector3 startPosition = currentWord.GetLinePointPosition();
-                        Vector3 endPosition = word.GetLinePointPosition();
-                        LineRenderer line = ((GameObject)Instantiate(linePrefab, ((GameObject)GameObject.Find("Lines")).transform)).GetComponentInChildren<LineRenderer>();
-                        Vector3[] positions = { startPosition, endPosition };
-                        line.SetPositions(positions);
                         currentWord.SetConnectedWord(word);
                         word.SetConnectedWord(currentWord);
-                        currentWord = null;
+                        if(currentWord.CheckIfConnectedToCorrectPair())
+                        {
+                            Vector3 startPosition = currentWord.GetLinePointPosition();
+                            Vector3 endPosition = word.GetLinePointPosition();
+                            LineRenderer line = ((GameObject)Instantiate(linePrefab, ((GameObject)GameObject.Find("Lines")).transform)).GetComponentInChildren<LineRenderer>();
+                            Vector3[] positions = { startPosition, endPosition };
+                            currentWord.SetConnectedLine(line.gameObject);
+                            line.SetPositions(positions);
+                            BroadcastMessage("IncrementScore", SendMessageOptions.RequireReceiver);
+                            IEnumerator coroutine = currentWord.RemoveWordPair(removalTime);
+                            StartCoroutine(coroutine);
+                            currentWord = null;
+                        }
+                        else
+                        {
+                            //ADD SFX
+                            BroadcastMessage("ReduceTime", 5, SendMessageOptions.RequireReceiver);
+                            currentWord.ResetConnection();
+                            word.ResetConnection();
+                        }
                     }
                 }
             }

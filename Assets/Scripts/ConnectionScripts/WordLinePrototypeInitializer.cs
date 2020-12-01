@@ -7,21 +7,33 @@ public class WordLinePrototypeInitializer : MonoBehaviour
 {
     public Transform leftSide;
     public Transform rightSide;
+    public Transform lines;
     public List<GameObject> rightSideWords = new List<GameObject>();
     public List<GameObject> leftSideWords = new List<GameObject>();
     public List<string[]> pairs = new List<string[]>();
+
+    public int maxWordCount = 4;
 
     public Object wordPrefab;
 
     public void PlaceWordsInSides()
     {
+        ClearOldWords();
         List<string[]> wordPairs = new List<string[]>();
         foreach(string[] pair in pairs)
         {
             wordPairs.Add(pair);
         }
         
-        int count = wordPairs.Count;
+        int count = 0;
+        if(wordPairs.Count > maxWordCount)
+        {
+            count = maxWordCount;
+        }
+        else
+        {
+            count = wordPairs.Count;
+        }
         for(int i = 0; i < count; i++)
         {
             int rand = Random.Range(0, wordPairs.Count);
@@ -79,5 +91,33 @@ public class WordLinePrototypeInitializer : MonoBehaviour
         Vector3 currentPosition = wordObject.transform.localPosition;
         wordObject.transform.localPosition = new Vector3(currentPosition.x, currentPosition.y, 0);
         wordObject.transform.localScale = new Vector3(1, 1, 1);
+    }
+
+    private void ClearOldWords()
+    {
+        if(lines.childCount > 0)
+        {
+            for(int i = 0; i < lines.childCount; i++)
+            {
+                Destroy(lines.GetChild(i).gameObject);
+            }
+        }
+        
+        if(rightSide.childCount > 0)
+        {
+            for(int i = 0; i < rightSide.childCount; i++)
+            {
+                Destroy(rightSide.GetChild(i).gameObject);
+                Destroy(leftSide.GetChild(i).gameObject);
+            }
+        }
+    }
+
+    private void CheckIfAllPairsDeleted()
+    {
+        if(rightSide.childCount <= 1)
+        {
+            BroadcastMessage("FinishRound", SendMessageOptions.RequireReceiver);
+        }
     }
 }

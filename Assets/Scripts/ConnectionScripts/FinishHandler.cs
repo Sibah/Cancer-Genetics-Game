@@ -10,14 +10,20 @@ public class FinishHandler : MonoBehaviour
     public Transform lines;
     public Text score;
     public Text timer;
+    public float startTime = 5;
     public float time;
     public int scorePoints;
     public WordLinePrototypeInitializer initializer;
 
     private void Update() 
     {
-        time += Time.deltaTime;
-        timer.text = ((int)time).ToString();    
+        time -= Time.deltaTime;
+        timer.text = ((int)time).ToString();  
+        if((int)time <= 0)
+        {
+            //UPDATE TO CONNECT TO MAIN PROJECT!
+            SendMessageUpwards("BackToModeSelect", SendMessageOptions.RequireReceiver);
+        }  
     }
 
     public void FinishRound()
@@ -33,25 +39,31 @@ public class FinishHandler : MonoBehaviour
             Destroy(leftSide.GetChild(i).gameObject);
         }
         
-        time = 0;
-        scorePoints += GetAllCorrectAnswers();
-
-        score.text = scorePoints.ToString();
+        time = startTime;
 
         initializer.PlaceWordsInSides();
     }
 
-    public int GetAllCorrectAnswers()
+    public void IncrementScore()
     {
-        int counter = 0;
-        for(int i = 0; i < rightSide.childCount; i++)
-        {
-            if(rightSide.GetChild(i).GetComponentInChildren<WordHandler>().CheckIfConnectedToCorrectPair())
-            {
-                counter++;
-            }
-        }
-        return counter;
+        scorePoints++;
+
+        score.text = scorePoints.ToString();
     }
 
+    public void ResetTime()
+    {
+        time = startTime;
+    }
+
+    public void ResetScore()
+    {
+        scorePoints = 0;
+        score.text = scorePoints.ToString();
+    }
+
+    public void ReduceTime(int value)
+    {
+        time -= value;
+    }
 }
