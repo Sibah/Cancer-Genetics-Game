@@ -127,6 +127,9 @@ public class GameController : MonoBehaviour
             }
             scoreDisplayText.text = "Score: " + playerScore.ToString();
             questionTimer = 50;
+        } else
+        {
+            timeRemaining = timeRemaining - 5f;
         }
 
         questionTimer = 50;
