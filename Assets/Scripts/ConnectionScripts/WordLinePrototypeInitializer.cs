@@ -10,7 +10,7 @@ public class WordLinePrototypeInitializer : MonoBehaviour
     public Transform lines;
     public List<GameObject> rightSideWords = new List<GameObject>();
     public List<GameObject> leftSideWords = new List<GameObject>();
-    public List<string[]> pairs = new List<string[]>();
+    public List<WordPair> pairs = new List<WordPair>();
 
     public int maxWordCount = 4;
 
@@ -19,8 +19,8 @@ public class WordLinePrototypeInitializer : MonoBehaviour
     public void PlaceWordsInSides()
     {
         ClearOldWords();
-        List<string[]> wordPairs = new List<string[]>();
-        foreach(string[] pair in pairs)
+        List<WordPair> wordPairs = new List<WordPair>();
+        foreach(WordPair pair in pairs)
         {
             wordPairs.Add(pair);
         }
@@ -37,7 +37,7 @@ public class WordLinePrototypeInitializer : MonoBehaviour
         for(int i = 0; i < count; i++)
         {
             int rand = Random.Range(0, wordPairs.Count);
-            WordPair pair = new WordPair(wordPairs[rand][0], wordPairs[rand][1]);
+            WordPair pair = wordPairs[rand];
             GameObject[] wordObjects = new GameObject[2];
 
             wordObjects[0] = ((GameObject)Instantiate(wordPrefab));

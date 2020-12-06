@@ -53,6 +53,6 @@ public class WordHandler : MonoBehaviour
 
     private void OnDestroy() 
     {
-        SendMessageUpwards("CheckIfAllPairsDeleted", SendMessageOptions.RequireReceiver);    
+        SendMessageUpwards("CheckIfAllPairsDeleted", SendMessageOptions.DontRequireReceiver);    
     }
 }
