@@ -19,25 +19,20 @@ public class WordLinePrototypeInitializer : MonoBehaviour
     public void PlaceWordsInSides()
     {
         ClearOldWords();
-        List<WordPair> wordPairs = new List<WordPair>();
-        foreach(WordPair pair in pairs)
-        {
-            wordPairs.Add(pair);
-        }
         
         int count = 0;
-        if(wordPairs.Count > maxWordCount)
+        if(pairs.Count > maxWordCount)
         {
             count = maxWordCount;
         }
         else
         {
-            count = wordPairs.Count;
+            count = pairs.Count;
         }
         for(int i = 0; i < count; i++)
         {
-            int rand = Random.Range(0, wordPairs.Count);
-            WordPair pair = wordPairs[rand];
+            int rand = Random.Range(0, pairs.Count);
+            WordPair pair = pairs[rand];
             GameObject[] wordObjects = new GameObject[2];
 
             wordObjects[0] = ((GameObject)Instantiate(wordPrefab));
@@ -62,7 +57,7 @@ public class WordLinePrototypeInitializer : MonoBehaviour
             rightSideWords.Add(wordObjects[0]);
             leftSideWords.Add(wordObjects[1]);
 
-            wordPairs.RemoveAt(rand);
+            pairs.RemoveAt(rand);
         }
         for(int i = 0; i < count; i++)
         {
