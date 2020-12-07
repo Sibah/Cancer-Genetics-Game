@@ -19,6 +19,7 @@ public class GameController : MonoBehaviour
     public GameObject roundEndDisplay;
     
     public bool theAnswerIsCorrect;
+    public int correctPressed;
 
     private DataController dataController;
     private RoundData currentRoundData;
@@ -137,18 +138,20 @@ public class GameController : MonoBehaviour
             if (questionTimer > 20)
             {
                 playerScore += Mathf.FloorToInt(questionTimer);
-            }else
+            }
+            else
             {
                 playerScore += currentRoundData.pointsAddedForCorrectAnswer;
             }
             scoreDisplayText.text = "Score: " + playerScore.ToString();
             questionTimer = 50;
-        } else
+        }
+        else
         {
             theAnswerIsCorrect = false;
             timeRemaining = timeRemaining - 5f;
         }
-
+        
         questionTimer = 50;
 
         if (qNumber + 1 < questionPool.Length)

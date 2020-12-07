@@ -40,7 +40,6 @@ public class AnswerButton : MonoBehaviour
         if (gameController.IsCorrected())
         {
             GetComponent<Button>().image.color = Color.green;
-            Debug.Log("im true");
             StartCoroutine(ReturnButtonColor());
         }
         else
