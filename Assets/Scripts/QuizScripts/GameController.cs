@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Linq;
+using System.Collections;
 
 public class GameController : MonoBehaviour
 {
@@ -16,6 +17,9 @@ public class GameController : MonoBehaviour
     public Text scoreDisplayText;
     public GameObject questionDisplay;
     public GameObject roundEndDisplay;
+    
+    public bool theAnswerIsCorrect;
+    public int correctPressed;
 
     private DataController dataController;
     private RoundData currentRoundData;
@@ -112,32 +116,49 @@ public class GameController : MonoBehaviour
         }
     }
 
+    public bool IsCorrected()
+    {
+        return theAnswerIsCorrect;
+    }
+
+    IEnumerator DelayTime()
+    {
+        yield return new WaitForSeconds(3f);
+        qNumber++;
+        ShowQuestion();
+    }
+
     // Tests if the clicked answer is correct and adds the points. Updates the score text. Checks if there are more questions to show or ends the round.
     // Also gives point by remaining questionTime. If correct answer is pressed after 20 seconds have passed then it just gives 10 points.
     public void AnswerButtonClicked(bool isCorrect)
     {
         if (isCorrect)
         {
-            if(questionTimer > 20)
+            theAnswerIsCorrect = true;
+            if (questionTimer > 20)
             {
                 playerScore += Mathf.FloorToInt(questionTimer);
-            }else
+            }
+            else
             {
                 playerScore += currentRoundData.pointsAddedForCorrectAnswer;
             }
             scoreDisplayText.text = "Score: " + playerScore.ToString();
             questionTimer = 50;
-        } else
+        }
+        else
         {
+            theAnswerIsCorrect = false;
             timeRemaining = timeRemaining - 5f;
         }
-
+        
         questionTimer = 50;
 
         if (qNumber + 1 < questionPool.Length)
         {
-            qNumber++;
-            ShowQuestion();
+            //qNumber++;
+            StartCoroutine(DelayTime());
+            //ShowQuestion();
         } else
         {
             EndRound();

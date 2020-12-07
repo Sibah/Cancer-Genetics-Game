@@ -7,5 +7,6 @@ public class QuestionData
 {
     public string questionText;
     public Sprite questionImage;
+    public int correctCount;
     public AnswerData[] answers;
 }

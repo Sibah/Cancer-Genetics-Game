@@ -157,6 +157,7 @@ MonoBehaviour:
     questions:
     - questionText: "Mik\xE4 on eksoni?"
       questionImage: {fileID: 0}
+      correctCount: 1
       answers:
       - answerText: Geenin proteiinia koodaava osa
         isCorrect: 1
@@ -168,6 +169,7 @@ MonoBehaviour:
         isCorrect: 0
     - questionText: "Mik\xE4 on introni?"
       questionImage: {fileID: 0}
+      correctCount: 1
       answers:
       - answerText: Geenin proteiinia koodaava osa
         isCorrect: 0
@@ -179,6 +181,7 @@ MonoBehaviour:
         isCorrect: 0
     - questionText: "Mitk\xE4 ovat DNA:n em\xE4kset?"
       questionImage: {fileID: 0}
+      correctCount: 3
       answers:
       - answerText: Tymiini
         isCorrect: 1
@@ -190,6 +193,7 @@ MonoBehaviour:
         isCorrect: 0
     - questionText: "Mitk\xE4 ovat merkkej\xE4 sy\xF6p\xE4alttiuden periytyvyydest\xE4?"
       questionImage: {fileID: 0}
+      correctCount: 3
       answers:
       - answerText: "Nuori sairastumisik\xE4"
         isCorrect: 1
@@ -203,6 +207,7 @@ MonoBehaviour:
         isCorrect: 1
     - questionText: "Periytyv\xE4n rintasy\xF6v\xE4n alttiusgeenit?"
       questionImage: {fileID: 0}
+      correctCount: 2
       answers:
       - answerText: BRCR 1
         isCorrect: 0
@@ -215,6 +220,7 @@ MonoBehaviour:
     - questionText: "Mik\xE4/mitk\xE4 seuraavista poistetaan esil\xE4hetti-RNA:sta
         silmukoinnissa?"
       questionImage: {fileID: 0}
+      correctCount: 1
       answers:
       - answerText: Eksonit
         isCorrect: 0
@@ -226,6 +232,7 @@ MonoBehaviour:
         isCorrect: 1
     - questionText: RNA muodostaa...
       questionImage: {fileID: 0}
+      correctCount: 1
       answers:
       - answerText: DNA-polumeraasin
         isCorrect: 0
@@ -235,6 +242,7 @@ MonoBehaviour:
         isCorrect: 1
     - questionText: "Mit\xE4 ei tarvita sek\xE4 replikaatioon ett\xE4 transkriptioon?"
       questionImage: {fileID: 0}
+      correctCount: 1
       answers:
       - answerText: DNA
         isCorrect: 0
@@ -246,6 +254,7 @@ MonoBehaviour:
         isCorrect: 0
     - questionText: "Mik\xE4/mitk\xE4 v\xE4itteet onkogeenist\xE4 ovat totta?"
       questionImage: {fileID: 0}
+      correctCount: 2
       answers:
       - answerText: "Koodaavat soluproliferaatiota est\xE4vi\xE4 proteiineja"
         isCorrect: 0
@@ -258,6 +267,7 @@ MonoBehaviour:
         isCorrect: 1
     - questionText: "Mik\xE4/mitk\xE4 v\xE4itteet kasvunrajoitegeenist\xE4 ovat totta?"
       questionImage: {fileID: 0}
+      correctCount: 1
       answers:
       - answerText: "Koodaavat ep\xE4normaali soluproliferaatiota est\xE4vi\xE4 proteiineja"
         isCorrect: 0
@@ -270,6 +280,7 @@ MonoBehaviour:
         isCorrect: 1
     - questionText: "Mitk\xE4 seuraavista ovat karsinogeenej\xE4?"
       questionImage: {fileID: 0}
+      correctCount: 3
       answers:
       - answerText: Tupakka
         isCorrect: 1
@@ -281,6 +292,7 @@ MonoBehaviour:
         isCorrect: 0
     - questionText: "Samasta geenist\xE4 voi synty\xE4 yht\xE4aikaisesti monta transkriptia"
       questionImage: {fileID: 0}
+      correctCount: 1
       answers:
       - answerText: Oikein
         isCorrect: 1
@@ -288,6 +300,7 @@ MonoBehaviour:
         isCorrect: 0
     - questionText: "Eri kudokset ilment\xE4v\xE4t eri geenej\xE4"
       questionImage: {fileID: 0}
+      correctCount: 1
       answers:
       - answerText: Oikein
         isCorrect: 1
@@ -296,6 +309,7 @@ MonoBehaviour:
     - questionText: "Yksil\xF6ll\xE4 voi olla saman geenin alleeleita kuinka paljon
         tahansa"
       questionImage: {fileID: 0}
+      correctCount: 1
       answers:
       - answerText: Oikein
         isCorrect: 0
@@ -304,6 +318,7 @@ MonoBehaviour:
     - questionText: "Ihmisell\xE4 on 94 eri kodonia, joista 80 koodittaa aminohappoa
         ja kolme toimii lopetussignaalina"
       questionImage: {fileID: 0}
+      correctCount: 1
       answers:
       - answerText: Oikein
         isCorrect: 0
@@ -311,6 +326,7 @@ MonoBehaviour:
         isCorrect: 1
     - questionText: "Sy\xF6p\xE4alttiusgeenin kantaja sairastuu aina sy\xF6p\xE4\xE4n"
       questionImage: {fileID: 0}
+      correctCount: 1
       answers:
       - answerText: Oikein
         isCorrect: 0
@@ -319,6 +335,7 @@ MonoBehaviour:
     - questionText: "Sy\xF6v\xE4n syntyyn riitt\xE4\xE4 ituradan geenimuutokset,
         eik\xE4 sen syntyyn tarvita kudostason geenimuutoksia"
       questionImage: {fileID: 0}
+      correctCount: 1
       answers:
       - answerText: Oikein
         isCorrect: 0
