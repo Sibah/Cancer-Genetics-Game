@@ -29,46 +29,54 @@ public class WordLinePrototypeInitializer : MonoBehaviour
         {
             count = pairs.Count;
         }
-        for(int i = 0; i < count; i++)
+        //CHECK FOR END OF THE ROUND
+        if(count == 0)
         {
-            int rand = Random.Range(0, pairs.Count);
-            WordPair pair = pairs[rand];
-            GameObject[] wordObjects = new GameObject[2];
-
-            wordObjects[0] = ((GameObject)Instantiate(wordPrefab));
-            wordObjects[0].GetComponentInChildren<WordHandler>().SetSavedWordPair(pair);
-
-            wordObjects[1] = ((GameObject)Instantiate(wordPrefab));
-            wordObjects[1].GetComponentInChildren<WordHandler>().SetSavedWordPair(pair);
-
-            int sideRand = Random.Range(0, 2);
-            if(sideRand == 0)
-            {
-                wordObjects[0].GetComponentInChildren<Text>().text = pair.GetFirstWord();
-                wordObjects[1].GetComponentInChildren<Text>().text = pair.GetSecondWord();
-            }
-            else
-            {
-                wordObjects[1].GetComponentInChildren<Text>().text = pair.GetFirstWord();
-                wordObjects[0].GetComponentInChildren<Text>().text = pair.GetSecondWord();
-            }
-
-            
-            rightSideWords.Add(wordObjects[0]);
-            leftSideWords.Add(wordObjects[1]);
-
-            pairs.RemoveAt(rand);
+            SendMessage("BackToModeSelect");
         }
-        for(int i = 0; i < count; i++)
+        else
         {
-            int rightRand = Random.Range(0, rightSideWords.Count);
-            int leftRand = Random.Range(0, leftSideWords.Count);
+            for(int i = 0; i < count; i++)
+            {
+                int rand = Random.Range(0, pairs.Count);
+                WordPair pair = pairs[rand];
+                GameObject[] wordObjects = new GameObject[2];
 
-            PutWordToSide(rightSideWords[rightRand], rightSide);
-            PutWordToSide(leftSideWords[leftRand], leftSide);
+                wordObjects[0] = ((GameObject)Instantiate(wordPrefab));
+                wordObjects[0].GetComponentInChildren<WordHandler>().SetSavedWordPair(pair);
 
-            rightSideWords.RemoveAt(rightRand);
-            leftSideWords.RemoveAt(leftRand);
+                wordObjects[1] = ((GameObject)Instantiate(wordPrefab));
+                wordObjects[1].GetComponentInChildren<WordHandler>().SetSavedWordPair(pair);
+
+                int sideRand = Random.Range(0, 2);
+                if(sideRand == 0)
+                {
+                    wordObjects[0].GetComponentInChildren<Text>().text = pair.GetFirstWord();
+                    wordObjects[1].GetComponentInChildren<Text>().text = pair.GetSecondWord();
+                }
+                else
+                {
+                    wordObjects[1].GetComponentInChildren<Text>().text = pair.GetFirstWord();
+                    wordObjects[0].GetComponentInChildren<Text>().text = pair.GetSecondWord();
+                }
+
+                
+                rightSideWords.Add(wordObjects[0]);
+                leftSideWords.Add(wordObjects[1]);
+
+                pairs.RemoveAt(rand);
+            }
+            for(int i = 0; i < count; i++)
+            {
+                int rightRand = Random.Range(0, rightSideWords.Count);
+                int leftRand = Random.Range(0, leftSideWords.Count);
+
+                PutWordToSide(rightSideWords[rightRand], rightSide);
+                PutWordToSide(leftSideWords[leftRand], leftSide);
+
+                rightSideWords.RemoveAt(rightRand);
+                leftSideWords.RemoveAt(leftRand);
+            }
         }
     }
 
@@ -112,7 +120,7 @@ public class WordLinePrototypeInitializer : MonoBehaviour
     {
         if(rightSide.childCount <= 1)
         {
-            BroadcastMessage("FinishRound", SendMessageOptions.RequireReceiver);
+            BroadcastMessage("FinishRound", SendMessageOptions.DontRequireReceiver);
         }
     }
 }
