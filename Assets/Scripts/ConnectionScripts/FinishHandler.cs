@@ -38,8 +38,6 @@ public class FinishHandler : MonoBehaviour
             Destroy(rightSide.GetChild(i).gameObject);
             Destroy(leftSide.GetChild(i).gameObject);
         }
-        
-        time = startTime;
 
         initializer.PlaceWordsInSides();
     }

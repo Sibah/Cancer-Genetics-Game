@@ -118,7 +118,7 @@ public class WordLinePrototypeInitializer : MonoBehaviour
 
     private void CheckIfAllPairsDeleted()
     {
-        if(rightSide.childCount <= 1)
+        if(rightSide.childCount <= 1 && leftSide.childCount <= 1)
         {
             BroadcastMessage("FinishRound", SendMessageOptions.DontRequireReceiver);
         }
