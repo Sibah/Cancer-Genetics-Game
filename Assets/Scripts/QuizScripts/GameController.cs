@@ -1,9 +1,8 @@
 ﻿using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 using System.Linq;
-using System.Collections;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
@@ -17,9 +16,6 @@ public class GameController : MonoBehaviour
     public Text scoreDisplayText;
     public GameObject questionDisplay;
     public GameObject roundEndDisplay;
-    
-    public bool theAnswerIsCorrect;
-    public int correctPressed;
 
     private DataController dataController;
     private RoundData currentRoundData;
@@ -31,6 +27,10 @@ public class GameController : MonoBehaviour
     private int questionIndex;
     private int playerScore;
     private List<GameObject> answerButtonGameObjects = new List<GameObject>();
+    private List<AnswerData> correctAnswers = new List<AnswerData>();
+    private List<AnswerData> selectedAnswers;
+    private Color selectedColor;
+    private Color defaultColor;
 
     private List<int> questionIndexesChosen = new List<int>();
     private int qNumber;
@@ -48,6 +48,8 @@ public class GameController : MonoBehaviour
         playerScore = 0;
         questionIndex = 0;
         qNumber = 0;
+        selectedColor = Color.green;
+        defaultColor = Color.white;
 
         ShowQuestion();
         isRoundActive = true;
@@ -103,6 +105,12 @@ public class GameController : MonoBehaviour
 
             AnswerButton answerButton = answerButtonGameObject.GetComponent<AnswerButton>();
             answerButton.Setup(answersInRandomOrder[i]);
+
+            // Add all correct answers to list
+            if (answerButton.GetComponent<AnswerButton>().answerData.isCorrect)
+            {
+                correctAnswers.Add(answersInRandomOrder[i]);
+            }
         }
     }
 
@@ -116,25 +124,12 @@ public class GameController : MonoBehaviour
         }
     }
 
-    public bool IsCorrected()
-    {
-        return theAnswerIsCorrect;
-    }
-
-    IEnumerator DelayTime()
-    {
-        yield return new WaitForSeconds(3f);
-        qNumber++;
-        ShowQuestion();
-    }
-
     // Tests if the clicked answer is correct and adds the points. Updates the score text. Checks if there are more questions to show or ends the round.
     // Also gives point by remaining questionTime. If correct answer is pressed after 20 seconds have passed then it just gives 10 points.
     public void AnswerButtonClicked(bool isCorrect)
     {
         if (isCorrect)
         {
-            theAnswerIsCorrect = true;
             if (questionTimer > 20)
             {
                 playerScore += Mathf.FloorToInt(questionTimer);
@@ -148,7 +143,6 @@ public class GameController : MonoBehaviour
         }
         else
         {
-            theAnswerIsCorrect = false;
             timeRemaining = timeRemaining - 5f;
         }
         
@@ -156,9 +150,8 @@ public class GameController : MonoBehaviour
 
         if (qNumber + 1 < questionPool.Length)
         {
-            //qNumber++;
-            StartCoroutine(DelayTime());
-            //ShowQuestion();
+            qNumber++;
+            ShowQuestion();
         } else
         {
             EndRound();
