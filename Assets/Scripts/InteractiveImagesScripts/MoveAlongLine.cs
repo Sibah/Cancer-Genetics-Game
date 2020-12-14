@@ -57,7 +57,8 @@ public class MoveAlongLine : MonoBehaviour
                     gameObject.transform.position.y-0.5f, 0);  
                     if (i == numberOfGenes)
                     {
-                        SceneManager.LoadScene("TranslaatioScene");               
+                        Destroy(GameObject.Find("Text"));
+                        SceneManager.LoadScene("TranslaatioScene"); 
                     }
                 }
             } else {
