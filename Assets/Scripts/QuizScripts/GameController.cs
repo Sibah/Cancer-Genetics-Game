@@ -20,6 +20,7 @@ public class GameController : MonoBehaviour
     private DataController dataController;
     private RoundData currentRoundData;
     private QuestionData[] questionPool;
+    public int correctClickCount;
 
     private bool isRoundActive;
     public float timeRemaining;
@@ -38,6 +39,7 @@ public class GameController : MonoBehaviour
         currentRoundData = dataController.GetCurrentRoundData();
         questionPool = currentRoundData.questions;
         timeRemaining = currentRoundData.timeLimitInSeconds;
+        correctClickCount = 0;
         questionTimer = 50;
 
         UpdateTimeRemainingDisplay();

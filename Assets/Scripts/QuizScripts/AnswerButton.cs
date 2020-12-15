@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class AnswerButton : MonoBehaviour
@@ -9,9 +7,6 @@ public class AnswerButton : MonoBehaviour
     public AnswerData answerData;
     public int correctClicks;
     private GameController gameController;
-    public int perQuestionCount;
-
-    private AnswerButton instance;
 
     void Start()
     {
@@ -28,7 +23,7 @@ public class AnswerButton : MonoBehaviour
 
     public void ButtonClick()
     {
-        correctClicks++;
+        gameController.correctClickCount++;
     }
 
     public void HandeClick()
@@ -46,10 +41,11 @@ public class AnswerButton : MonoBehaviour
 
     private void Update()
     {
-        if (correctClicks == gameController.correctAnswers.Count)
+        if (gameController.correctClickCount == gameController.correctAnswers.Count)
         {
             gameController.correctAnswers.Clear();
             gameController.AnswerButtonClicked(answerData.isCorrect);
+            gameController.correctClickCount = 0;
         }
     }
 }
