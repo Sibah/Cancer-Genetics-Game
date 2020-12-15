@@ -27,10 +27,7 @@ public class GameController : MonoBehaviour
     private int questionIndex;
     private int playerScore;
     private List<GameObject> answerButtonGameObjects = new List<GameObject>();
-    private List<AnswerData> correctAnswers = new List<AnswerData>();
-    private List<AnswerData> selectedAnswers;
-    private Color selectedColor;
-    private Color defaultColor;
+    public List<AnswerData> correctAnswers = new List<AnswerData>();
 
     private List<int> questionIndexesChosen = new List<int>();
     private int qNumber;
@@ -48,8 +45,6 @@ public class GameController : MonoBehaviour
         playerScore = 0;
         questionIndex = 0;
         qNumber = 0;
-        selectedColor = Color.green;
-        defaultColor = Color.white;
 
         ShowQuestion();
         isRoundActive = true;
