@@ -39,6 +39,7 @@ public class AnswerButton : MonoBehaviour
             GetComponent<Button>().image.color = Color.green;
         } else if (!answerData.isCorrect)
         {
+            gameController.timeRemaining -= 5f;
             GetComponent<Button>().image.color = Color.red;
         }
     }

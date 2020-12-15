@@ -22,7 +22,7 @@ public class GameController : MonoBehaviour
     private QuestionData[] questionPool;
 
     private bool isRoundActive;
-    private float timeRemaining;
+    public float timeRemaining;
     private float questionTimer;
     private int questionIndex;
     private int playerScore;
