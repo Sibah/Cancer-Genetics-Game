@@ -39,7 +39,7 @@ public class AnswerButton : MonoBehaviour
         }
     }
 
-    private void Update()
+    /*private void Update()
     {
         if (gameController.correctClickCount == gameController.correctAnswers.Count)
         {
@@ -47,5 +47,5 @@ public class AnswerButton : MonoBehaviour
             gameController.AnswerButtonClicked(answerData.isCorrect);
             gameController.correctClickCount = 0;
         }
-    }
+    }*/
 }

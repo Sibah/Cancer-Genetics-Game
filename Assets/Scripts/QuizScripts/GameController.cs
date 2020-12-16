@@ -29,6 +29,7 @@ public class GameController : MonoBehaviour
     private int playerScore;
     private List<GameObject> answerButtonGameObjects = new List<GameObject>();
     public List<AnswerData> correctAnswers = new List<AnswerData>();
+    public AnswerData answerData;
 
     private List<int> questionIndexesChosen = new List<int>();
     private int qNumber;
@@ -75,6 +76,8 @@ public class GameController : MonoBehaviour
     // Displays new question from questionData. Removes old answerButtons and creates new ones according to how many answers are there.
     private void ShowQuestion()
     {
+        correctAnswers.Clear();
+        correctClickCount = 0;
         RemoveAnswerButton();
         ChooseQuestion();
         QuestionData questionData = questionPool[questionIndex];
@@ -175,6 +178,11 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
+        if (correctClickCount == correctAnswers.Count)
+        {
+            AnswerButtonClicked(true);
+        }
+
         if (isRoundActive)
         {
             questionTimer -= Time.deltaTime;
