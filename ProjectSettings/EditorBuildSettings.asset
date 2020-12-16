@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/InteractiveImages/TranslaatioScene.unity
     guid: cffa5ad5fe96ccb4ab00a1d2b0ef0b7a
+  - enabled: 1
+    path: Assets/Scenes/ConnectionGame.unity
+    guid: cc4a0f0b789f92d4e97e53290bab68a9
   m_configObjects: {}
