@@ -17,6 +17,7 @@ public class AnswerButton : MonoBehaviour
         answerData = data;
         answerText.text = answerData.answerText;
         GetComponent<Button>().image.color = Color.white;
+        GetComponent<Button>().interactable = true;
     }
 
     public void ButtonClick()
@@ -30,10 +31,12 @@ public class AnswerButton : MonoBehaviour
         {
             ButtonClick();
             GetComponent<Button>().image.color = Color.green;
+            GetComponent<Button>().interactable = false;
         } else if (!answerData.isCorrect)
         {
             gameController.timeRemaining -= 5f;
             GetComponent<Button>().image.color = Color.red;
+            GetComponent<Button>().interactable = false;
         }
     }
 }
