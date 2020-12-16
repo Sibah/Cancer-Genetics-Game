@@ -41,7 +41,7 @@ public class GameController : MonoBehaviour
         questionPool = currentRoundData.questions;
         timeRemaining = currentRoundData.timeLimitInSeconds;
         correctClickCount = 0;
-        questionTimer = 50;
+        questionTimer = 30;
 
         UpdateTimeRemainingDisplay();
 
@@ -130,7 +130,7 @@ public class GameController : MonoBehaviour
     {
         if (isCorrect)
         {
-            if (questionTimer > 20)
+            if (questionTimer > 15)
             {
                 playerScore += Mathf.FloorToInt(questionTimer);
             }
@@ -139,14 +139,14 @@ public class GameController : MonoBehaviour
                 playerScore += currentRoundData.pointsAddedForCorrectAnswer;
             }
             scoreDisplayText.text = "Score: " + playerScore.ToString();
-            questionTimer = 50;
+            questionTimer = 30;
         }
         /*else
         {
             timeRemaining = timeRemaining - 5f;
         }*/
         
-        questionTimer = 50;
+        questionTimer = 30;
 
         if (qNumber + 1 < questionPool.Length)
         {
@@ -174,6 +174,10 @@ public class GameController : MonoBehaviour
     private void UpdateTimeRemainingDisplay()
     {
         timeRemainingDisplayText.text = "Time: " + Mathf.Round(timeRemaining).ToString();
+        if (timeRemaining < 0)
+        {
+            timeRemainingDisplayText.text = "Time: " + 0.ToString();
+        }
     }
 
     void Update()

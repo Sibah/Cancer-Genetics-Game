@@ -152,7 +152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allRoundData:
   - name: Round Zero
-    timeLimitInSeconds: 60
+    timeLimitInSeconds: 120
     pointsAddedForCorrectAnswer: 10
     questions:
     - questionText: "Mik\xE4 on eksoni?"
