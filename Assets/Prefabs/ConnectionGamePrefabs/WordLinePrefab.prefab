@@ -83,6 +83,7 @@ GameObject:
   - component: {fileID: 1747927966545431389}
   - component: {fileID: 1747927966545431386}
   - component: {fileID: 1747927966545431391}
+  - component: {fileID: 1921321537180733588}
   m_Layer: 5
   m_Name: WordLinePrefab
   m_TagString: Untagged
@@ -215,6 +216,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70886538e39155545b937b83131149a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waitTimer: 1
+  animationEnded: 0
+--- !u!95 &1921321537180733588
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747927966545431384}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cffe4f0d887931841968ff3abb661588, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1747927967192229769
 GameObject:
   m_ObjectHideFlags: 0

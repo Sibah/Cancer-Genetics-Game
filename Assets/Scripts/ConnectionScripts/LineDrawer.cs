@@ -20,6 +20,7 @@ public class LineDrawer : MonoBehaviour
                     {
                         currentWord.SetConnectedWord(word);
                         word.SetConnectedWord(currentWord);
+                        word.SelectWord(true);
                         if(currentWord.CheckIfConnectedToCorrectPair())
                         {
                             Vector3 startPosition = currentWord.GetLinePointPosition();
@@ -37,6 +38,8 @@ public class LineDrawer : MonoBehaviour
                         {
                             //ADD SFX
                             BroadcastMessage("ReduceTime", 5, SendMessageOptions.RequireReceiver);
+                            currentWord.SelectWord(false);
+                            word.SelectWord(false);
                             currentWord.ResetConnection();
                             word.ResetConnection();
                         }
@@ -45,12 +48,17 @@ public class LineDrawer : MonoBehaviour
             }
             else
             {
+                currentWord.SelectWord(false);
                 currentWord = null;
             }
         }
         else
         {
             currentWord = word;
+            if(currentWord != null)
+            {
+                currentWord.SelectWord(true);
+            }
         }
     }
 }

@@ -7,6 +7,7 @@ public class ModeSelector : MonoBehaviour
 {
     public GameObject mode1;
     public GameObject selection;
+    public GameObject instructions;
     public Transform database;
     public WordLinePrototypeInitializer wordInit;
 
@@ -14,6 +15,7 @@ public class ModeSelector : MonoBehaviour
     {
         mode1.SetActive(true);
         selection.SetActive(false);
+        instructions.SetActive(false);
         BroadcastMessage("ResetTime", SendMessageOptions.RequireReceiver);
         BroadcastMessage("ResetScore", SendMessageOptions.RequireReceiver);
 
@@ -28,6 +30,7 @@ public class ModeSelector : MonoBehaviour
         mode1.SetActive(false);
         wordInit.pairs = new List<WordPair>();
         selection.SetActive(true);
+        instructions.SetActive(true);
     }
 
     public void BackToMainMenu()
