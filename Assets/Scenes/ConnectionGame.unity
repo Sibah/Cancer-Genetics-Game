@@ -1603,6 +1603,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mode1: {fileID: 474829319}
   selection: {fileID: 946694740}
+  instructions: {fileID: 535115334}
   database: {fileID: 1909021914}
   wordInit: {fileID: 1519257267}
 --- !u!114 &1519257267

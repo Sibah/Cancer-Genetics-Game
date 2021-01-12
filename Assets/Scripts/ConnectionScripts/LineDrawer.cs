@@ -20,7 +20,6 @@ public class LineDrawer : MonoBehaviour
                     {
                         currentWord.SetConnectedWord(word);
                         word.SetConnectedWord(currentWord);
-                        word.SelectWord(true);
                         if(currentWord.CheckIfConnectedToCorrectPair())
                         {
                             Vector3 startPosition = currentWord.GetLinePointPosition();
