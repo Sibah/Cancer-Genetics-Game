@@ -25,28 +25,11 @@ public class MainMenuCameraController : MonoBehaviour
         canvasMain.SetActive(true);
     }
 
-    //KeyCode.Alpha1
-
-    void Update()
+    private void OnMouseDown()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            mainCamera.enabled = false;
-            zoomCamera.enabled = true;
-            canvas.SetActive(true);
-            canvasMain.SetActive(false);
-        }
-        /*if (Input.GetKeyDown(KeyCode.Mouse1))
-        {
-            mainCamera.enabled = true;
-            zoomCamera.enabled = false;
-            canvas.SetActive(false);
-        }
-        else if (Input.GetKeyDown(KeyCode.Mouse1))
-        {
-            mainCamera.enabled = false;
-            zoomCamera.enabled = true;
-            canvas.SetActive(true);
-        }*/
+        mainCamera.enabled = false;
+        zoomCamera.enabled = true;
+        canvas.SetActive(true);
+        canvasMain.SetActive(false);
     }
 }

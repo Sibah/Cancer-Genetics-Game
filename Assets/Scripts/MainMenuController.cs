@@ -35,7 +35,6 @@ public class MainMenuController : MonoBehaviour
         print("game quit");
         Application.Quit();
     }
-
     public void Study()
     {
         SceneManager.LoadScene("StudyScene");
