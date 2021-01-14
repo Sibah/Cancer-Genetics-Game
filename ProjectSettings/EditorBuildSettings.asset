@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ConnectionGame.unity
     guid: cc4a0f0b789f92d4e97e53290bab68a9
+  - enabled: 1
+    path: Assets/Scenes/StudyScene.unity
+    guid: cbbf57936ac7e614db8f67b93bc234ff
   m_configObjects: {}
