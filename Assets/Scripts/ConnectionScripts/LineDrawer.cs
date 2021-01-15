@@ -12,6 +12,7 @@ public class LineDrawer : MonoBehaviour
     {
         if(currentWord != null && word != null)
         {
+            print(currentWord.transform.GetComponentInChildren<UnityEngine.UI.Text>().text);
             if(currentWord.GetConnectedWord() == null)
             {
                 if(word.GetConnectedWord() == null)
@@ -22,6 +23,7 @@ public class LineDrawer : MonoBehaviour
                         word.SetConnectedWord(currentWord);
                         if(currentWord.CheckIfConnectedToCorrectPair())
                         {
+                            word.SelectWord(true);
                             Vector3 startPosition = currentWord.GetLinePointPosition();
                             Vector3 endPosition = word.GetLinePointPosition();
                             LineRenderer line = ((GameObject)Instantiate(linePrefab, ((GameObject)GameObject.Find("Lines")).transform)).GetComponentInChildren<LineRenderer>();
@@ -37,7 +39,7 @@ public class LineDrawer : MonoBehaviour
                         {
                             //ADD SFX
                             BroadcastMessage("ReduceTime", 5, SendMessageOptions.RequireReceiver);
-                            currentWord.SelectWord(false);
+                            // currentWord.SelectWord(false);
                             word.SelectWord(false);
                             currentWord.ResetConnection();
                             word.ResetConnection();
