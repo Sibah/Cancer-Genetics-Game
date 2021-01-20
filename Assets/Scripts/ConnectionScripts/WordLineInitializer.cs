@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class WordLinePrototypeInitializer : MonoBehaviour
+public class WordLineInitializer : MonoBehaviour
 {
     public Transform leftSide;
     public Transform rightSide;
@@ -12,7 +12,7 @@ public class WordLinePrototypeInitializer : MonoBehaviour
     public List<GameObject> leftSideWords = new List<GameObject>();
     public List<WordPair> pairs = new List<WordPair>();
 
-    public int maxWordCount = 4;
+    public int maxWordCount = 4, roundAmount = 2, roundCounter = 0;
 
     public Object wordPrefab;
 
@@ -30,7 +30,7 @@ public class WordLinePrototypeInitializer : MonoBehaviour
             count = pairs.Count;
         }
         //CHECK FOR END OF THE ROUND
-        if(count == 0)
+        if(count == 0 || roundCounter >= roundAmount)
         {
             SendMessage("BackToModeSelect");
         }
@@ -78,6 +78,7 @@ public class WordLinePrototypeInitializer : MonoBehaviour
                 leftSideWords.RemoveAt(leftRand);
             }
         }
+        roundCounter++;
     }
 
     private void PutWordToSide(GameObject wordObject, Transform parent)

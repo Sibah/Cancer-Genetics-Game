@@ -9,7 +9,8 @@ public class ModeSelector : MonoBehaviour
     public GameObject selection;
     public GameObject instructions;
     public Transform database;
-    public WordLinePrototypeInitializer wordInit;
+    public WordLineInitializer wordInit;
+    public WordDatabase currentDatabase;
 
     public void SelectMode1()
     {
@@ -20,7 +21,8 @@ public class ModeSelector : MonoBehaviour
         BroadcastMessage("ResetScore", SendMessageOptions.RequireReceiver);
 
         //CHANGE TO BE EASIER TO CHANGE "DATABASE"
-        wordInit.pairs = database.GetChild(0).GetComponent<WordDatabase>().GetWordPairs();
+        currentDatabase = database.GetChild(0).GetComponent<WordDatabase>();
+        wordInit.pairs = currentDatabase.GetWordPairs();
 
         wordInit.PlaceWordsInSides();
     }
