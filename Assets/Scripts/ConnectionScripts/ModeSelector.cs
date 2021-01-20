@@ -21,7 +21,7 @@ public class ModeSelector : MonoBehaviour
         BroadcastMessage("ResetScore", SendMessageOptions.RequireReceiver);
 
         //CHANGE TO BE EASIER TO CHANGE "DATABASE"
-        currentDatabase = database.GetChild(0).GetComponent<WordDatabase>();
+        // currentDatabase = database.GetChild(0).GetComponent<WordDatabase>();
         wordInit.pairs = currentDatabase.GetWordPairs();
 
         wordInit.PlaceWordsInSides();

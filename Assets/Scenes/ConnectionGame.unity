@@ -840,10 +840,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstWordList:
   - Tymiini
-  - Guaniini
+  - Guaniini (DNA)
+  - Urasiili
+  - Guaniini (RNA)
+  - Autosomaalinen dominoiva periytyminen
+  - Autosomaalinen resessiivinen periytyminen
+  - X-kromosomissa dominoiva periytyminen
+  - X-kromosomissa resessiivinen periytyminen
+  - "Y-kromosomissa periytyv\xE4"
+  - DNA
+  - RNA
+  - "5\u2019 CAP"
+  - "Poly-A -h\xE4nt\xE4"
+  - Koodaava juoste
+  - Mallijuoste
+  - 'Ribosomin kohta A '
+  - Ribosomin kohta P
+  - Ribosomin kohta E
   secondWordList:
-  - Adeniini
-  - Sytosiini
+  - Adeniini (DNA)
+  - Sytosiini (DNA)
+  - Adeniini (RNA)
+  - Sytosiini (RNA)
+  - "Sairaan lapsilla 50% todenn\xE4k\xF6isyys sairastua"
+  - "Sairaan lapsilla 25% todenn\xE4k\xF6isyys sairastua"
+  - "Kaikki sairaan miehen tytt\xE4ret sairaita "
+  - "Sairaan pojan \xE4iti on kantaja"
+  - Ei periydy naisille
+  - "Deoksiriboosi   Kaksiketjuinen   Sis\xE4lt\xE4\xE4 geenit"
+  - Riboosi   Yksiketjuinen   Erilaisia tominnallisia muotoja
+  - "7-metyyliguanosiini   V\xE4ltt\xE4m\xE4t\xF6n RNA:n kiinnitymiselle ribosomiin  
+    Kiinnitet\xE4\xE4n RNA:n 5\u2019 p\xE4\xE4h\xE4n"
+  - "Kiinnitet\xE4\xE4n 3\u2019 p\xE4\xE4h\xE4n   Stabiloi RNA:ta   Liitet\xE4\xE4n
+    useita adeniini em\xE4ksi\xE4"
+  - "Sama em\xE4sj\xE4rjestys kuin muodostuvassa RNA-molekyyliss\xE4 "
+  - "RNA-polymeraasi k\xE4ytt\xE4\xE4 kopioimiseen"
+  - "Siirt\xE4j\xE4-RNA sitoutuu kodoniin   Vapauttajatekij\xE4 sitoutuu"
+  - "Aminohappo irtoaa siirt\xE4j\xE4-RNA:sta"
+  - "Siirt\xE4j\xE4-RNA vapautuu"
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1606,6 +1640,7 @@ MonoBehaviour:
   instructions: {fileID: 535115334}
   database: {fileID: 1909021914}
   wordInit: {fileID: 1519257267}
+  currentDatabase: {fileID: 576444399}
 --- !u!114 &1519257267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1624,6 +1659,8 @@ MonoBehaviour:
   rightSideWords: []
   leftSideWords: []
   maxWordCount: 4
+  roundAmount: 2
+  roundCounter: 0
   wordPrefab: {fileID: 1747927966545431384, guid: ded7d1ad9114a464fa5740069fecff3a,
     type: 3}
 --- !u!114 &1519257268
