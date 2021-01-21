@@ -1,13 +1,20 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class MutationClicked : MonoBehaviour
+public class Mutations2Mutation1 : MonoBehaviour
 {
-
     [SerializeField]
     private GameObject newLetter;
 
     private Text text;
+    public int errors;
+
+    //Alustetaan teksti
+    void Start() {
+        GameObject go = GameObject.Find("Mutations2ErrorsText");
+        text = go.GetComponent<UnityEngine.UI.Text>();
+        text.text = "Virheitä jäljellä: " + errors;
+    }
     
     //Hiirellä klikattaessa geenivirhe korjautuu ja virhelaskuri päivittyy   
     void OnMouseOver(){
@@ -17,18 +24,8 @@ public class MutationClicked : MonoBehaviour
             gameObject.GetComponent<SpriteRenderer>().color = color;
             newLetter.transform.position = transform.position;
 
-            GameObject go = GameObject.Find("Mutation1");
-            go.GetComponent<Mutation1>().errors--;
-            int errors = go.GetComponent<Mutation1>().errors;
-      
-
-            GameObject go2 = GameObject.Find("ErrorsText");
-            text = go2.GetComponent<UnityEngine.UI.Text>();
+            errors--;
             text.text = "Virheitä jäljellä: " + errors;
-            if (errors == 0){
-                GameObject gobj = GameObject.Find("ArrowMutations");
-               gobj.GetComponent<SpriteRenderer>().enabled = true;
-            }
         }
     }
 }

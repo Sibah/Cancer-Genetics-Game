@@ -57,7 +57,9 @@ public class TranslaatioUGA : MonoBehaviour
 //        go.transform.position = new Vector3(700,100,0);
 //        go.GetComponent<Text>().text = "Rakenna RNA";
         
-        SceneManager.LoadScene("MainMenu");
+//        SceneManager.LoadScene("MainMenu");
+            GameObject gobj = GameObject.Find("arrow_right3");
+            gobj.GetComponent<SpriteRenderer>().enabled = true;  
 
         }
 
@@ -78,7 +80,7 @@ public class TranslaatioUGA : MonoBehaviour
             GameObject go2 = GameObject.Find("PlaceholderUGA");
             go2.transform.position = new Vector3(-100,-100, 0);
             
-            StartCoroutine(ExecuteAfterTime(5));
+            StartCoroutine(ExecuteAfterTime(.5f));
             
         }
         else

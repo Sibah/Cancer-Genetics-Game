@@ -42,10 +42,12 @@ public class DragToPlaceholderChangeScene : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
     
-        SceneManager.LoadScene("DNAScene");
+//        SceneManager.LoadScene("DNAScene");
+        GameObject gobj = GameObject.Find("arrow_right");
+        gobj.GetComponent<SpriteRenderer>().enabled = true;
         
-//        Destroy(GameObject.Find("Text"));
-        Destroy(GameObject.Find("Text (1)"));
+        Destroy(GameObject.Find("Text (1)"));        
+        Destroy(GameObject.Find("Text"));
         DontDestroyOnLoad(GameObject.Find("Canvas"));
         GameObject go = GameObject.Find("Text");
         go.transform.position = new Vector3(700,100,0);

@@ -58,7 +58,9 @@ public class MoveAlongLine : MonoBehaviour
                     if (i == numberOfGenes)
                     {
                         Destroy(GameObject.Find("Text"));
-                        SceneManager.LoadScene("TranslaatioScene"); 
+//                        SceneManager.LoadScene("TranslaatioScene");
+                        GameObject gobj = GameObject.Find("arrow_right2");
+                        gobj.GetComponent<SpriteRenderer>().enabled = true;
                     }
                 }
             } else {
