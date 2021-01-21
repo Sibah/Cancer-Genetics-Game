@@ -1,20 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class AnswerButton : MonoBehaviour
 {
     public Text answerText;
-    private AnswerData answerData;
+    public AnswerData answerData;
     private GameController gameController;
-
-    public static AnswerButton _instace;
-
-    private void Awake()
-    {
-        _instace = this;
-    }
 
     void Start()
     {
@@ -25,27 +16,27 @@ public class AnswerButton : MonoBehaviour
     {
         answerData = data;
         answerText.text = answerData.answerText;
+        GetComponent<Button>().image.color = Color.white;
+        GetComponent<Button>().interactable = true;
     }
 
-    IEnumerator ReturnButtonColor()
+    public void ButtonClick()
     {
-        yield return new WaitForSeconds(2.9f);
-        GetComponent<Button>().image.color = Color.white;
+        gameController.correctClickCount++;
     }
 
     public void HandeClick()
     {
-        gameController.AnswerButtonClicked(answerData.isCorrect);
-
-        if (gameController.IsCorrected())
+        if (answerData.isCorrect)
         {
+            ButtonClick();
             GetComponent<Button>().image.color = Color.green;
-            StartCoroutine(ReturnButtonColor());
-        }
-        else
+            GetComponent<Button>().interactable = false;
+        } else if (!answerData.isCorrect)
         {
+            gameController.timeRemaining -= 5f;
             GetComponent<Button>().image.color = Color.red;
-            StartCoroutine(ReturnButtonColor());
+            GetComponent<Button>().interactable = false;
         }
     }
 }

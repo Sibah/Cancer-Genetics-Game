@@ -8,7 +8,9 @@ public class WordHandler : MonoBehaviour
     private RectTransform linePoint;
     private WordHandler connectedWord;
     private GameObject connectedLine;
+    public float waitTimer = 1f;
     public bool onRightSide { get{ return transform.parent.name.Equals("RightSide"); } set{}}
+    public bool animationEnded = false;
 
     public void SendPositionData()
     {
@@ -31,8 +33,12 @@ public class WordHandler : MonoBehaviour
 
     public IEnumerator RemoveWordPair(float time)
     {
-        yield return new WaitForSeconds(time);
-        Destroy(gameObject);
+        yield return new WaitForSeconds(waitTimer);
+        StartEndAnimation();
+        connectedWord.StartEndAnimation();
+        connectedLine.SetActive(false);
+
+        yield return new WaitUntil(() => animationEnded == true);
         if(connectedWord != null)
         {
             Destroy(connectedWord.gameObject);
@@ -41,6 +47,28 @@ public class WordHandler : MonoBehaviour
         {
             Destroy(connectedLine);
         }
+        Destroy(gameObject);
+    }
+
+    // Given to Animation event
+    public void SetAnimationEndedTrue()
+    {
+        animationEnded = true;
+    }
+    
+    public void SelectWord(bool selected)
+    {
+        GetComponent<Animator>().SetBool("isSelected", selected);
+    }
+
+    public void StartEndAnimation()
+    {
+        Animator animator = GetComponent<Animator>();
+        AnimationEvent e = new AnimationEvent();
+        e.functionName = "SetAnimationEndedTrue";
+        e.time = animator.runtimeAnimatorController.animationClips[0].length;
+        animator.runtimeAnimatorController.animationClips[0].AddEvent(e);
+        animator.SetBool("isConnected", true);
     }
 
     public WordPair GetSavedWordPair() { return savedWordPair; }

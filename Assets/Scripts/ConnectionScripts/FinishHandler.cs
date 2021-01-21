@@ -13,7 +13,7 @@ public class FinishHandler : MonoBehaviour
     public float startTime = 5;
     public float time;
     public int scorePoints;
-    public WordLinePrototypeInitializer initializer;
+    public WordLineInitializer initializer;
 
     private void Update() 
     {
