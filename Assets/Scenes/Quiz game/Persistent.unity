@@ -171,15 +171,15 @@ MonoBehaviour:
       questionImage: {fileID: 0}
       correctCount: 1
       answers:
-      - answerText: Geenin proteiinia koodaava osa
+      - answerText: 'Geenin proteiinia koodaava osa '
         isCorrect: 0
-      - answerText: Geenin proteiinia koodaamaton osa
+      - answerText: 'Geenin proteiinia koodaamaton osa '
         isCorrect: 1
       - answerText: "Esil\xE4hetti-RNA"
         isCorrect: 0
       - answerText: Proteiinin primaarirakenne
         isCorrect: 0
-    - questionText: "Mitk\xE4 ovat DNA:n em\xE4kset?"
+    - questionText: "Mitk\xE4 ovat DNA:n em\xE4kset"
       questionImage: {fileID: 0}
       correctCount: 3
       answers:
@@ -189,34 +189,8 @@ MonoBehaviour:
         isCorrect: 1
       - answerText: Adeniini
         isCorrect: 1
-      - answerText: Syktokiini
+      - answerText: Sytokiini
         isCorrect: 0
-    - questionText: "Mitk\xE4 ovat merkkej\xE4 sy\xF6p\xE4alttiuden periytyvyydest\xE4?"
-      questionImage: {fileID: 0}
-      correctCount: 3
-      answers:
-      - answerText: "Nuori sairastumisik\xE4"
-        isCorrect: 1
-      - answerText: Hoidon tehottomuus
-        isCorrect: 0
-      - answerText: "Suvussa paljon tietty\xE4 sy\xF6p\xE4\xE4"
-        isCorrect: 1
-      - answerText: Vaikeat oireet
-        isCorrect: 0
-      - answerText: "Toistuvat sy\xF6v\xE4t"
-        isCorrect: 1
-    - questionText: "Periytyv\xE4n rintasy\xF6v\xE4n alttiusgeenit?"
-      questionImage: {fileID: 0}
-      correctCount: 2
-      answers:
-      - answerText: BRCR 1
-        isCorrect: 0
-      - answerText: BRCA 1
-        isCorrect: 1
-      - answerText: APC
-        isCorrect: 0
-      - answerText: BRCA 2
-        isCorrect: 1
     - questionText: "Mik\xE4/mitk\xE4 seuraavista poistetaan esil\xE4hetti-RNA:sta
         silmukoinnissa?"
       questionImage: {fileID: 0}
@@ -230,11 +204,11 @@ MonoBehaviour:
         isCorrect: 0
       - answerText: Intronit
         isCorrect: 1
-    - questionText: RNA muodostaa...
+    - questionText: RNA muodostaa..
       questionImage: {fileID: 0}
       correctCount: 1
       answers:
-      - answerText: DNA-polumeraasin
+      - answerText: DNA-polymeraasin
         isCorrect: 0
       - answerText: RNA-polymeraasin
         isCorrect: 0
@@ -250,6 +224,406 @@ MonoBehaviour:
         isCorrect: 1
       - answerText: Proteiineja
         isCorrect: 0
+    - questionText: "Mill\xE4 alueella kromosomissa on suurin geenitiheys?"
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: "Sentromeerien l\xE4hell\xE4"
+        isCorrect: 0
+      - answerText: "Keskell\xE4"
+        isCorrect: 0
+      - answerText: "Telomeerien l\xE4hell\xE4"
+        isCorrect: 1
+    - questionText: "Mill\xE4 todenn\xE4k\xF6isyydell\xE4 autosomissa dominoivasti
+        periytyv\xE4\xE4 sairautta sairastavan lapset sairastuvat?"
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: 75%
+        isCorrect: 0
+      - answerText: 50%
+        isCorrect: 1
+      - answerText: 25%
+        isCorrect: 0
+    - questionText: "Mit\xE4 tarkoitetaan ep\xE4t\xE4ydellisell\xE4 penetranssilla?"
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Sairaus/geeni ei periydy
+        isCorrect: 0
+      - answerText: "Geenist\xE4 periytyy vain osa"
+        isCorrect: 0
+      - answerText: Dominoiva geeni ei tule ilmi
+        isCorrect: 1
+      - answerText: "Resessiivinen geeni hypp\xE4\xE4 sukupolven yli"
+        isCorrect: 0
+    - questionText: "Miksi X-kromosomissa dominoivasti periytyv\xE4 sairaus voi olla
+        lievempi oireinen naisilla?"
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Lyonisoitumisen takia
+        isCorrect: 1
+      - answerText: "Estrogeeni lievent\xE4v\xE4\xE4 geeniekspressiota"
+        isCorrect: 0
+      - answerText: Testosteroni vahvistaa geeeniekspressiota
+        isCorrect: 0
+      - answerText: Mikrodeletion takia
+        isCorrect: 0
+    - questionText: "X-kromosomissa dominoivasti periytyv\xE4\xE4 tautia sairastavan
+        miehen.."
+      questionImage: {fileID: 0}
+      correctCount: 3
+      answers:
+      - answerText: "Kaikki tytt\xE4ret ovat terveit\xE4"
+        isCorrect: 0
+      - answerText: "Kaikki pojat ovat terveit\xE4"
+        isCorrect: 1
+      - answerText: "Kaikki tytt\xE4ret ovat sairaita"
+        isCorrect: 1
+      - answerText: Kaikki pojat ovat sairaita
+        isCorrect: 0
+    - questionText: "Mitk\xE4 seuraavista kuvaavat DNA:ta?"
+      questionImage: {fileID: 0}
+      correctCount: 3
+      answers:
+      - answerText: Deoksiriboosi-fosfaattitukiranka
+        isCorrect: 1
+      - answerText: Yksijuosteinen
+        isCorrect: 0
+      - answerText: "Sis\xE4lt\xE4\xE4 geenit"
+        isCorrect: 1
+      - answerText: Komplementaarinen
+        isCorrect: 1
+      - answerText: Riboosi-fosfaattirunko
+        isCorrect: 0
+    - questionText: "Mik\xE4 juoste sis\xE4lt\xE4\xE4 geenin tiedon?"
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Koodaava juoste
+        isCorrect: 1
+      - answerText: Mallijuoste
+        isCorrect: 0
+      - answerText: Talojuoste
+        isCorrect: 0
+    - questionText: "Mitk\xE4 seuraavista RNA-polymeraasia koskevista v\xE4itteist\xE4
+        ovat totta?"
+      questionImage: {fileID: 0}
+      correctCount: 3
+      answers:
+      - answerText: Pystyy oikolukemaan tuottamaansa RNA:ta
+        isCorrect: 0
+      - answerText: Ei tarvitse aluketta
+        isCorrect: 1
+      - answerText: Sitoutuu promoottori alueelle
+        isCorrect: 1
+      - answerText: "Syntetisoi RNA:ta 5\u2019->3\u2019 suuntaan"
+        isCorrect: 1
+    - questionText: "Mit\xE4 tapahtuu l\xE4hetti-RNA:n muokkauksessa?"
+      questionImage: {fileID: 0}
+      correctCount: 2
+      answers:
+      - answerText: "Lis\xE4t\xE4\xE4n 5\u2019CAP"
+        isCorrect: 1
+      - answerText: Silmukointi
+        isCorrect: 1
+      - answerText: Laskostus
+        isCorrect: 0
+      - answerText: Jakautuminen
+        isCorrect: 0
+    - questionText: "Mik\xE4 on l\xE4hetti-RNA:n 3\u2019 p\xE4\xE4h\xE4n liitett\xE4v\xE4n
+        poly-A-h\xE4nn\xE4n tarkoitus?"
+      questionImage: {fileID: 0}
+      correctCount: 2
+      answers:
+      - answerText: "Auttaa kiinnittym\xE4\xE4n ribosomiin"
+        isCorrect: 0
+      - answerText: Stabiloi RNA:ta
+        isCorrect: 1
+      - answerText: "Tuhoaa l\xE4hetti-RNA:n translaation lopuksi"
+        isCorrect: 0
+      - answerText: "Auttaa l\xE4hetti-RNA:n siirtymisess\xE4 tumaan"
+        isCorrect: 1
+    - questionText: "Mit\xE4 tapahtuu silmukoinnissa?"
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: "Spliseosomi muodostaa intronista silmukan, joka irtoaa eksonin
+          v\xE4list\xE4"
+        isCorrect: 1
+      - answerText: "Introni lohkeaa itsest\xE4\xE4n RNA:sta"
+        isCorrect: 0
+      - answerText: "Spliseosomi poistaa 5\u2019CAP:in"
+        isCorrect: 0
+    - questionText: "Miksi kutsutaan lukuraamia, jossa DNA:n geneettinen koodi luetaan
+        l\xE4hetti-RNA:sta?"
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Koloni
+        isCorrect: 0
+      - answerText: Kodoni
+        isCorrect: 1
+      - answerText: Antikodoni
+        isCorrect: 0
+      - answerText: Kokoni
+        isCorrect: 0
+    - questionText: "Mitk\xE4 kuuluvat siirt\xE4j\xE4-RNA:n erityispiirteisiin?"
+      questionImage: {fileID: 0}
+      correctCount: 2
+      answers:
+      - answerText: "Kuljettaa spesifist\xE4 aminohappoa"
+        isCorrect: 1
+      - answerText: "S\xE4\xE4telee DNA:ta"
+        isCorrect: 0
+      - answerText: Antikodoni, jolla luetaan kodonia
+        isCorrect: 1
+      - answerText: "Elimist\xF6n suurin molekyyli"
+        isCorrect: 0
+    - questionText: "Mit\xE4 lopetuskodoni saa aikaan ribosomilla?"
+      questionImage: {fileID: 0}
+      correctCount: 3
+      answers:
+      - answerText: Peptidiketjun tuhoutumisen
+        isCorrect: 0
+      - answerText: "Vapauttajatekij\xE4n sitoutumisen ribosomin A:han"
+        isCorrect: 1
+      - answerText: "H2O:n liitt\xE4misen peptidiin"
+        isCorrect: 1
+      - answerText: Translaatiokoneiston purkautumisen
+        isCorrect: 1
+    - questionText: "Samasta geenist\xE4 voi synty\xE4 yht\xE4aikaisesti monta transkriptia."
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 1
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 0
+    - questionText: "Eri kudokset ilment\xE4v\xE4t eri geenej\xE4"
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 1
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 0
+    - questionText: "Yksil\xF6ll\xE4 voi olla saman geenin alleeleita kuinka paljon
+        tahansa."
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 0
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 1
+    - questionText: "Ihmisell\xE4 on 94 eri kodonia, joista 80 koodittaa aminohappoa
+        ja kolme toimii lopetussignaalina."
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: "O\xEDkein"
+        isCorrect: 0
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 1
+    - questionText: "Jos yksil\xF6ll\xE4 on geenist\xE4 eri alleelit, h\xE4n on genotyypilt\xE4\xE4n
+        kyseisen geenin suhteen heterotsygootti."
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 1
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 0
+    - questionText: "Resessiivinen alleeli voi ilmenty\xE4 fenotyypiss\xE4, jos se
+        on genotyypiss\xE4 heterotsygoottina."
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 0
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 1
+    - questionText: Lyonisoituminen tarkoittaa toisen X-kromosomin sattumanvaraista
+        inaktivoitumista soluissa.
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 1
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 0
+    - questionText: "Autosomissa periytyv\xE4 sairaus esiintyy yht\xE4 usein molemilla
+        sukupuolilla."
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 1
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 0
+    - questionText: "Resessiiviset sairaudet ovat yleisi\xE4, joten on yleist\xE4,
+        ett\xE4 kaksi resessiivist\xE4 tautia sairastavaa hankkii lapsia."
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 0
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 1
+    - questionText: "Ep\xE4t\xE4ydellinen penetranssi voi johtua esimerkiksi sairauden
+        my\xF6h\xE4isest\xE4 alkamisi\xE4st\xE4, jolloin oireet eiv\xE4t tule henkil\xF6n
+        elinaikana ilmi."
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 1
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 0
+    - questionText: "Resessiiviselle geenille ei ole tyypillist\xE4 sukupolven yli
+        hypp\xE4\xE4minen."
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 0
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 1
+    - questionText: "X-kromosomissa dominoivasti periytyv\xE4 sairaus esiintyy yleisemmin
+        miehill\xE4."
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 0
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 1
+    - questionText: "Resessiivisesti X-kromosomissa periytyv\xE4\xE4 sairautta sairastavan
+        miehen poika on sairas."
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 0
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 1
+    - questionText: "Y-kromosomissa olevat mikrodeleetiot voivat periyty\xE4 vain
+        is\xE4lt\xE4 pojalle."
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 1
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 0
+    - questionText: "RNA on yksiketjuinen, mutta pystyy muodostamaan rakenteita kuten
+        ribosomeja sitoutumalla itseens\xE4 ja proteiineihin."
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 1
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 0
+    - questionText: "RNA-polymeraasi tekee RNA:ta mallijuosteen avulla ja syntetisoi
+        RNA:ta 3\u2019->5\u2019 suuntaan."
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 0
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 1
+    - questionText: "RNA-polymeraasi tarvitsee transkriptiotekij\xF6it\xE4 sitoutuakseen
+        promoottori alueelle."
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 1
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 0
+    - questionText: "5\u2019CAP on RNA:n 5\u2019 p\xE4\xE4h\xE4n liitett\xE4v\xE4
+        7-metyyliguanosiini ja 3\u2019 p\xE4\xE4n poly-A-h\xE4nt\xE4 sis\xE4lt\xE4\xE4
+        useita adeniini em\xE4ksi\xE4."
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 1
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 0
+    - questionText: Vaihtoehtoisessa silmukoinnissa osa eksoneista silmukoituu pois
+        intronien kanssa.
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 1
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 0
+    - questionText: "RNA:ta voidaan muokata vain liitt\xE4m\xE4ll\xE4 5\u2019CAP,
+        poly-A-h\xE4nt\xE4 ja silmukoimalla."
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 0
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 1
+    - questionText: "L\xE4hetti-RNA:n kodoni tunnistetaan ribosomin kohdassa E."
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 0
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 1
+    - questionText: "Aminohappo irtoaa siirt\xE4j\xE4-RNA:sta ribosomin kohdassa
+        P."
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 1
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 0
+    - questionText: "Translaatiossa l\xE4hetti-RNA:sta tehd\xE4\xE4n valmis proteiini."
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 0
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 1
+    - questionText: "Mitk\xE4 ovat merkkej\xE4 sy\xF6p\xE4alttiuden periytyvyydest\xE4?"
+      questionImage: {fileID: 0}
+      correctCount: 2
+      answers:
+      - answerText: "Nuori sairastumisik\xE4"
+        isCorrect: 1
+      - answerText: Hoidon tehottomuus
+        isCorrect: 0
+      - answerText: "Suvussa paljon tietty\xE4 sy\xF6p\xE4\xE4"
+        isCorrect: 1
+      - answerText: Vaikeat oireet
+        isCorrect: 0
+      - answerText: "Toistuvat sy\xF6v\xE4t"
+        isCorrect: 1
+    - questionText: "Periytyv\xE4n rintasy\xF6v\xE4n alttiusgeenit?"
+      questionImage: {fileID: 0}
+      correctCount: 2
+      answers:
+      - answerText: BACR 1
+        isCorrect: 0
+      - answerText: BRCA 1
+        isCorrect: 1
+      - answerText: APC
+        isCorrect: 0
+      - answerText: BRCA 2
+        isCorrect: 1
       - answerText: RNA
         isCorrect: 0
     - questionText: "Mik\xE4/mitk\xE4 v\xE4itteet onkogeenist\xE4 ovat totta?"
@@ -290,41 +664,7 @@ MonoBehaviour:
         isCorrect: 1
       - answerText: Vitamiinit
         isCorrect: 0
-    - questionText: "Samasta geenist\xE4 voi synty\xE4 yht\xE4aikaisesti monta transkriptia"
-      questionImage: {fileID: 0}
-      correctCount: 1
-      answers:
-      - answerText: Oikein
-        isCorrect: 1
-      - answerText: "V\xE4\xE4rin"
-        isCorrect: 0
-    - questionText: "Eri kudokset ilment\xE4v\xE4t eri geenej\xE4"
-      questionImage: {fileID: 0}
-      correctCount: 1
-      answers:
-      - answerText: Oikein
-        isCorrect: 1
-      - answerText: "V\xE4\xE4rin"
-        isCorrect: 0
-    - questionText: "Yksil\xF6ll\xE4 voi olla saman geenin alleeleita kuinka paljon
-        tahansa"
-      questionImage: {fileID: 0}
-      correctCount: 1
-      answers:
-      - answerText: Oikein
-        isCorrect: 0
-      - answerText: "V\xE4\xE4rin"
-        isCorrect: 1
-    - questionText: "Ihmisell\xE4 on 94 eri kodonia, joista 80 koodittaa aminohappoa
-        ja kolme toimii lopetussignaalina"
-      questionImage: {fileID: 0}
-      correctCount: 1
-      answers:
-      - answerText: Oikein
-        isCorrect: 0
-      - answerText: "V\xE4\xE4rin"
-        isCorrect: 1
-    - questionText: "Sy\xF6p\xE4alttiusgeenin kantaja sairastuu aina sy\xF6p\xE4\xE4n"
+    - questionText: "Sy\xF6p\xE4alttiusgeenin kantaja sairastuu aina sy\xF6p\xE4\xE4n."
       questionImage: {fileID: 0}
       correctCount: 1
       answers:
@@ -333,7 +673,7 @@ MonoBehaviour:
       - answerText: "V\xE4\xE4rin"
         isCorrect: 1
     - questionText: "Sy\xF6v\xE4n syntyyn riitt\xE4\xE4 ituradan geenimuutokset,
-        eik\xE4 sen syntyyn tarvita kudostason geenimuutoksia"
+        eik\xE4 sen syntyyn tarvita kudostason geenimuutoksia."
       questionImage: {fileID: 0}
       correctCount: 1
       answers:
