@@ -1,13 +1,14 @@
 ﻿using UnityEngine.UIElements;
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class WordHandler : MonoBehaviour
 {
     private WordPair savedWordPair;
     private RectTransform linePoint;
-    private WordHandler connectedWord;
-    private GameObject connectedLine;
+    private List<WordHandler> connectedWord = new List<WordHandler>();
+    private List<GameObject> connectedLine = new List<GameObject>();
     public float waitTimer = 1f;
     public bool onRightSide { get{ return transform.parent.name.Equals("RightSide"); } set{}}
     public bool animationEnded = false;
@@ -19,11 +20,22 @@ public class WordHandler : MonoBehaviour
 
     public bool CheckIfConnectedToCorrectPair()
     {
-        if(connectedWord == null)
+        if(connectedWord == null || connectedWord.Count == 0)
         {
             return false;
         }
-        return savedWordPair.Equals(connectedWord.savedWordPair);
+        if(connectedWord.Count == 1)
+        {
+            return savedWordPair.Equals(connectedWord[0].savedWordPair);
+        }
+        foreach(WordHandler word in connectedWord)
+        {
+            if(!savedWordPair.Equals(word.savedWordPair))
+            {
+                return false;
+            }
+        }
+        return true;
     }
 
     public void ResetConnection()
@@ -35,17 +47,26 @@ public class WordHandler : MonoBehaviour
     {
         yield return new WaitForSeconds(waitTimer);
         StartEndAnimation();
-        connectedWord.StartEndAnimation();
-        connectedLine.SetActive(false);
+        foreach(WordHandler word in connectedWord)
+        {
+            word.StartEndAnimation();
+        }
+        foreach(GameObject line in connectedLine)
+        {
+            line.SetActive(false);
+        }
 
         yield return new WaitUntil(() => animationEnded == true);
         if(connectedWord != null)
         {
-            Destroy(connectedWord.gameObject);
+            foreach(WordHandler word in connectedWord)
+            {
+                Destroy(word.gameObject);
+            }
         }
-        if(connectedLine != null)
+        foreach(GameObject line in connectedLine)
         {
-            Destroy(connectedLine);
+            Destroy(line);
         }
         Destroy(gameObject);
     }
@@ -73,11 +94,12 @@ public class WordHandler : MonoBehaviour
 
     public WordPair GetSavedWordPair() { return savedWordPair; }
     public Vector3 GetLinePointPosition() { return linePoint.position; }
-    public WordHandler GetConnectedWord() { return connectedWord; }
+    public WordHandler GetConnectedWord() { return connectedWord[0]; }
     public void SetSavedWordPair(WordPair newPair) { savedWordPair = newPair; }
     public void SetLinePoint(RectTransform point) {linePoint = point;}
-    public void SetConnectedWord(WordHandler word) { connectedWord = word; }
-    public void SetConnectedLine(GameObject line) { connectedLine = line; }
+    public void SetConnectedWord(WordHandler word) { connectedWord[0] = word; }
+    public void AddConnectedWord(WordHandler word) {}
+    public void SetConnectedLine(GameObject line) { connectedLine[0] = line; }
 
     private void OnDestroy() 
     {
