@@ -195,6 +195,7 @@ public class GameController : MonoBehaviour
 
             if (timeRemaining <= 0f)
             {
+                PlayerPrefs.SetInt("QuizScore", playerScore);
                 EndRound();
             }
         }
