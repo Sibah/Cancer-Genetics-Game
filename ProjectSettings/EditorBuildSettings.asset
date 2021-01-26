@@ -36,6 +36,6 @@ EditorBuildSettings:
     path: Assets/Scenes/StudyScene.unity
     guid: cbbf57936ac7e614db8f67b93bc234ff
   - enabled: 1
-    path: Assets/Scenes/InteractiveImages/MutationsScene.unity
+    path: Assets/Scenes/InteractiveImages/PointMutationScene.unity
     guid: b507861369f55e94e8063ee57b1d4675
   m_configObjects: {}

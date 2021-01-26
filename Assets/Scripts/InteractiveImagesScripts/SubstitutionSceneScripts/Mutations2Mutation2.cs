@@ -25,6 +25,11 @@ public class Mutations2Mutation2 : MonoBehaviour
             GameObject go2 = GameObject.Find("Mutations2ErrorsText");
             text = go2.GetComponent<UnityEngine.UI.Text>();
             text.text = "Virheitä jäljellä: " + errors;
+
+            if (errors == 0){
+                GameObject gobj = GameObject.Find("Arrow");
+                gobj.GetComponent<SpriteRenderer>().enabled = true;
+            }
         }
     }
 }

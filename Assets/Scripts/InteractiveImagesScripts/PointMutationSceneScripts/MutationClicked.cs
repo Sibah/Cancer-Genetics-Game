@@ -26,7 +26,7 @@ public class MutationClicked : MonoBehaviour
             text = go2.GetComponent<UnityEngine.UI.Text>();
             text.text = "Virheitä jäljellä: " + errors;
             if (errors == 0){
-                GameObject gobj = GameObject.Find("ArrowMutations");
+                GameObject gobj = GameObject.Find("Arrow");
                gobj.GetComponent<SpriteRenderer>().enabled = true;
             }
         }

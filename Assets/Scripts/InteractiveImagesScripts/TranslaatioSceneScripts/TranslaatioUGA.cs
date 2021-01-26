@@ -58,7 +58,7 @@ public class TranslaatioUGA : MonoBehaviour
 //        go.GetComponent<Text>().text = "Rakenna RNA";
         
 //        SceneManager.LoadScene("MainMenu");
-            GameObject gobj = GameObject.Find("arrow_right3");
+            GameObject gobj = GameObject.Find("Arrow");
             gobj.GetComponent<SpriteRenderer>().enabled = true;  
 
         }

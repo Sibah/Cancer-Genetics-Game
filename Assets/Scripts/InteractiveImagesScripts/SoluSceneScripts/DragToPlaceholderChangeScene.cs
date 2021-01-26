@@ -43,15 +43,15 @@ public class DragToPlaceholderChangeScene : MonoBehaviour
         yield return new WaitForSeconds(time);
     
 //        SceneManager.LoadScene("DNAScene");
-        GameObject gobj = GameObject.Find("arrow_right");
+        GameObject gobj = GameObject.Find("Arrow");
         gobj.GetComponent<SpriteRenderer>().enabled = true;
         
-        Destroy(GameObject.Find("Text (1)"));        
-        Destroy(GameObject.Find("Text"));
-        DontDestroyOnLoad(GameObject.Find("Canvas"));
-        GameObject go = GameObject.Find("Text");
-        go.transform.position = new Vector3(700,100,0);
-        go.GetComponent<Text>().text = "Rakenna RNA";
+//        Destroy(GameObject.Find("Text (1)"));        
+//        Destroy(GameObject.Find("Text"));
+//       DontDestroyOnLoad(GameObject.Find("Canvas"));
+//        GameObject go = GameObject.Find("Text");
+//        go.transform.position = new Vector3(700,100,0);
+//        go.GetComponent<Text>().text = "Rakenna RNA";
         }
 
     private void OnMouseUp() {
@@ -60,7 +60,7 @@ public class DragToPlaceholderChangeScene : MonoBehaviour
         {
             transform.position = new Vector2(objectPlace.position.x, objectPlace.position.y);
             locked = true;
-            StartCoroutine(ExecuteAfterTime(1));
+            StartCoroutine(ExecuteAfterTime(0.1f));
             
         }
         else

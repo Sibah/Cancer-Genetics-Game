@@ -37,7 +37,7 @@ public class MoveAlongLine : MonoBehaviour
         deltaX = 0.2f;
         //x-0.27f y-0.1f deltaX 0.08f for ios
         placeholders[0].transform.position = new Vector3(gameObject.transform.position.x-0.65f,
-        gameObject.transform.position.y-0.5f, 0);    
+        gameObject.transform.position.y-0.4f, 0);    
         numberOfGenes = 5;    
     }
 
@@ -54,13 +54,18 @@ public class MoveAlongLine : MonoBehaviour
                     transform.position = new Vector3(transform.position.x + 0.005f, transform.position.y, transform.position.z);
                     placeholders[i].transform.position = new Vector3(0, 0, 0);
                     placeholders[i+1].transform.position = new Vector3(gameObject.transform.position.x-0.65f, 
-                    gameObject.transform.position.y-0.5f, 0);  
+                    gameObject.transform.position.y-0.4f, 0);  
                     if (i == numberOfGenes)
                     {
-                        Destroy(GameObject.Find("Text"));
+//                        Destroy(GameObject.Find("Text"));
 //                        SceneManager.LoadScene("TranslaatioScene");
-                        GameObject gobj = GameObject.Find("arrow_right2");
+                        GameObject gobj = GameObject.Find("Arrow");
                         gobj.GetComponent<SpriteRenderer>().enabled = true;
+                        transform.position = new Vector3(transform.position.x - 0.005f, transform.position.y, transform.position.z);
+                        placeholderA.SetActive(false);
+                        placeholderC.SetActive(false);
+                        placeholderG.SetActive(false);
+                        placeholderU.SetActive(false);                                             
                     }
                 }
             } else {
