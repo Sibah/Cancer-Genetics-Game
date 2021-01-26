@@ -3,16 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WordPair
+public class WordPair : MonoBehaviour
 {
+    [SerializeField]
     private string firstWord;
-    private string secondWord;
-
-    public WordPair(string first, string second)
-    {
-        firstWord = first;
-        secondWord = second;
-    }
+    [SerializeField]
+    private List<string> secondWords;
 
     public override bool Equals(object obj)
     {
@@ -30,14 +26,19 @@ public class WordPair
 
     public override int GetHashCode()
     {
-        return firstWord.Length + secondWord.Length;
+        return firstWord.Length + secondWords.Count;
     }
 
     public override string ToString()
     {
-        return firstWord + " " + secondWord;
+        string words = firstWord;
+        foreach(string text in secondWords)
+        {
+            words += " " + text;
+        }
+        return words;
     }
 
     public string GetFirstWord() { return firstWord; }
-    public string GetSecondWord() { return secondWord; }
+    public List<string> GetSecondWord() { return secondWords; }
 }
