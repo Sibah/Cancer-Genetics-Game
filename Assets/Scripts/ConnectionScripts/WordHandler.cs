@@ -7,7 +7,7 @@ public class WordHandler : MonoBehaviour
 {
     private WordPair savedWordPair;
     private RectTransform linePoint;
-    private List<WordHandler> connectedWord = new List<WordHandler>();
+    private List<WordHandler> connectedWords = new List<WordHandler>();
     private List<GameObject> connectedLine = new List<GameObject>();
     public float waitTimer = 1f;
     public bool onRightSide { get{ return transform.parent.name.Equals("RightSide"); } set{}}
@@ -27,15 +27,15 @@ public class WordHandler : MonoBehaviour
 
     public bool CheckIfConnectedToCorrectPair()
     {
-        if(connectedWord == null || connectedWord.Count == 0)
+        if(connectedWords == null || connectedWords.Count == 0)
         {
             return false;
         }
-        if(connectedWord.Count == 1)
+        if(connectedWords.Count == 1)
         {
-            return savedWordPair.Equals(connectedWord[0].savedWordPair);
+            return savedWordPair.Equals(connectedWords[0].savedWordPair);
         }
-        foreach(WordHandler word in connectedWord)
+        foreach(WordHandler word in connectedWords)
         {
             if(!savedWordPair.Equals(word.savedWordPair))
             {
@@ -47,14 +47,14 @@ public class WordHandler : MonoBehaviour
 
     public void ResetConnection()
     {
-        connectedWord = null;
+        connectedWords = null;
     }
 
     public IEnumerator RemoveWordPair(float time)
     {
         yield return new WaitForSeconds(waitTimer);
         StartEndAnimation();
-        foreach(WordHandler word in connectedWord)
+        foreach(WordHandler word in connectedWords)
         {
             word.StartEndAnimation();
         }
@@ -64,9 +64,9 @@ public class WordHandler : MonoBehaviour
         }
 
         yield return new WaitUntil(() => animationEnded == true);
-        if(connectedWord != null)
+        if(connectedWords != null)
         {
-            foreach(WordHandler word in connectedWord)
+            foreach(WordHandler word in connectedWords)
             {
                 Destroy(word.gameObject);
             }
@@ -82,6 +82,7 @@ public class WordHandler : MonoBehaviour
     public void SetAnimationEndedTrue()
     {
         animationEnded = true;
+        GetComponent<Animator>().runtimeAnimatorController.animationClips[0].events = System.Array.Empty<AnimationEvent>();
     }
     
     public void SelectWord(bool selected)
@@ -99,13 +100,34 @@ public class WordHandler : MonoBehaviour
         animator.SetBool("isConnected", true);
     }
 
+    public void WronglyConnected()
+    {
+        Animator animator = GetComponent<Animator>();
+        AnimationEvent e = new AnimationEvent();
+        e.functionName = "SetIsWrongSelectionToFalse";
+        e.time = animator.runtimeAnimatorController.animationClips[3].length;
+        animator.runtimeAnimatorController.animationClips[3].AddEvent(e);
+    }
+
+    public void SetIsWrongSelectionToFalse()
+    {
+        Animator animator = GetComponent<Animator>();
+        animator.SetBool("isWrongSelection", false);
+        animator.runtimeAnimatorController.animationClips[0].events = System.Array.Empty<AnimationEvent>();
+    }
+
+    public bool CheckIfFullyConnected()
+    {
+        return savedWordPair.connectionCount-1 == connectedWords.Count;
+    }
+
     public WordPair GetSavedWordPair() { return savedWordPair; }
     public Vector3 GetLinePointPosition() { return linePoint.position; }
-    public WordHandler GetConnectedWord() { return connectedWord[0]; }
+    public List<WordHandler> GetConnectedWords() { return connectedWords; }
     public void SetSavedWordPair(WordPair newPair) { savedWordPair = newPair; }
     public void SetLinePoint(RectTransform point) {linePoint = point;}
-    public void SetConnectedWord(WordHandler word) { connectedWord[0] = word; }
-    public void AddConnectedWord(WordHandler word) {}
+    public void SetconnectedWords(WordHandler word) { connectedWords[0] = word; }
+    public void AddconnectedWords(WordHandler word) {}
     public void SetConnectedLine(GameObject line) { connectedLine[0] = line; }
 
     private void OnDestroy() 

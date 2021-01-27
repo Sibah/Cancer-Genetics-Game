@@ -12,40 +12,9 @@ public class LineDrawer : MonoBehaviour
     {
         if(currentWord != null && word != null)
         {
-            print(currentWord.transform.GetComponentInChildren<UnityEngine.UI.Text>().text);
-            if(currentWord.GetConnectedWord() == null)
+            if(currentWord.GetConnectedWords() == null)
             {
-                if(word.GetConnectedWord() == null)
-                {
-                    if(currentWord.onRightSide != word.onRightSide)
-                    {
-                        currentWord.SetConnectedWord(word);
-                        word.SetConnectedWord(currentWord);
-                        if(currentWord.CheckIfConnectedToCorrectPair())
-                        {
-                            word.SelectWord(true);
-                            Vector3 startPosition = currentWord.GetLinePointPosition();
-                            Vector3 endPosition = word.GetLinePointPosition();
-                            LineRenderer line = ((GameObject)Instantiate(linePrefab, ((GameObject)GameObject.Find("Lines")).transform)).GetComponentInChildren<LineRenderer>();
-                            Vector3[] positions = { startPosition, endPosition };
-                            currentWord.SetConnectedLine(line.gameObject);
-                            line.SetPositions(positions);
-                            BroadcastMessage("IncrementScore", SendMessageOptions.RequireReceiver);
-                            IEnumerator coroutine = currentWord.RemoveWordPair(removalTime);
-                            StartCoroutine(coroutine);
-                            currentWord = null;
-                        }
-                        else
-                        {
-                            //ADD SFX
-                            BroadcastMessage("ReduceTime", 5, SendMessageOptions.RequireReceiver);
-                            // currentWord.SelectWord(false);
-                            word.SelectWord(false);
-                            currentWord.ResetConnection();
-                            word.ResetConnection();
-                        }
-                    }
-                }
+
             }
             else
             {

@@ -94,22 +94,6 @@ public class WordLineInitializer : MonoBehaviour
         }
     }
 
-    private void PutWordToSide(GameObject wordObject, Transform parent)
-    {
-        if(parent.name.Equals("RightSide"))
-        {
-            wordObject.GetComponentInChildren<WordHandler>().SetLinePoint(wordObject.transform.GetChild(1).GetComponent<RectTransform>());
-        }
-        else
-        {
-            wordObject.GetComponentInChildren<WordHandler>().SetLinePoint(wordObject.transform.GetChild(2).GetComponent<RectTransform>());
-        }
-        wordObject.transform.parent = parent;
-        Vector3 currentPosition = wordObject.transform.localPosition;
-        wordObject.transform.localPosition = new Vector3(currentPosition.x, currentPosition.y, 0);
-        wordObject.transform.localScale = new Vector3(1, 1, 1);
-    }
-
     private void ClearOldWords()
     {
         if(lines.childCount > 0)

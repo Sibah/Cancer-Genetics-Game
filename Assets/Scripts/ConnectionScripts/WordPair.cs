@@ -9,6 +9,13 @@ public class WordPair : MonoBehaviour
     private string firstWord;
     [SerializeField]
     private List<string> secondWords;
+    public int connectionCount
+    {
+        get
+        {
+            return 1 + secondWords.Count;
+        }
+    }
 
     public override bool Equals(object obj)
     {
