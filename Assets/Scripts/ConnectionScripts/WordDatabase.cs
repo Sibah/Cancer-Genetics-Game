@@ -14,9 +14,15 @@ public class WordDatabase : MonoBehaviour
 
     public List<WordPair> GetWordPairs()
     {
-        //TODO: CHANGE HOW WORD PAIRS ARE STORED IN UNITY
+        WordPair[] pairs = wordPairs;
 
-        return null;
+        List<WordPair> pairList = new List<WordPair>();
+        foreach(WordPair pair in pairs)
+        {
+            pairList.Add(pair);
+        }
+
+        return pairList;
     }
 
 }

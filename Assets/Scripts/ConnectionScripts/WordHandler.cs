@@ -12,6 +12,13 @@ public class WordHandler : MonoBehaviour
     public float waitTimer = 1f;
     public bool onRightSide { get{ return transform.parent.name.Equals("RightSide"); } set{}}
     public bool animationEnded = false;
+    public string wordText
+    {
+        set
+        {
+            GetComponentInChildren<UnityEngine.UI.Text>().text = value;
+        }
+    }
 
     public void SendPositionData()
     {

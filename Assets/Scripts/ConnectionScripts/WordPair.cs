@@ -12,16 +12,24 @@ public class WordPair : MonoBehaviour
 
     public override bool Equals(object obj)
     {
-        if(obj == null)
+        if(obj == null || !(obj is WordPair))
         {
             return false;
         }
-        // if(!(obj is WordPair))
-        // {
-        //     return false;
-        // }
         WordPair secondPair = (WordPair)obj;
-        return secondPair.GetFirstWord().Equals(this.GetFirstWord()) && secondPair.GetSecondWord().Equals(this.GetSecondWord());
+        if(this.secondWords.Count != secondPair.secondWords.Count)
+        {
+            return false;
+        }
+
+        for(int i = 0; i <= secondWords.Count; i++)
+        {
+            if(!secondWords[i].Equals(secondPair.secondWords[i]))
+            {
+                return false;
+            }
+        }
+        return firstWord.Equals(secondPair.firstWord);
     }
 
     public override int GetHashCode()
@@ -40,5 +48,5 @@ public class WordPair : MonoBehaviour
     }
 
     public string GetFirstWord() { return firstWord; }
-    public List<string> GetSecondWord() { return secondWords; }
+    public List<string> GetSecondWords() { return secondWords; }
 }

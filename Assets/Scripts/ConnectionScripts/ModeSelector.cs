@@ -8,7 +8,6 @@ public class ModeSelector : MonoBehaviour
     public GameObject mode1;
     public GameObject selection;
     public GameObject instructions;
-    public Transform database;
     public WordLineInitializer wordInit;
     public WordDatabase currentDatabase;
 
