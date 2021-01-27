@@ -141,10 +141,6 @@ public class GameController : MonoBehaviour
             scoreDisplayText.text = "Score: " + playerScore.ToString();
             questionTimer = 30;
         }
-        /*else
-        {
-            timeRemaining = timeRemaining - 5f;
-        }*/
         
         questionTimer = 30;
 
