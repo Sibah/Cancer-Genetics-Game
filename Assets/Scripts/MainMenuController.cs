@@ -34,9 +34,15 @@ public class MainMenuController : MonoBehaviour
 
     public void QuitGame()
     {
-        print("game quit");
+        PlayerPrefs.DeleteAll();
         Application.Quit();
     }
+
+    private void OnApplicationQuit()
+    {
+        PlayerPrefs.DeleteAll();
+    }
+
     public void Study()
     {
         SceneManager.LoadScene("StudyScene");
@@ -51,7 +57,8 @@ public class MainMenuController : MonoBehaviour
     {
         int quizScore = PlayerPrefs.GetInt("QuizScore");
         quizScoreDisplayText.text = "Quiz: " + quizScore.ToString();
-        if (quizScore >= 500)
+
+        if (quizScore >= 500) // What are the high enough highscores?
         {
             doctorPhaseButton.interactable = true;
         } else
