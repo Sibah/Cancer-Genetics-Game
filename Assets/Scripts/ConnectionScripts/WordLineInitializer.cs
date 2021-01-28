@@ -65,33 +65,32 @@ public class WordLineInitializer : MonoBehaviour
 
     private void CreateWords(bool isLeftSide, WordPair pair)
     {
+        CreateWord(isLeftSide, pair, pair.GetFirstWord());
+
+        foreach(string secondWord in pair.GetSecondWords())
+        {
+            CreateWord(!isLeftSide, pair, secondWord);
+        }
+    }
+
+    private void CreateWord(bool isLeftSide, WordPair pair, string text)
+    {
         GameObject word;
+        WordHandler handler;
         if(isLeftSide)
         {
             word = (GameObject)(Instantiate(wordPrefab, leftSide));
+            handler = word.GetComponent<WordHandler>();
+            handler.SetLinePoint(handler.transform.GetChild(2).GetComponent<RectTransform>());
         }
         else
         {
             word = (GameObject)(Instantiate(wordPrefab, rightSide));
-        }
-        WordHandler handler = word.GetComponent<WordHandler>();
-        handler.wordText = pair.GetFirstWord();
-        handler.SetSavedWordPair(pair);
-
-        foreach(string secondWord in pair.GetSecondWords())
-        {
-            if(isLeftSide)
-            {
-                word = (GameObject)(Instantiate(wordPrefab, rightSide));
-            }
-            else
-            {
-                word = (GameObject)(Instantiate(wordPrefab, leftSide));
-            }
             handler = word.GetComponent<WordHandler>();
-            handler.wordText = secondWord;
-            handler.SetSavedWordPair(pair);
+            handler.SetLinePoint(handler.transform.GetChild(1).GetComponent<RectTransform>());
         }
+        handler.wordText = text;
+        handler.SetSavedWordPair(pair);
     }
 
     private void ClearOldWords()

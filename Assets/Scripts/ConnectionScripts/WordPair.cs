@@ -8,12 +8,12 @@ public class WordPair : MonoBehaviour
     [SerializeField]
     private string firstWord;
     [SerializeField]
-    private List<string> secondWords;
+    private List<string> secondWords = new List<string>();
     public int connectionCount
     {
         get
         {
-            return 1 + secondWords.Count;
+            return secondWords.Count;
         }
     }
 
@@ -29,7 +29,7 @@ public class WordPair : MonoBehaviour
             return false;
         }
 
-        for(int i = 0; i <= secondWords.Count; i++)
+        for(int i = 0; i < secondWords.Count; i++)
         {
             if(!secondWords[i].Equals(secondPair.secondWords[i]))
             {

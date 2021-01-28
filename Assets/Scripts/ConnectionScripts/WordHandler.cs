@@ -6,6 +6,7 @@ using System.Collections.Generic;
 public class WordHandler : MonoBehaviour
 {
     private WordPair savedWordPair;
+    [SerializeField]
     private RectTransform linePoint;
     private List<WordHandler> connectedWords = new List<WordHandler>();
     private List<GameObject> connectedLine = new List<GameObject>();
@@ -100,13 +101,18 @@ public class WordHandler : MonoBehaviour
         animator.SetBool("isConnected", true);
     }
 
-    public void WronglyConnected()
+    public void WronglyConnected(bool isMultiConnectable)
     {
         Animator animator = GetComponent<Animator>();
         AnimationEvent e = new AnimationEvent();
         e.functionName = "SetIsWrongSelectionToFalse";
         e.time = animator.runtimeAnimatorController.animationClips[3].length;
         animator.runtimeAnimatorController.animationClips[3].AddEvent(e);
+        animator.SetBool("isWrongSelection", true);
+        if(!isMultiConnectable)
+        {
+            SelectWord(false);
+        }
     }
 
     public void SetIsWrongSelectionToFalse()
@@ -118,7 +124,12 @@ public class WordHandler : MonoBehaviour
 
     public bool CheckIfFullyConnected()
     {
-        return savedWordPair.connectionCount-1 == connectedWords.Count;
+        if(savedWordPair.connectionCount == connectedWords.Count) return true;
+        foreach(WordHandler word in connectedWords)
+        {
+            if(word.GetSavedWordPair().connectionCount == word.connectedWords.Count) return true;
+        }
+        return false;
     }
 
     public WordPair GetSavedWordPair() { return savedWordPair; }
