@@ -13,6 +13,13 @@ public class WordHandler : MonoBehaviour
     public float waitTimer = 1f;
     public bool onRightSide { get{ return transform.parent.name.Equals("RightSide"); } set{}}
     public bool animationEnded = false;
+    public bool isJoinableToMultiple
+    {
+        get
+        {
+            return GetComponentInChildren<UnityEngine.UI.Text>().text.Equals(savedWordPair.GetFirstWord()) && savedWordPair.connectionCount == 1;
+        }
+    }
     public string wordText
     {
         set
@@ -26,7 +33,7 @@ public class WordHandler : MonoBehaviour
         SendMessageUpwards("DrawLine", this, SendMessageOptions.RequireReceiver);
     }
 
-    public bool CheckIfConnectedToCorrectPair()
+    public bool CheckIfCorrectlyFinished()
     {
         if(connectedWords == null || connectedWords.Count == 0)
         {
@@ -34,13 +41,27 @@ public class WordHandler : MonoBehaviour
         }
         if(connectedWords.Count == 1)
         {
+            if(connectedWords.Count != savedWordPair.connectionCount)
+            {
+                List<WordHandler> handlers = connectedWords[0].GetConnectedWords();
+                foreach(WordHandler word in handlers)
+                {
+                    if(!savedWordPair.Equals(word.savedWordPair))
+                    {
+                        return false;
+                    }
+                }
+            }
             return savedWordPair.Equals(connectedWords[0].savedWordPair);
         }
-        foreach(WordHandler word in connectedWords)
+        else
         {
-            if(!savedWordPair.Equals(word.savedWordPair))
+            foreach(WordHandler word in connectedWords)
             {
-                return false;
+                if(!savedWordPair.Equals(word.savedWordPair))
+                {
+                    return false;
+                }
             }
         }
         return true;
@@ -132,14 +153,15 @@ public class WordHandler : MonoBehaviour
         return false;
     }
 
+    public void AddConnectedWord(WordHandler word) { connectedWords.Add(word); }
+
     public WordPair GetSavedWordPair() { return savedWordPair; }
     public Vector3 GetLinePointPosition() { return linePoint.position; }
     public List<WordHandler> GetConnectedWords() { return connectedWords; }
     public void SetSavedWordPair(WordPair newPair) { savedWordPair = newPair; }
     public void SetLinePoint(RectTransform point) {linePoint = point;}
     public void SetconnectedWords(WordHandler word) { connectedWords[0] = word; }
-    public void AddconnectedWords(WordHandler word) {}
-    public void SetConnectedLine(GameObject line) { connectedLine[0] = line; }
+    public void AddConnectedLine(GameObject line) { connectedLine.Add(line); }
 
     private void OnDestroy() 
     {

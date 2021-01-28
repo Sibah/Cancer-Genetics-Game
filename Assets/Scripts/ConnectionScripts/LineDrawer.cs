@@ -21,14 +21,31 @@ public class LineDrawer : MonoBehaviour
                     {
                         LineRenderer line = ((GameObject)Instantiate(linePrefab, lines)).GetComponent<LineRenderer>();
                         line.SetPositions(new Vector3[] { currentWord.GetLinePointPosition(), word.GetLinePointPosition() } );
+                        currentWord.AddConnectedWord(word);
+                        currentWord.AddConnectedLine(line.gameObject);
+                        word.SelectWord(true);
+                        if(currentWord.CheckIfFullyConnected())
+                        {
+                            if(currentWord.CheckIfCorrectlyFinished())
+                            {
+                                IEnumerator coroutine = currentWord.RemoveWordPair(removalTime);
+                                StartCoroutine(coroutine);
+                            }
+                            currentWord = null;
+                        }
                     }
                     else
                     {
-                        currentWord.WronglyConnected(true);
-                        if(currentWord.GetSavedWordPair().connectionCount == 1)
+                        word.WronglyConnected(true);
+                        print(word.GetComponentInChildren<UnityEngine.UI.Text>().text);
+                        if(!currentWord.isJoinableToMultiple)
                         {
                             currentWord.WronglyConnected(false);
                             currentWord = null;
+                        }
+                        else
+                        {
+                            currentWord.WronglyConnected(true);
                         }
                     }
                 }
