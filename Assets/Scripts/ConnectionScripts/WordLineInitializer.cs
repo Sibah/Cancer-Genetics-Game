@@ -24,6 +24,7 @@ public class WordLineInitializer : MonoBehaviour
 
         ClearOldWords();
         HandleWordCreation();
+        PutWordsToSides();
         roundCounter++;
     }
 
@@ -51,46 +52,105 @@ public class WordLineInitializer : MonoBehaviour
                 int index = Random.Range(0, pairs.Count);
                 WordPair pair = pairs[index];
                 pairs.RemoveAt(index);
-                if(Random.Range(0, 2) == 0)
+                CreateWords(pair);
+                if(leftSide.childCount >= count || rightSide.childCount >= count)
                 {
-                    CreateWords(true, pair);
-                }
-                else
-                {
-                    CreateWords(false, pair);
+                    break;
                 }
             }
         }
     }
 
-    private void CreateWords(bool isLeftSide, WordPair pair)
+    private void CreateWords(WordPair pair)
     {
-        CreateWord(isLeftSide, pair, pair.GetFirstWord());
+        GameObject firstWord;
+        List<GameObject> secondWords = new List<GameObject>();
+        
+        firstWord = CreateWord(pair, pair.GetFirstWord());
 
         foreach(string secondWord in pair.GetSecondWords())
         {
-            CreateWord(!isLeftSide, pair, secondWord);
+            secondWords.Add(CreateWord(pair, secondWord));
         }
-    }
 
-    private void CreateWord(bool isLeftSide, WordPair pair, string text)
-    {
-        GameObject word;
-        WordHandler handler;
-        if(isLeftSide)
+        if(Random.Range(0, 2) == 0)
         {
-            word = (GameObject)(Instantiate(wordPrefab, leftSide));
-            handler = word.GetComponent<WordHandler>();
-            handler.SetLinePoint(handler.transform.GetChild(2).GetComponent<RectTransform>());
+            AddWordsToSides(firstWord,secondWords, true);
         }
         else
         {
-            word = (GameObject)(Instantiate(wordPrefab, rightSide));
-            handler = word.GetComponent<WordHandler>();
-            handler.SetLinePoint(handler.transform.GetChild(1).GetComponent<RectTransform>());
+            AddWordsToSides(firstWord,secondWords, false);
         }
+    }
+
+    private GameObject CreateWord(WordPair pair, string text)
+    {
+        GameObject word;
+        WordHandler handler;
+
+        word = (GameObject)(Instantiate(wordPrefab));
+        handler = word.GetComponent<WordHandler>();
         handler.wordText = text;
         handler.SetSavedWordPair(pair);
+
+        return word;
+    }
+
+    private void AddWordsToSides(GameObject firstWord, List<GameObject> secondWords, bool isLeftside)
+    {
+        if(isLeftside)
+        {
+            firstWord.GetComponent<WordHandler>().SetLinePoint(firstWord.transform.GetChild(2).GetComponent<RectTransform>());
+            leftSideWords.Add(firstWord);
+            foreach(GameObject word in secondWords)
+            {
+                word.GetComponent<WordHandler>().SetLinePoint(word.transform.GetChild(1).GetComponent<RectTransform>());
+                rightSideWords.Add(word);
+            }
+        }
+        else
+        {
+            firstWord.GetComponent<WordHandler>().SetLinePoint(firstWord.transform.GetChild(1).GetComponent<RectTransform>());
+            leftSideWords.Add(firstWord);
+            foreach(GameObject word in secondWords)
+            {
+                word.GetComponent<WordHandler>().SetLinePoint(word.transform.GetChild(2).GetComponent<RectTransform>());
+                rightSideWords.Add(word);
+            }
+        }
+    }
+
+    private void PutWordsToSides()
+    {
+        ShuffleGameObjectList(rightSideWords);
+        ShuffleGameObjectList(leftSideWords);
+
+        foreach(GameObject word in rightSideWords)
+        {
+            word.transform.parent = rightSide;
+            word.transform.localScale = new Vector3(1, 1, 1);
+            word.transform.localPosition = Vector3.zero;
+        }
+        foreach(GameObject word in leftSideWords)
+        {
+            word.transform.parent = leftSide;
+            word.transform.localScale = new Vector3(1, 1, 1);
+            word.transform.localPosition = Vector3.zero;
+            // word.transform.position = new Vector3(word.transform.position.x, word.transform.position.y, 0);
+        }
+        rightSideWords = new List<GameObject>();
+        leftSideWords = new List<GameObject>();
+    }
+
+    private void ShuffleGameObjectList(List<GameObject> list)
+    {
+        for(int i = list.Count - 1; i > 0; i--)
+        {
+            int j = Random.Range(0, i + 1);
+            GameObject temp = list[i];
+            list[i] = list[j];
+            list[j] = temp;
+        }
     }
 
     private void ClearOldWords()
