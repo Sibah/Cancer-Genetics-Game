@@ -199,6 +199,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 14717154}
   m_CullTransparentMesh: 0
+--- !u!4 &18004747 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+    type: 3}
+  m_PrefabInstance: {fileID: 251706505}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &29803884
 GameObject:
   m_ObjectHideFlags: 0
@@ -407,6 +413,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 46784957}
   m_CullTransparentMesh: 0
+--- !u!4 &72065863 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+    type: 3}
+  m_PrefabInstance: {fileID: 555886225}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &157215449
 GameObject:
   m_ObjectHideFlags: 0
@@ -537,6 +549,164 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 157215449}
   m_CullTransparentMesh: 0
+--- !u!1001 &187832488
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 576444398}
+    m_Modifications:
+    - target: {fileID: 2003701269675015992, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_Name
+      value: WordPair
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: firstWord
+      value: X-kromosomissa resessiivinen periytyminen
+      objectReference: {fileID: 0}
+    - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: secondWords.Array.data[0]
+      value: "Sairaan pojan \xE4iti on kantaja"
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c6dee0c60f5de654085690da8caa13f9, type: 3}
+--- !u!1001 &251706505
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 576444398}
+    m_Modifications:
+    - target: {fileID: 2003701269675015992, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_Name
+      value: WordPair
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: firstWord
+      value: X-kromosomissa dominoiva periytyminen
+      objectReference: {fileID: 0}
+    - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: secondWords.Array.data[0]
+      value: "Kaikki sairaan miehen tytt\xE4ret sairaita"
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c6dee0c60f5de654085690da8caa13f9, type: 3}
 --- !u!4 &255306253 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
@@ -897,6 +1067,85 @@ RectTransform:
   m_AnchoredPosition: {x: -6.54, y: 73}
   m_SizeDelta: {x: 523.83264, y: 300.8729}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &555886225
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 576444398}
+    m_Modifications:
+    - target: {fileID: 2003701269675015992, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_Name
+      value: WordPair
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: firstWord
+      value: "Y-kromosomissa periytyv\xE4"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: secondWords.Array.data[0]
+      value: Ei periydy naisille
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c6dee0c60f5de654085690da8caa13f9, type: 3}
 --- !u!1 &576444397
 GameObject:
   m_ObjectHideFlags: 0
@@ -927,6 +1176,9 @@ Transform:
   m_Children:
   - {fileID: 289207467}
   - {fileID: 522278832}
+  - {fileID: 2064352665}
+  - {fileID: 18004747}
+  - {fileID: 72065863}
   m_Father: {fileID: 1909021914}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1088,7 +1340,7 @@ MonoBehaviour:
     m_Top: 50
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: 50
+  m_Spacing: 25
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
@@ -2034,7 +2286,7 @@ MonoBehaviour:
     m_Top: 50
     m_Bottom: 0
   m_ChildAlignment: 2
-  m_Spacing: 50
+  m_Spacing: 25
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
@@ -2241,6 +2493,12 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!4 &2064352665 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+    type: 3}
+  m_PrefabInstance: {fileID: 187832488}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2067560465 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,

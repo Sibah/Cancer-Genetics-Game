@@ -37,7 +37,6 @@ public class LineDrawer : MonoBehaviour
                     else
                     {
                         word.WronglyConnected(true);
-                        print(word.GetComponentInChildren<UnityEngine.UI.Text>().text);
                         if(!currentWord.isJoinableToMultiple)
                         {
                             currentWord.WronglyConnected(false);

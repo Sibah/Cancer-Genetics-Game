@@ -111,11 +111,11 @@ public class WordLineInitializer : MonoBehaviour
         else
         {
             firstWord.GetComponent<WordHandler>().SetLinePoint(firstWord.transform.GetChild(1).GetComponent<RectTransform>());
-            leftSideWords.Add(firstWord);
+            rightSideWords.Add(firstWord);
             foreach(GameObject word in secondWords)
             {
                 word.GetComponent<WordHandler>().SetLinePoint(word.transform.GetChild(2).GetComponent<RectTransform>());
-                rightSideWords.Add(word);
+                leftSideWords.Add(word);
             }
         }
     }
