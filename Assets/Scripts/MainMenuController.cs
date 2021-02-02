@@ -5,6 +5,8 @@ using UnityEngine.UI;
 public class MainMenuController : MonoBehaviour
 {
     public Text quizScoreDisplayText;
+    //public Text connectionScoreDisplayText;
+    //public Text sentenceScoreDisplayText;
     public Button doctorPhaseButton;
 
     public void StartQuizGame()
@@ -56,9 +58,14 @@ public class MainMenuController : MonoBehaviour
     private void Update()
     {
         int quizScore = PlayerPrefs.GetInt("QuizScore");
-        quizScoreDisplayText.text = "Quiz: " + quizScore.ToString();
+        //int connectionScore = PlayerPrefs.GetInt("ConnectionScore");
+        //int sentenceScore = PlayerPrefs.GetInt("SentenceScore");
 
-        if (quizScore >= 500) // What are the high enough highscores?
+        quizScoreDisplayText.text = "Quiz: " + quizScore.ToString();
+        //connectionScoreDisplayText.text = "Quiz: " + connectionScore.ToString();
+        //sentenceScoreDisplayText.text = "Quiz: " + sentenceScore.ToString();
+
+        if (quizScore >= 500) // (quizScore >= 500 && connectionScore >= 100 && sentenceScore >= 100) What are the high enough highscores?
         {
             doctorPhaseButton.interactable = true;
         } else
