@@ -153,23 +153,26 @@ public class WordLineInitializer : MonoBehaviour
         }
     }
 
-    private void ClearOldWords()
+    public void ClearOldWords()
     {
-        if(lines.childCount > 0)
+        int lineCount = lines.childCount;
+        int rightCount = rightSide.childCount;
+        int leftCount = leftSide.childCount;
+        for(int i = 0; i < lineCount; i++)
         {
-            for(int i = 0; i < lines.childCount; i++)
-            {
-                Destroy(lines.GetChild(i).gameObject);
-            }
+            Destroy(lines.GetChild(i).gameObject);
         }
         
-        if(rightSide.childCount > 0)
+        for(int i = 0; i < rightCount; i++)
         {
-            for(int i = 0; i < rightSide.childCount; i++)
-            {
-                Destroy(rightSide.GetChild(i).gameObject);
-                Destroy(leftSide.GetChild(i).gameObject);
-            }
+            print("a");
+            Destroy(rightSide.GetChild(i).gameObject);
+        }
+
+        for(int i = 0; i < leftCount; i++)
+        {
+            print("b");
+            Destroy(leftSide.GetChild(i).gameObject);
         }
     }
 

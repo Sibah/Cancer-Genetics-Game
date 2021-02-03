@@ -28,6 +28,8 @@ public class ModeSelector : MonoBehaviour
     
     public void BackToModeSelect()
     {
+        wordInit.roundCounter = 0;
+        wordInit.ClearOldWords();
         mode1.SetActive(false);
         wordInit.pairs = new List<WordPair>();
         selection.SetActive(true);
