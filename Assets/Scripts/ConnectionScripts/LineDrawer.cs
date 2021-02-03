@@ -9,6 +9,15 @@ public class LineDrawer : MonoBehaviour
     public WordHandler currentWord;
     public float removalTime = 0.25f;
 
+    private void Update() 
+    {
+        if(Input.GetMouseButtonDown(1))
+        {
+            currentWord.SelectWord(false);
+            currentWord = null;
+        }    
+    }
+
     public void DrawLine(WordHandler word)
     {
         if(currentWord != null)
