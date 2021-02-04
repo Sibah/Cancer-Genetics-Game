@@ -28,8 +28,8 @@ public class LineDrawer : MonoBehaviour
                 {
                     if(currentWord.GetSavedWordPair().Equals(word.GetSavedWordPair()))
                     {
-                        LineRenderer line = ((GameObject)Instantiate(linePrefab, lines)).GetComponent<LineRenderer>();
-                        line.SetPositions(new Vector3[] { currentWord.GetLinePointPosition(), word.GetLinePointPosition() } );
+                        LinePositionKeeper line = ((GameObject)Instantiate(linePrefab, lines)).GetComponent<LinePositionKeeper>();
+                        line.SetPoints(currentWord.GetLinePoint(), word.GetLinePoint());
                         currentWord.AddConnectedWord(word);
                         currentWord.AddConnectedLine(line.gameObject);
                         word.SelectWord(true);

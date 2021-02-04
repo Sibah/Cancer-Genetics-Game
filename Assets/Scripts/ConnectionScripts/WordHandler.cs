@@ -6,7 +6,6 @@ using System.Collections.Generic;
 public class WordHandler : MonoBehaviour
 {
     private WordPair savedWordPair;
-    [SerializeField]
     private RectTransform linePoint;
     private List<WordHandler> connectedWords = new List<WordHandler>();
     private List<GameObject> connectedLine = new List<GameObject>();
@@ -17,7 +16,7 @@ public class WordHandler : MonoBehaviour
     {
         get
         {
-            return GetComponentInChildren<UnityEngine.UI.Text>().text.Equals(savedWordPair.GetFirstWord()) && savedWordPair.connectionCount == 1;
+            return GetComponentInChildren<UnityEngine.UI.Text>().text.Equals(savedWordPair.GetFirstWord()) && savedWordPair.connectionCount != 1;
         }
     }
     public string wordText
@@ -156,7 +155,7 @@ public class WordHandler : MonoBehaviour
     public void AddConnectedWord(WordHandler word) { connectedWords.Add(word); }
 
     public WordPair GetSavedWordPair() { return savedWordPair; }
-    public Vector3 GetLinePointPosition() { return linePoint.position; }
+    public Transform GetLinePoint() { return linePoint; }
     public List<WordHandler> GetConnectedWords() { return connectedWords; }
     public void SetSavedWordPair(WordPair newPair) { savedWordPair = newPair; }
     public void SetLinePoint(RectTransform point) {linePoint = point;}
@@ -165,6 +164,7 @@ public class WordHandler : MonoBehaviour
 
     private void OnDestroy() 
     {
+        SendMessageUpwards("IncrementScore", SendMessageOptions.DontRequireReceiver);
         SendMessageUpwards("CheckIfAllPairsDeleted", SendMessageOptions.DontRequireReceiver);    
     }
 }

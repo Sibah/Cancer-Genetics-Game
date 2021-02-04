@@ -73,9 +73,9 @@ public class WordLineInitializer : MonoBehaviour
             secondWords.Add(CreateWord(pair, secondWord));
         }
 
-        if(Random.Range(0, 2) == 0)
+        if(Random.Range(0, 2) == 0 || firstWord.GetComponent<WordHandler>().isJoinableToMultiple)
         {
-            AddWordsToSides(firstWord,secondWords, true);
+            AddWordsToSides(firstWord, secondWords, true);
         }
         else
         {
@@ -136,7 +136,6 @@ public class WordLineInitializer : MonoBehaviour
             word.transform.parent = leftSide;
             word.transform.localScale = new Vector3(1, 1, 1);
             word.transform.localPosition = Vector3.zero;
-            // word.transform.position = new Vector3(word.transform.position.x, word.transform.position.y, 0);
         }
         rightSideWords = new List<GameObject>();
         leftSideWords = new List<GameObject>();
@@ -165,13 +164,11 @@ public class WordLineInitializer : MonoBehaviour
         
         for(int i = 0; i < rightCount; i++)
         {
-            print("a");
             Destroy(rightSide.GetChild(i).gameObject);
         }
 
         for(int i = 0; i < leftCount; i++)
         {
-            print("b");
             Destroy(leftSide.GetChild(i).gameObject);
         }
     }

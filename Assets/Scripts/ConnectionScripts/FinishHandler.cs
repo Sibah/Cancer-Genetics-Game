@@ -51,7 +51,7 @@ public class FinishHandler : MonoBehaviour
 
     public void IncrementScore()
     {
-        scorePoints++;
+        scorePoints += 5;
 
         score.text = scorePoints.ToString();
     }

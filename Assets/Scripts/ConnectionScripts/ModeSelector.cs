@@ -36,6 +36,11 @@ public class ModeSelector : MonoBehaviour
         instructions.SetActive(true);
     }
 
+    public void ActivateResultScreen()
+    {
+        
+    }
+
     public void BackToMainMenu()
     {
         SceneManager.LoadScene("MainMenu");
