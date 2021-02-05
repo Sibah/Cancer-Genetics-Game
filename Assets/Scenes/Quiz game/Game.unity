@@ -443,7 +443,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Time: 0'
+  m_Text: 'Aika: 0'
 --- !u!222 &514495151
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -579,7 +579,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ROUND OVER
+  m_Text: PELI OHI
 --- !u!222 &551771336
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1045,7 +1045,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Score: 0'
+  m_Text: 'Pisteet: 0'
 --- !u!222 &1437172347
 CanvasRenderer:
   m_ObjectHideFlags: 0

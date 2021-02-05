@@ -864,7 +864,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "T\xE4st\xE4 opisekelemaan"
+  m_Text: "T\xE4st\xE4 opiskelemaan"
 --- !u!222 &203236153
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4278,7 +4278,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Connection:'
+  m_Text: 'Yhdistely:'
 --- !u!222 &874079854
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5628,7 +5628,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -70, y: -30.09}
+  m_AnchoredPosition: {x: -70, y: -30.089966}
   m_SizeDelta: {x: 200, y: 60}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1253331030
@@ -5881,7 +5881,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Quit
+  m_Text: Sulje peli
 --- !u!222 &1270128961
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7226,7 +7226,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 37.162, y: 479.91}
+  m_AnchoredPosition: {x: 37.16211, y: 479.91003}
   m_SizeDelta: {x: -746.3237, y: -959.82294}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1518778841
@@ -8126,7 +8126,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'High Scores:'
+  m_Text: 'Max pisteet:'
 --- !u!222 &1657493017
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9238,7 +9238,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Sentence:'
+  m_Text: "T\xE4ydennys:"
 --- !u!222 &1888916412
 CanvasRenderer:
   m_ObjectHideFlags: 0
