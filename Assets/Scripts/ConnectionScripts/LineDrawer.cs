@@ -34,8 +34,7 @@ public class LineDrawer : MonoBehaviour
                         word.AddConnectedWord(currentWord);
                         currentWord.AddConnectedLine(line.gameObject);
                         word.AddConnectedLine(line.gameObject);
-                        // word.SelectWord(true);
-                        currentWord.SelectWord(true);
+
                         if(currentWord.CheckIfFullyConnected())
                         {
                             if(currentWord.CheckIfCorrectlyFinished())
@@ -44,6 +43,17 @@ public class LineDrawer : MonoBehaviour
                                 StartCoroutine(coroutine);
                             }
                             currentWord = null;
+                            return;
+                        }
+
+                        if(!currentWord.isJoinableToMultiple)
+                        {
+                            currentWord.SelectWord(false);
+                            currentWord = null;
+                        }
+                        else
+                        {
+                            currentWord.SelectWord(true);
                         }
                     }
                     else
