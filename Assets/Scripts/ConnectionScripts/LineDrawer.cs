@@ -31,8 +31,11 @@ public class LineDrawer : MonoBehaviour
                         LinePositionKeeper line = ((GameObject)Instantiate(linePrefab, lines)).GetComponent<LinePositionKeeper>();
                         line.SetPoints(currentWord.GetLinePoint(), word.GetLinePoint());
                         currentWord.AddConnectedWord(word);
+                        word.AddConnectedWord(currentWord);
                         currentWord.AddConnectedLine(line.gameObject);
-                        word.SelectWord(true);
+                        word.AddConnectedLine(line.gameObject);
+                        // word.SelectWord(true);
+                        currentWord.SelectWord(true);
                         if(currentWord.CheckIfFullyConnected())
                         {
                             if(currentWord.CheckIfCorrectlyFinished())

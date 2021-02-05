@@ -73,30 +73,57 @@ public class WordHandler : MonoBehaviour
 
     public IEnumerator RemoveWordPair(float time)
     {
-        yield return new WaitForSeconds(waitTimer);
-        StartEndAnimation();
-        foreach(WordHandler word in connectedWords)
+        if(isJoinableToMultiple || savedWordPair.GetSecondWords().Count == 1)
         {
-            word.StartEndAnimation();
-        }
-        foreach(GameObject line in connectedLine)
-        {
-            line.SetActive(false);
-        }
-
-        yield return new WaitUntil(() => animationEnded == true);
-        if(connectedWords != null)
-        {
+            SelectWord(false);
+            yield return new WaitForSeconds(waitTimer);
+            StartEndAnimation();
             foreach(WordHandler word in connectedWords)
+            {
+                word.StartEndAnimation();
+            }
+            foreach(GameObject line in connectedLine)
+            {
+                line.SetActive(false);
+            }
+
+            yield return new WaitUntil(() => animationEnded == true);
+            DestroyWords(this);
+        }
+        else
+        {
+            WordHandler mainWord = connectedWords[0];
+            mainWord.SelectWord(false);
+            yield return new WaitForSeconds(waitTimer);
+            mainWord.StartEndAnimation();
+            foreach(WordHandler word in connectedWords)
+            {
+                word.StartEndAnimation();
+            }
+            foreach(GameObject line in connectedLine)
+            {
+                line.SetActive(false);
+            }
+
+            yield return new WaitUntil(() => mainWord.animationEnded == true);
+            DestroyWords(mainWord);
+        }
+    }
+
+    private void DestroyWords(WordHandler currentWord)
+    {
+        if(currentWord.connectedWords != null)
+        {
+            foreach(WordHandler word in currentWord.connectedWords)
             {
                 Destroy(word.gameObject);
             }
         }
-        foreach(GameObject line in connectedLine)
+        foreach(GameObject line in currentWord.connectedLine)
         {
             Destroy(line);
         }
-        Destroy(gameObject);
+        Destroy(currentWord.gameObject);
     }
 
     // Given to Animation event
@@ -109,6 +136,10 @@ public class WordHandler : MonoBehaviour
     public void SelectWord(bool selected)
     {
         GetComponent<Animator>().SetBool("isSelected", selected);
+        foreach(WordHandler word in connectedWords)
+        {
+            word.GetComponent<Animator>().SetBool("isSelected", selected);
+        }
     }
 
     public void StartEndAnimation()
