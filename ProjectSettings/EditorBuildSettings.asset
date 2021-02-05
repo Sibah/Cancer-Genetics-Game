@@ -18,9 +18,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Quiz game/Game.unity
     guid: 052a367ce1f86ea4e876885b820adc83
   - enabled: 1
-    path: Assets/Scenes/EndlessRunner.unity
-    guid: 02dd037946e4c4e4ab16dd6a161e8209
-  - enabled: 1
     path: Assets/Scenes/InteractiveImages/SoluScene.unity
     guid: a936581a997b49d4ab890a62fb446314
   - enabled: 1
@@ -29,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/InteractiveImages/TranslaatioScene.unity
     guid: cffa5ad5fe96ccb4ab00a1d2b0ef0b7a
+  - enabled: 1
+    path: Assets/Scenes/InteractiveImages/MutationsScene.unity
+    guid: b507861369f55e94e8063ee57b1d4675
   - enabled: 1
     path: Assets/Scenes/ConnectionGame.unity
     guid: cc4a0f0b789f92d4e97e53290bab68a9
