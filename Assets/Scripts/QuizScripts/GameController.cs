@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -33,6 +34,7 @@ public class GameController : MonoBehaviour
 
     private List<int> questionIndexesChosen = new List<int>();
     private int qNumber;
+    private bool addPointsOnce = false;
 
     void Start()
     {
@@ -76,6 +78,7 @@ public class GameController : MonoBehaviour
     // Displays new question from questionData. Removes old answerButtons and creates new ones according to how many answers are there.
     private void ShowQuestion()
     {
+        addPointsOnce = false;
         correctAnswers.Clear();
         correctClickCount = 0;
         RemoveAnswerButton();
@@ -146,13 +149,12 @@ public class GameController : MonoBehaviour
 
         if (qNumber + 1 < questionPool.Length)
         {
+            StartCoroutine(TransitionToNextQuestion());
             qNumber++;
-            ShowQuestion();
         } else
         {
             EndRound();
         }
-
     }
 
     public void EndRound()
@@ -176,10 +178,17 @@ public class GameController : MonoBehaviour
         }
     }
 
+    IEnumerator TransitionToNextQuestion()
+    {
+        yield return new WaitForSeconds(1.0f);
+        ShowQuestion();
+    }
+
     void Update()
     {
-        if (correctClickCount == correctAnswers.Count)
+        if (correctClickCount == correctAnswers.Count && !addPointsOnce)
         {
+            addPointsOnce = true;
             AnswerButtonClicked(true);
         }
 
