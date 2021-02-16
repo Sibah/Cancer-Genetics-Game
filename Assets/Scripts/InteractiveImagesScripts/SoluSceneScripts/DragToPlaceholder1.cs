@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class DragToPlaceholderChangeScene : MonoBehaviour
+public class DragToPlaceholder1 : MonoBehaviour
 {
     [SerializeField]
     private Transform objectPlace;

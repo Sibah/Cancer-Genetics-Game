@@ -7,31 +7,35 @@ public class Mutations3Mutation : MonoBehaviour
 
     private Vector3 startPosition;
 
+    [SerializeField]
+    private int rotationSpeed = 50;
     void Update() {
         if (locked == false){
             GameObject go = GameObject.Find("C2");
-            go.transform.RotateAround(transform.position, new Vector3(0, 0, 1), 50 * Time.deltaTime);
+            go.transform.RotateAround(transform.position, new Vector3(0, 0, 1), rotationSpeed * Time.deltaTime);
             go.transform.rotation = Quaternion.identity;    
 
             GameObject go2 = GameObject.Find("G");
-            go2.transform.RotateAround(transform.position, new Vector3(0, 0, 1), 50 * Time.deltaTime);
+            go2.transform.RotateAround(transform.position, new Vector3(0, 0, 1), rotationSpeed * Time.deltaTime);
             go2.transform.rotation = Quaternion.identity; 
 
 
             GameObject go3 = GameObject.Find("A");
-            go3.transform.RotateAround(transform.position, new Vector3(0, 0, 1), 50 * Time.deltaTime);
+            go3.transform.RotateAround(transform.position, new Vector3(0, 0, 1), rotationSpeed * Time.deltaTime);
             go3.transform.rotation = Quaternion.identity; 
 
 
             GameObject go4 = GameObject.Find("A2");
-            go4.transform.RotateAround(transform.position, new Vector3(0, 0, 1), 50 * Time.deltaTime);
+            go4.transform.RotateAround(transform.position, new Vector3(0, 0, 1), rotationSpeed * Time.deltaTime);
             go4.transform.rotation = Quaternion.identity; 
             
             float currentAngle = Vector2.Angle(startPosition - transform.position,
                                            go4.transform.position - transform.position);
 
             if (currentAngle >= 179){
-                enabled = false;                 
+                rotationSpeed = 0;
+                GameObject arrow = GameObject.Find("Arrow");
+                arrow.GetComponent<SpriteRenderer>().enabled = true;                 
             }
         }
     }
