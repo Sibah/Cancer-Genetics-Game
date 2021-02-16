@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d6c83a6c95a2f428fa0b3df6d29c51d8
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - wordPrefab: {instanceID: 0}
+  - newText: {instanceID: 0}
+  - answerText: {fileID: 88972028992576371, guid: 3cd3371467ee44cffb71ec5c5a0c6dca,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
