@@ -3,41 +3,57 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WordPair
+public class WordPair : MonoBehaviour
 {
+    [SerializeField]
     private string firstWord;
-    private string secondWord;
-
-    public WordPair(string first, string second)
+    [SerializeField]
+    private List<string> secondWords = new List<string>();
+    public int connectionCount
     {
-        firstWord = first;
-        secondWord = second;
+        get
+        {
+            return secondWords.Count;
+        }
     }
 
     public override bool Equals(object obj)
     {
-        if(obj == null)
+        if(obj == null || !(obj is WordPair))
         {
             return false;
         }
-        // if(!(obj is WordPair))
-        // {
-        //     return false;
-        // }
         WordPair secondPair = (WordPair)obj;
-        return secondPair.GetFirstWord().Equals(this.GetFirstWord()) && secondPair.GetSecondWord().Equals(this.GetSecondWord());
+        if(this.secondWords.Count != secondPair.secondWords.Count)
+        {
+            return false;
+        }
+
+        for(int i = 0; i < secondWords.Count; i++)
+        {
+            if(!secondWords[i].Equals(secondPair.secondWords[i]))
+            {
+                return false;
+            }
+        }
+        return firstWord.Equals(secondPair.firstWord);
     }
 
     public override int GetHashCode()
     {
-        return firstWord.Length + secondWord.Length;
+        return firstWord.Length + secondWords.Count;
     }
 
     public override string ToString()
     {
-        return firstWord + " " + secondWord;
+        string words = firstWord;
+        foreach(string text in secondWords)
+        {
+            words += " " + text;
+        }
+        return words;
     }
 
     public string GetFirstWord() { return firstWord; }
-    public string GetSecondWord() { return secondWord; }
+    public List<string> GetSecondWords() { return secondWords; }
 }

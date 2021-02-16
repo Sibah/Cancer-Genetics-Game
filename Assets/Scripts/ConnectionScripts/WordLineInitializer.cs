@@ -11,16 +11,27 @@ public class WordLineInitializer : MonoBehaviour
     public List<GameObject> rightSideWords = new List<GameObject>();
     public List<GameObject> leftSideWords = new List<GameObject>();
     public List<WordPair> pairs = new List<WordPair>();
-
-    public int maxWordCount = 4, roundAmount = 2, roundCounter = 0;
-
     public Object wordPrefab;
+    public int maxWordCount = 4, roundAmount = 2, roundCounter = 0;
 
     public void PlaceWordsInSides()
     {
+        if(pairs == null)
+        {
+            Debug.LogError("wordPair array is null");
+            return;
+        }
+
         ClearOldWords();
-        
+        HandleWordCreation();
+        PutWordsToSides();
+        roundCounter++;
+    }
+
+    private void HandleWordCreation()
+    {
         int count = 0;
+
         if(pairs.Count > maxWordCount)
         {
             count = maxWordCount;
@@ -29,7 +40,7 @@ public class WordLineInitializer : MonoBehaviour
         {
             count = pairs.Count;
         }
-        //CHECK FOR END OF THE ROUND
+
         if(count == 0 || roundCounter >= roundAmount)
         {
             SendMessage("BackToModeSelect");
@@ -38,82 +49,127 @@ public class WordLineInitializer : MonoBehaviour
         {
             for(int i = 0; i < count; i++)
             {
-                int rand = Random.Range(0, pairs.Count);
-                WordPair pair = pairs[rand];
-                GameObject[] wordObjects = new GameObject[2];
-
-                wordObjects[0] = ((GameObject)Instantiate(wordPrefab));
-                wordObjects[0].GetComponentInChildren<WordHandler>().SetSavedWordPair(pair);
-
-                wordObjects[1] = ((GameObject)Instantiate(wordPrefab));
-                wordObjects[1].GetComponentInChildren<WordHandler>().SetSavedWordPair(pair);
-
-                int sideRand = Random.Range(0, 2);
-                if(sideRand == 0)
+                int index = Random.Range(0, pairs.Count);
+                WordPair pair = pairs[index];
+                pairs.RemoveAt(index);
+                CreateWords(pair);
+                if(leftSide.childCount >= count || rightSide.childCount >= count)
                 {
-                    wordObjects[0].GetComponentInChildren<Text>().text = pair.GetFirstWord();
-                    wordObjects[1].GetComponentInChildren<Text>().text = pair.GetSecondWord();
+                    break;
                 }
-                else
-                {
-                    wordObjects[1].GetComponentInChildren<Text>().text = pair.GetFirstWord();
-                    wordObjects[0].GetComponentInChildren<Text>().text = pair.GetSecondWord();
-                }
-
-                
-                rightSideWords.Add(wordObjects[0]);
-                leftSideWords.Add(wordObjects[1]);
-
-                pairs.RemoveAt(rand);
-            }
-            for(int i = 0; i < count; i++)
-            {
-                int rightRand = Random.Range(0, rightSideWords.Count);
-                int leftRand = Random.Range(0, leftSideWords.Count);
-
-                PutWordToSide(rightSideWords[rightRand], rightSide);
-                PutWordToSide(leftSideWords[leftRand], leftSide);
-
-                rightSideWords.RemoveAt(rightRand);
-                leftSideWords.RemoveAt(leftRand);
             }
         }
-        roundCounter++;
     }
 
-    private void PutWordToSide(GameObject wordObject, Transform parent)
+    private void CreateWords(WordPair pair)
     {
-        if(parent.name.Equals("RightSide"))
+        GameObject firstWord;
+        List<GameObject> secondWords = new List<GameObject>();
+        
+        firstWord = CreateWord(pair, pair.GetFirstWord());
+
+        foreach(string secondWord in pair.GetSecondWords())
         {
-            wordObject.GetComponentInChildren<WordHandler>().SetLinePoint(wordObject.transform.GetChild(1).GetComponent<RectTransform>());
+            secondWords.Add(CreateWord(pair, secondWord));
+        }
+
+        if(Random.Range(0, 2) == 0 || firstWord.GetComponent<WordHandler>().isJoinableToMultiple)
+        {
+            AddWordsToSides(firstWord, secondWords, true);
         }
         else
         {
-            wordObject.GetComponentInChildren<WordHandler>().SetLinePoint(wordObject.transform.GetChild(2).GetComponent<RectTransform>());
+            AddWordsToSides(firstWord,secondWords, false);
         }
-        wordObject.transform.parent = parent;
-        Vector3 currentPosition = wordObject.transform.localPosition;
-        wordObject.transform.localPosition = new Vector3(currentPosition.x, currentPosition.y, 0);
-        wordObject.transform.localScale = new Vector3(1, 1, 1);
     }
 
-    private void ClearOldWords()
+    private GameObject CreateWord(WordPair pair, string text)
     {
-        if(lines.childCount > 0)
+        GameObject word;
+        WordHandler handler;
+
+        word = (GameObject)(Instantiate(wordPrefab));
+        handler = word.GetComponent<WordHandler>();
+        handler.wordText = text;
+        handler.SetSavedWordPair(pair);
+
+        return word;
+    }
+
+    private void AddWordsToSides(GameObject firstWord, List<GameObject> secondWords, bool isLeftside)
+    {
+        if(isLeftside)
         {
-            for(int i = 0; i < lines.childCount; i++)
+            firstWord.GetComponent<WordHandler>().SetLinePoint(firstWord.transform.GetChild(2).GetComponent<RectTransform>());
+            leftSideWords.Add(firstWord);
+            foreach(GameObject word in secondWords)
             {
-                Destroy(lines.GetChild(i).gameObject);
+                word.GetComponent<WordHandler>().SetLinePoint(word.transform.GetChild(1).GetComponent<RectTransform>());
+                rightSideWords.Add(word);
             }
         }
-        
-        if(rightSide.childCount > 0)
+        else
         {
-            for(int i = 0; i < rightSide.childCount; i++)
+            firstWord.GetComponent<WordHandler>().SetLinePoint(firstWord.transform.GetChild(1).GetComponent<RectTransform>());
+            rightSideWords.Add(firstWord);
+            foreach(GameObject word in secondWords)
             {
-                Destroy(rightSide.GetChild(i).gameObject);
-                Destroy(leftSide.GetChild(i).gameObject);
+                word.GetComponent<WordHandler>().SetLinePoint(word.transform.GetChild(2).GetComponent<RectTransform>());
+                leftSideWords.Add(word);
             }
+        }
+    }
+
+    private void PutWordsToSides()
+    {
+        ShuffleGameObjectList(rightSideWords);
+        ShuffleGameObjectList(leftSideWords);
+
+        foreach(GameObject word in rightSideWords)
+        {
+            word.transform.parent = rightSide;
+            word.transform.localScale = new Vector3(1, 1, 1);
+            word.transform.localPosition = Vector3.zero;
+        }
+        foreach(GameObject word in leftSideWords)
+        {
+            word.transform.parent = leftSide;
+            word.transform.localScale = new Vector3(1, 1, 1);
+            word.transform.localPosition = Vector3.zero;
+        }
+        rightSideWords = new List<GameObject>();
+        leftSideWords = new List<GameObject>();
+    }
+
+    private void ShuffleGameObjectList(List<GameObject> list)
+    {
+        for(int i = list.Count - 1; i > 0; i--)
+        {
+            int j = Random.Range(0, i + 1);
+            GameObject temp = list[i];
+            list[i] = list[j];
+            list[j] = temp;
+        }
+    }
+
+    public void ClearOldWords()
+    {
+        int lineCount = lines.childCount;
+        int rightCount = rightSide.childCount;
+        int leftCount = leftSide.childCount;
+        for(int i = 0; i < lineCount; i++)
+        {
+            Destroy(lines.GetChild(i).gameObject);
+        }
+        
+        for(int i = 0; i < rightCount; i++)
+        {
+            Destroy(rightSide.GetChild(i).gameObject);
+        }
+
+        for(int i = 0; i < leftCount; i++)
+        {
+            Destroy(leftSide.GetChild(i).gameObject);
         }
     }
 

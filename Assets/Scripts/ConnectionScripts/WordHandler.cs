@@ -1,64 +1,145 @@
 ﻿using UnityEngine.UIElements;
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class WordHandler : MonoBehaviour
 {
     private WordPair savedWordPair;
     private RectTransform linePoint;
-    private WordHandler connectedWord;
-    private GameObject connectedLine;
+    private List<WordHandler> connectedWords = new List<WordHandler>();
+    private List<GameObject> connectedLine = new List<GameObject>();
     public float waitTimer = 1f;
     public bool onRightSide { get{ return transform.parent.name.Equals("RightSide"); } set{}}
     public bool animationEnded = false;
+    public bool isJoinableToMultiple
+    {
+        get
+        {
+            return GetComponentInChildren<UnityEngine.UI.Text>().text.Equals(savedWordPair.GetFirstWord()) && savedWordPair.connectionCount != 1;
+        }
+    }
+    public string wordText
+    {
+        set
+        {
+            GetComponentInChildren<UnityEngine.UI.Text>().text = value;
+        }
+    }
 
     public void SendPositionData()
     {
         SendMessageUpwards("DrawLine", this, SendMessageOptions.RequireReceiver);
     }
 
-    public bool CheckIfConnectedToCorrectPair()
+    public bool CheckIfCorrectlyFinished()
     {
-        if(connectedWord == null)
+        if(connectedWords == null || connectedWords.Count == 0)
         {
             return false;
         }
-        return savedWordPair.Equals(connectedWord.savedWordPair);
+        if(connectedWords.Count == 1)
+        {
+            if(connectedWords.Count != savedWordPair.connectionCount)
+            {
+                List<WordHandler> handlers = connectedWords[0].GetConnectedWords();
+                foreach(WordHandler word in handlers)
+                {
+                    if(!savedWordPair.Equals(word.savedWordPair))
+                    {
+                        return false;
+                    }
+                }
+            }
+            return savedWordPair.Equals(connectedWords[0].savedWordPair);
+        }
+        else
+        {
+            foreach(WordHandler word in connectedWords)
+            {
+                if(!savedWordPair.Equals(word.savedWordPair))
+                {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 
     public void ResetConnection()
     {
-        connectedWord = null;
+        connectedWords = null;
     }
 
     public IEnumerator RemoveWordPair(float time)
     {
-        yield return new WaitForSeconds(waitTimer);
-        StartEndAnimation();
-        connectedWord.StartEndAnimation();
-        connectedLine.SetActive(false);
+        if(isJoinableToMultiple || savedWordPair.GetSecondWords().Count == 1)
+        {
+            SelectWord(false);
+            yield return new WaitForSeconds(waitTimer);
+            StartEndAnimation();
+            foreach(WordHandler word in connectedWords)
+            {
+                word.StartEndAnimation();
+            }
+            foreach(GameObject line in connectedLine)
+            {
+                line.SetActive(false);
+            }
 
-        yield return new WaitUntil(() => animationEnded == true);
-        if(connectedWord != null)
-        {
-            Destroy(connectedWord.gameObject);
+            yield return new WaitUntil(() => animationEnded == true);
+            DestroyWords(this);
         }
-        if(connectedLine != null)
+        else
         {
-            Destroy(connectedLine);
+            WordHandler mainWord = connectedWords[0];
+            mainWord.SelectWord(false);
+            yield return new WaitForSeconds(waitTimer);
+            mainWord.StartEndAnimation();
+            foreach(WordHandler word in connectedWords)
+            {
+                word.StartEndAnimation();
+            }
+            foreach(GameObject line in connectedLine)
+            {
+                line.SetActive(false);
+            }
+
+            yield return new WaitUntil(() => mainWord.animationEnded == true);
+            DestroyWords(mainWord);
         }
-        Destroy(gameObject);
+    }
+
+    private void DestroyWords(WordHandler currentWord)
+    {
+        if(currentWord.connectedWords != null)
+        {
+            foreach(WordHandler word in currentWord.connectedWords)
+            {
+                Destroy(word.gameObject);
+            }
+        }
+        foreach(GameObject line in currentWord.connectedLine)
+        {
+            Destroy(line);
+        }
+        Destroy(currentWord.gameObject);
     }
 
     // Given to Animation event
     public void SetAnimationEndedTrue()
     {
         animationEnded = true;
+        GetComponent<Animator>().runtimeAnimatorController.animationClips[0].events = System.Array.Empty<AnimationEvent>();
     }
     
     public void SelectWord(bool selected)
     {
         GetComponent<Animator>().SetBool("isSelected", selected);
+        foreach(WordHandler word in connectedWords)
+        {
+            word.GetComponent<Animator>().SetBool("isSelected", selected);
+        }
     }
 
     public void StartEndAnimation()
@@ -71,16 +152,50 @@ public class WordHandler : MonoBehaviour
         animator.SetBool("isConnected", true);
     }
 
+    public void WronglyConnected(bool isMultiConnectable)
+    {
+        Animator animator = GetComponent<Animator>();
+        AnimationEvent e = new AnimationEvent();
+        e.functionName = "SetIsWrongSelectionToFalse";
+        e.time = animator.runtimeAnimatorController.animationClips[3].length;
+        animator.runtimeAnimatorController.animationClips[3].AddEvent(e);
+        animator.SetBool("isWrongSelection", true);
+        if(!isMultiConnectable)
+        {
+            SelectWord(false);
+        }
+    }
+
+    public void SetIsWrongSelectionToFalse()
+    {
+        Animator animator = GetComponent<Animator>();
+        animator.SetBool("isWrongSelection", false);
+        animator.runtimeAnimatorController.animationClips[0].events = System.Array.Empty<AnimationEvent>();
+    }
+
+    public bool CheckIfFullyConnected()
+    {
+        if(savedWordPair.connectionCount == connectedWords.Count) return true;
+        foreach(WordHandler word in connectedWords)
+        {
+            if(word.GetSavedWordPair().connectionCount == word.connectedWords.Count) return true;
+        }
+        return false;
+    }
+
+    public void AddConnectedWord(WordHandler word) { connectedWords.Add(word); }
+
     public WordPair GetSavedWordPair() { return savedWordPair; }
-    public Vector3 GetLinePointPosition() { return linePoint.position; }
-    public WordHandler GetConnectedWord() { return connectedWord; }
+    public Transform GetLinePoint() { return linePoint; }
+    public List<WordHandler> GetConnectedWords() { return connectedWords; }
     public void SetSavedWordPair(WordPair newPair) { savedWordPair = newPair; }
     public void SetLinePoint(RectTransform point) {linePoint = point;}
-    public void SetConnectedWord(WordHandler word) { connectedWord = word; }
-    public void SetConnectedLine(GameObject line) { connectedLine = line; }
+    public void SetconnectedWords(WordHandler word) { connectedWords[0] = word; }
+    public void AddConnectedLine(GameObject line) { connectedLine.Add(line); }
 
     private void OnDestroy() 
     {
+        SendMessageUpwards("IncrementScore", SendMessageOptions.DontRequireReceiver);
         SendMessageUpwards("CheckIfAllPairsDeleted", SendMessageOptions.DontRequireReceiver);    
     }
 }

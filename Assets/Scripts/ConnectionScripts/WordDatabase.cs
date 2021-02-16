@@ -4,25 +4,25 @@ using UnityEngine;
 
 public class WordDatabase : MonoBehaviour
 {
-    public List<string> firstWordList = new List<string>();
-    public List<string> secondWordList = new List<string>();
+    public WordPair[] wordPairs
+    {
+        get
+        {
+            return GetComponentsInChildren<WordPair>();
+        }
+    }
 
     public List<WordPair> GetWordPairs()
     {
-        if(firstWordList.Count != secondWordList.Count)
+        WordPair[] pairs = wordPairs;
+
+        List<WordPair> pairList = new List<WordPair>();
+        foreach(WordPair pair in pairs)
         {
-            Debug.LogError("Word counts are different");
-            return null;
+            pairList.Add(pair);
         }
 
-        List<WordPair> words = new List<WordPair>();
-
-        for(int i = 0; i < firstWordList.Count; i++)
-        {
-            words.Add(new WordPair(firstWordList[i], secondWordList[i]));
-        }
-
-        return words;
+        return pairList;
     }
 
 }

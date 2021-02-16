@@ -8,7 +8,6 @@ public class ModeSelector : MonoBehaviour
     public GameObject mode1;
     public GameObject selection;
     public GameObject instructions;
-    public Transform database;
     public WordLineInitializer wordInit;
     public WordDatabase currentDatabase;
 
@@ -29,10 +28,17 @@ public class ModeSelector : MonoBehaviour
     
     public void BackToModeSelect()
     {
+        wordInit.roundCounter = 0;
+        wordInit.ClearOldWords();
         mode1.SetActive(false);
         wordInit.pairs = new List<WordPair>();
         selection.SetActive(true);
         instructions.SetActive(true);
+    }
+
+    public void ActivateResultScreen()
+    {
+        
     }
 
     public void BackToMainMenu()

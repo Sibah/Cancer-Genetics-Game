@@ -4,53 +4,76 @@ using System.Collections;
 public class LineDrawer : MonoBehaviour
 {
     public Object linePrefab;
+    public Transform lines;
     public Camera mainCamera;
     public WordHandler currentWord;
     public float removalTime = 0.25f;
 
+    private void Update() 
+    {
+        if(Input.GetMouseButtonDown(1))
+        {
+            currentWord.SelectWord(false);
+            currentWord = null;
+        }    
+    }
+
     public void DrawLine(WordHandler word)
     {
-        if(currentWord != null && word != null)
+        if(currentWord != null)
         {
-            print(currentWord.transform.GetComponentInChildren<UnityEngine.UI.Text>().text);
-            if(currentWord.GetConnectedWord() == null)
+            if(word != null && currentWord.onRightSide != word.onRightSide)
             {
-                if(word.GetConnectedWord() == null)
+                if(currentWord.GetConnectedWords().Count != currentWord.GetSavedWordPair().connectionCount)
                 {
-                    if(currentWord.onRightSide != word.onRightSide)
+                    if(currentWord.GetSavedWordPair().Equals(word.GetSavedWordPair()))
                     {
-                        currentWord.SetConnectedWord(word);
-                        word.SetConnectedWord(currentWord);
-                        if(currentWord.CheckIfConnectedToCorrectPair())
+                        LinePositionKeeper line = ((GameObject)Instantiate(linePrefab, lines)).GetComponent<LinePositionKeeper>();
+                        line.SetPoints(currentWord.GetLinePoint(), word.GetLinePoint());
+                        currentWord.AddConnectedWord(word);
+                        word.AddConnectedWord(currentWord);
+                        currentWord.AddConnectedLine(line.gameObject);
+                        word.AddConnectedLine(line.gameObject);
+
+                        if(currentWord.CheckIfFullyConnected())
                         {
-                            word.SelectWord(true);
-                            Vector3 startPosition = currentWord.GetLinePointPosition();
-                            Vector3 endPosition = word.GetLinePointPosition();
-                            LineRenderer line = ((GameObject)Instantiate(linePrefab, ((GameObject)GameObject.Find("Lines")).transform)).GetComponentInChildren<LineRenderer>();
-                            Vector3[] positions = { startPosition, endPosition };
-                            currentWord.SetConnectedLine(line.gameObject);
-                            line.SetPositions(positions);
-                            BroadcastMessage("IncrementScore", SendMessageOptions.RequireReceiver);
-                            IEnumerator coroutine = currentWord.RemoveWordPair(removalTime);
-                            StartCoroutine(coroutine);
+                            if(currentWord.CheckIfCorrectlyFinished())
+                            {
+                                IEnumerator coroutine = currentWord.RemoveWordPair(removalTime);
+                                StartCoroutine(coroutine);
+                            }
+                            currentWord = null;
+                            return;
+                        }
+
+                        if(!currentWord.isJoinableToMultiple)
+                        {
+                            currentWord.SelectWord(false);
                             currentWord = null;
                         }
                         else
                         {
-                            //ADD SFX
-                            BroadcastMessage("ReduceTime", 5, SendMessageOptions.RequireReceiver);
-                            // currentWord.SelectWord(false);
-                            word.SelectWord(false);
-                            currentWord.ResetConnection();
-                            word.ResetConnection();
+                            currentWord.SelectWord(true);
+                        }
+                    }
+                    else
+                    {
+                        word.WronglyConnected(true);
+                        if(!currentWord.isJoinableToMultiple)
+                        {
+                            currentWord.WronglyConnected(false);
+                            currentWord = null;
+                        }
+                        else
+                        {
+                            currentWord.WronglyConnected(true);
                         }
                     }
                 }
             }
             else
             {
-                currentWord.SelectWord(false);
-                currentWord = null;
+                Debug.LogError("Selected word is null");
             }
         }
         else
