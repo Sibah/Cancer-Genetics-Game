@@ -5,10 +5,12 @@ using UnityEngine;
 public class ActivateUIElement : MonoBehaviour
 {
     [SerializeField]
-    private GameObject ActivatableUIElement;
+    private GameObject activatableUIElement;
 
     public void ActivateElement()
     {
-        ActivatableUIElement.SetActive(true);
+        int childCount = activatableUIElement.transform.parent.childCount;
+        activatableUIElement.transform.SetSiblingIndex(childCount-1);
+        activatableUIElement.SetActive(!activatableUIElement.activeSelf);
     }
 }
