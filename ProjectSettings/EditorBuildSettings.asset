@@ -27,7 +27,7 @@ EditorBuildSettings:
     path: Assets/Scenes/InteractiveImages/TranslaatioScene.unity
     guid: cffa5ad5fe96ccb4ab00a1d2b0ef0b7a
   - enabled: 1
-    path: Assets/Scenes/InteractiveImages/MutationsScene.unity
+    path: Assets/Scenes/InteractiveImages/PointMutationScene.unity
     guid: b507861369f55e94e8063ee57b1d4675
   - enabled: 1
     path: Assets/Scenes/ConnectionGame.unity
@@ -38,4 +38,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/InteractiveImages/PointMutationScene.unity
     guid: b507861369f55e94e8063ee57b1d4675
+  - enabled: 1
+    path: Assets/Scenes/InteractiveImages/SubstitutionScene.unity
+    guid: d3ab7cde1acd20047a3a26e6ec63708e
+  - enabled: 1
+    path: Assets/Scenes/InteractiveImages/InversionScene.unity
+    guid: 6309c40e520417f419b257390a7b5fa9
+  - enabled: 1
+    path: Assets/Scenes/InteractiveImages/InsertionScene.unity
+    guid: 97f47013f738a6a4098d10a9953197ae
+  - enabled: 1
+    path: Assets/Scenes/InteractiveImages/DeletionScene.unity
+    guid: f06bfaabb52e57a4a99cc454face4ccc
   m_configObjects: {}

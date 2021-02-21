@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class NextArrowMutations1Scene : MonoBehaviour
+public class NextArrowPointMutationScene : MonoBehaviour
 {
     // Start is called before the first frame update
 

@@ -62,7 +62,8 @@ public class DeletionAScript : MonoBehaviour
 
             if (errors == 0)
             {
-                
+                GameObject go = GameObject.Find("Arrow");
+                go.GetComponent<SpriteRenderer>().enabled = true;                 
             }
         }else{
             transform.position = initialPosition;   

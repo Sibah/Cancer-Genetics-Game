@@ -67,9 +67,12 @@ public class DeletionGScript : MonoBehaviour
             GameObject gobj = GameObject.Find("AMoving");
             gobj.GetComponent<DeletionAScript>().errors--;
             int errors = gobj.GetComponent<DeletionAScript>().errors;
+           
+           
             if (errors == 0)
             {
-                
+                GameObject go = GameObject.Find("Arrow");
+                go.GetComponent<SpriteRenderer>().enabled = true;                
             }
 
         }else{
