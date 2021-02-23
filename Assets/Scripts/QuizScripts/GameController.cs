@@ -180,7 +180,7 @@ public class GameController : MonoBehaviour
 
     IEnumerator TransitionToNextQuestion()
     {
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.5f);
         ShowQuestion();
     }
 
