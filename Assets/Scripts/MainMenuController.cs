@@ -21,7 +21,7 @@ public class MainMenuController : MonoBehaviour
 
     public void StartThirdMiniGame()
     {
-        print("3");
+        SceneManager.LoadScene("StartScreen");
     }
 
     public void StartInteractiveImages()
