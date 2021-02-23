@@ -144,7 +144,7 @@ public class GameController : MonoBehaviour
             scoreDisplayText.text = "Score: " + playerScore.ToString();
             questionTimer = 30;
         }
-        
+
         questionTimer = 30;
 
         if (qNumber + 1 < questionPool.Length)
