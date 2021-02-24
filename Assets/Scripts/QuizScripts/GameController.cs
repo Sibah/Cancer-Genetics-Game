@@ -144,7 +144,7 @@ public class GameController : MonoBehaviour
             scoreDisplayText.text = "Score: " + playerScore.ToString();
             questionTimer = 30;
         }
-        
+
         questionTimer = 30;
 
         if (qNumber + 1 < questionPool.Length)
@@ -180,7 +180,7 @@ public class GameController : MonoBehaviour
 
     IEnumerator TransitionToNextQuestion()
     {
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.5f);
         ShowQuestion();
     }
 
