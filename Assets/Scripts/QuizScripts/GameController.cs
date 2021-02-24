@@ -133,7 +133,7 @@ public class GameController : MonoBehaviour
     {
         if (isCorrect)
         {
-            if (questionTimer > 15)
+            if (questionTimer > 10)
             {
                 playerScore += Mathf.FloorToInt(questionTimer);
             }
