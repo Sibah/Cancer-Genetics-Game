@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CancerStringDatabase : MonoBehaviour
+public class StringDatabase : MonoBehaviour
 {
-    public string[] cancers;
+    public string[] strings;
     public int maxLevenshteinDistance = 4;
     
     public string FindClosestText(string searchWord)
     {
         string closest = searchWord;
         int distance = 1000;
-        foreach(string word in cancers)
+        foreach(string word in strings)
         {
             int newDistance = LevenshteinDistance(searchWord, word);
             if(newDistance < distance)

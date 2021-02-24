@@ -5,9 +5,9 @@ using UnityEngine;
 public class DoctorPhaseDataHandler : MonoBehaviour
 {
     public string searchText;
-    public string correctText;
+    public CorrectString correctText;
     public ConfirmationHandler confirmationBox;
-    public CancerStringDatabase database;
+    public StringDatabase database;
 
     public void SetSearchText(string text)
     {
@@ -29,7 +29,7 @@ public class DoctorPhaseDataHandler : MonoBehaviour
             return;
         }
         
-        if(closestText.Equals(correctText) && searchText.Equals(closestText))
+        if(correctText.CheckIfCorrect(closestText) && searchText.Equals(closestText))
         {
             //TODO: Make correct answer possibility
             return;
