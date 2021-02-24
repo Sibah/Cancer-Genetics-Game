@@ -341,36 +341,6 @@ MonoBehaviour:
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
---- !u!1 &386913727
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 386913728}
-  m_Layer: 0
-  m_Name: DataStorage
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &386913728
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 386913727}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 604.34906, y: 408.5855, z: 10.217163}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &478041471
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -378,6 +348,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 867525648}
     m_Modifications:
+    - target: {fileID: 1191781465142918028, guid: fb62232eaa83ae042853ddcc6275d26b,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1191781465142918028, guid: fb62232eaa83ae042853ddcc6275d26b,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1191781465142918028, guid: fb62232eaa83ae042853ddcc6275d26b,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1191781465142918028, guid: fb62232eaa83ae042853ddcc6275d26b,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1191781466164642329, guid: fb62232eaa83ae042853ddcc6275d26b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -487,6 +477,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ConfirmationMode
+      objectReference: {fileID: 0}
+    - target: {fileID: 1191781466164642330, guid: fb62232eaa83ae042853ddcc6275d26b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1191781466406976491, guid: fb62232eaa83ae042853ddcc6275d26b,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1191781466406976491, guid: fb62232eaa83ae042853ddcc6275d26b,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1191781466406976491, guid: fb62232eaa83ae042853ddcc6275d26b,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1191781466406976491, guid: fb62232eaa83ae042853ddcc6275d26b,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb62232eaa83ae042853ddcc6275d26b, type: 3}
@@ -996,6 +1011,7 @@ GameObject:
   - component: {fileID: 867525648}
   - component: {fileID: 867525649}
   - component: {fileID: 867525650}
+  - component: {fileID: 867525651}
   m_Layer: 5
   m_Name: PatientStoryPhase
   m_TagString: Untagged
@@ -1038,9 +1054,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   searchText: 
-  correctText: {fileID: 0}
+  correctText: {fileID: 867525651}
   confirmationBox: {fileID: 478041473}
   database: {fileID: 867525650}
+  nextPhaseIndex: 1
 --- !u!114 &867525650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1053,8 +1070,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c374224ec37d0e41b03e6fe516448d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  strings: []
+  strings:
+  - kolonoskopia
+  - "paksusuolent\xE4hystys"
   maxLevenshteinDistance: 4
+--- !u!114 &867525651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867525647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eedb6d80abbc2eb48a13db8b04602793, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  correctString: kolonoskopia
+  synonyms:
+  - "paksusuolent\xE4hystys"
 --- !u!1001 &880315713
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1346,6 +1380,7 @@ GameObject:
   - component: {fileID: 1025589294}
   - component: {fileID: 1025589295}
   - component: {fileID: 1025589296}
+  - component: {fileID: 1025589297}
   m_Layer: 5
   m_Name: ChoosingCancerPhase
   m_TagString: Untagged
@@ -1393,9 +1428,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   searchText: 
-  correctText: {fileID: 0}
+  correctText: {fileID: 1025589297}
   confirmationBox: {fileID: 122787747}
   database: {fileID: 1025589296}
+  nextPhaseIndex: 0
 --- !u!114 &1025589296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1410,6 +1446,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strings: []
   maxLevenshteinDistance: 4
+--- !u!114 &1025589297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025589293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eedb6d80abbc2eb48a13db8b04602793, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  correctString: "Lynchin oireyhtym\xE4"
+  synonyms: []
 --- !u!1 &1045851421
 GameObject:
   m_ObjectHideFlags: 0
@@ -2368,6 +2418,7 @@ GameObject:
   - component: {fileID: 1792690056}
   - component: {fileID: 1792690055}
   - component: {fileID: 1792690054}
+  - component: {fileID: 1792690058}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2456,6 +2507,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1792690058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1792690053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82aaa47e37922b4fb2b56a2cb059e25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  phases:
+  - {fileID: 867525647}
+  - {fileID: 1025589293}
 --- !u!1 &1825902257
 GameObject:
   m_ObjectHideFlags: 0
@@ -2666,7 +2732,7 @@ GameObject:
   - component: {fileID: 2041526951}
   - component: {fileID: 2041526950}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: BackgroundInformation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

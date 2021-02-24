@@ -8,6 +8,7 @@ public class DoctorPhaseDataHandler : MonoBehaviour
     public CorrectString correctText;
     public ConfirmationHandler confirmationBox;
     public StringDatabase database;
+    public int nextPhaseIndex;
 
     public void SetSearchText(string text)
     {
@@ -29,13 +30,15 @@ public class DoctorPhaseDataHandler : MonoBehaviour
             return;
         }
         
-        if(correctText.CheckIfCorrect(closestText) && searchText.Equals(closestText))
+        if(correctText.Contains(searchText) || (correctText.CheckIfCorrect(closestText) && searchText.Equals(closestText)))
         {
+            SendMessageUpwards("ActivatePhase", nextPhaseIndex, SendMessageOptions.RequireReceiver);
             //TODO: Make correct answer possibility
             return;
         }
         else if(!searchText.Equals(closestText))
         {
+            confirmationBox.gameObject.SetActive(true);
             //TODO: Make confirmation check
             return;
         }
