@@ -30,7 +30,7 @@ public class DoctorPhaseDataHandler : MonoBehaviour
             return;
         }
         
-        if(correctText.Contains(searchText) || (correctText.CheckIfCorrect(closestText) && searchText.Equals(closestText)))
+        if(correctText.CheckIfCorrect(closestText) && searchText.Equals(closestText))
         {
             SendMessageUpwards("ActivatePhase", nextPhaseIndex, SendMessageOptions.RequireReceiver);
         }
