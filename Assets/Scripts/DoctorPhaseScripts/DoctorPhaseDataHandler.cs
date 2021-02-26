@@ -33,14 +33,19 @@ public class DoctorPhaseDataHandler : MonoBehaviour
         if(correctText.Contains(searchText) || (correctText.CheckIfCorrect(closestText) && searchText.Equals(closestText)))
         {
             SendMessageUpwards("ActivatePhase", nextPhaseIndex, SendMessageOptions.RequireReceiver);
-            //TODO: Make correct answer possibility
-            return;
         }
         else if(!searchText.Equals(closestText))
         {
             confirmationBox.gameObject.SetActive(true);
-            //TODO: Make confirmation check
-            return;
+            confirmationBox.ChangeTitleText(closestText);
+        }
+    }
+
+    public void CheckConfirmationText(string confirmationText)
+    {
+        if(correctText.CheckIfCorrect(confirmationText))
+        {
+            SendMessageUpwards("ActivatePhase", nextPhaseIndex, SendMessageOptions.RequireReceiver);
         }
     }
 }
