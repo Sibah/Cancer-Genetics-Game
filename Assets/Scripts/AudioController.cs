@@ -8,4 +8,9 @@ public class AudioController : MonoBehaviour
     {
         source = GetComponent<AudioSource>();
     }
+
+    public void Mute()
+    {
+        source.mute = !source.mute;
+    }
 }

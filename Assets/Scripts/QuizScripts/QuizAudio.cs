@@ -20,4 +20,9 @@ public class QuizAudio : MonoBehaviour
     {
         source.PlayOneShot(inCorrectClick, 1.5f);
     }
+
+    public void Mute()
+    {
+        source.mute = !source.mute;
+    }
 }
