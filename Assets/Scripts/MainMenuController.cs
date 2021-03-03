@@ -31,7 +31,7 @@ public class MainMenuController : MonoBehaviour
 
     public void StartBonusGame()
     {
-        SceneManager.LoadScene("EndlessRunner");
+        SceneManager.LoadScene("DinoGame");
     }
 
     public void QuitGame()
