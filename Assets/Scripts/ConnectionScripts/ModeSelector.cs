@@ -5,17 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class ModeSelector : MonoBehaviour
 {
-    public GameObject mode1;
-    public GameObject selection;
-    public GameObject instructions;
+    public GameObject startScreen;
+    public GameObject connectionMode;
+    public GameObject resultScreen;
     public WordLineInitializer wordInit;
     public WordDatabase currentDatabase;
 
-    public void SelectMode1()
+    public void SelectConnectionMode()
     {
-        mode1.SetActive(true);
-        selection.SetActive(false);
-        instructions.SetActive(false);
+        connectionMode.SetActive(true);
+        startScreen.SetActive(false);
         BroadcastMessage("ResetTime", SendMessageOptions.RequireReceiver);
         BroadcastMessage("ResetScore", SendMessageOptions.RequireReceiver);
 
@@ -28,17 +27,17 @@ public class ModeSelector : MonoBehaviour
     
     public void BackToModeSelect()
     {
-        wordInit.roundCounter = 0;
-        wordInit.ClearOldWords();
-        mode1.SetActive(false);
-        wordInit.pairs = new List<WordPair>();
-        selection.SetActive(true);
-        instructions.SetActive(true);
+        resultScreen.SetActive(false);
+        startScreen.SetActive(true);
     }
 
     public void ActivateResultScreen()
     {
-        
+        wordInit.roundCounter = 0;
+        wordInit.ClearOldWords();
+        connectionMode.SetActive(false);
+        resultScreen.SetActive(true);
+        wordInit.pairs = new List<WordPair>();
     }
 
     public void BackToMainMenu()
