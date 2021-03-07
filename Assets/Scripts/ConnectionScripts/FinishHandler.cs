@@ -22,7 +22,7 @@ public class FinishHandler : MonoBehaviour
         if((int)time <= 0)
         {
             //UPDATE TO CONNECT TO MAIN PROJECT!
-            SendMessageUpwards("BackToModeSelect", SendMessageOptions.RequireReceiver);
+            SendMessageUpwards("ActivateResultScreen", SendMessageOptions.RequireReceiver);
         }  
     }
 

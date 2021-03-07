@@ -43,7 +43,7 @@ public class WordLineInitializer : MonoBehaviour
 
         if(count == 0 || roundCounter >= roundAmount)
         {
-            SendMessage("BackToModeSelect");
+            SendMessage("ActivateResultScreen");
         }
         else
         {
