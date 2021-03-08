@@ -31,12 +31,21 @@ public class ModeSelector : MonoBehaviour
         startScreen.SetActive(true);
     }
 
-    public void ActivateResultScreen()
+    // Values Item1 == time
+    // Values Item2 == score
+    // Values Item3 == correct connection count
+    public void ActivateResultScreen(System.Tuple<int, int, int> values)
     {
         wordInit.roundCounter = 0;
         wordInit.ClearOldWords();
         connectionMode.SetActive(false);
         resultScreen.SetActive(true);
+
+        ResultHandler result = resultScreen.GetComponentInChildren<ResultHandler>();
+        result.scoreValue = values.Item2;
+        result.timeValue = values.Item1;
+        result.connectionValue = values.Item3;
+
         wordInit.pairs = new List<WordPair>();
     }
 

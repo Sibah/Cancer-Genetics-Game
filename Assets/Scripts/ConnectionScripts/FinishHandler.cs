@@ -13,6 +13,7 @@ public class FinishHandler : MonoBehaviour
     public float startTime = 5;
     public float time;
     public int scorePoints;
+    public int pointGain = 5;
     public WordLineInitializer initializer;
 
     private void Update() 
@@ -21,9 +22,19 @@ public class FinishHandler : MonoBehaviour
         timer.text = ((int)time).ToString();  
         if((int)time <= 0)
         {
-            //UPDATE TO CONNECT TO MAIN PROJECT!
-            SendMessageUpwards("ActivateResultScreen", SendMessageOptions.RequireReceiver);
+            FinishGame();
         }  
+    }
+
+    public void FinishGame()
+    {
+        // Values Item1 == time
+        // Values Item2 == score
+        // Values Item3 == correct connection count
+        System.Tuple<int, int, int> values = new System.Tuple<int, int, int>((int)(startTime-time), scorePoints, scorePoints/pointGain);
+        print(values);
+
+        SendMessageUpwards("ActivateResultScreen", values, SendMessageOptions.RequireReceiver);
     }
 
     public void FinishRound()
@@ -51,7 +62,7 @@ public class FinishHandler : MonoBehaviour
 
     public void IncrementScore()
     {
-        scorePoints += 5;
+        scorePoints += pointGain;
 
         score.text = scorePoints.ToString();
     }
