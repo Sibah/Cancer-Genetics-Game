@@ -21,7 +21,7 @@ public class MainMenuController : MonoBehaviour
 
     public void StartThirdMiniGame()
     {
-        print("3");
+        SceneManager.LoadScene("StartScreen");
     }
 
     public void StartInteractiveImages()
@@ -31,7 +31,7 @@ public class MainMenuController : MonoBehaviour
 
     public void StartBonusGame()
     {
-        SceneManager.LoadScene("EndlessRunner");
+        SceneManager.LoadScene("DinoGame");
     }
 
     public void QuitGame()
@@ -66,7 +66,7 @@ public class MainMenuController : MonoBehaviour
         //connectionScoreDisplayText.text = "Quiz: " + connectionScore.ToString();
         //sentenceScoreDisplayText.text = "Quiz: " + sentenceScore.ToString();
 
-        if (quizScore >= 500) // (quizScore >= 500 && connectionScore >= 100 && sentenceScore >= 100) What are the high enough highscores?
+        if (quizScore >= 0) // (quizScore >= 200 && connectionScore >= 100 && sentenceScore >= 15) What are the high enough highscores?
         {
             doctorPhaseButton.interactable = true;
         } else
