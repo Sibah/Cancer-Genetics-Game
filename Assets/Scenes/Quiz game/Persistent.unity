@@ -598,21 +598,21 @@ MonoBehaviour:
         isCorrect: 0
       - answerText: "V\xE4\xE4rin"
         isCorrect: 1
-    - questionText: "Mitk\xE4 ovat merkkej\xE4 sy\xF6p\xE4alttiuden periytyvyydest\xE4?"
+    - questionText: "Mitk\xE4 ovat merkkej\xE4 geneettisest\xE4 sy\xF6p\xE4alttiudesta?"
       questionImage: {fileID: 0}
-      correctCount: 2
+      correctCount: 3
       answers:
       - answerText: "Nuori sairastumisik\xE4"
         isCorrect: 1
-      - answerText: Hoidon tehottomuus
+      - answerText: Kuume
         isCorrect: 0
-      - answerText: "Suvussa paljon tietty\xE4 sy\xF6p\xE4\xE4"
+      - answerText: "Suvussa paljon tiettyj\xE4 sy\xF6pi\xE4"
         isCorrect: 1
-      - answerText: Vaikeat oireet
+      - answerText: "Lihass\xE4rky"
         isCorrect: 0
       - answerText: "Toistuvat sy\xF6v\xE4t"
         isCorrect: 1
-    - questionText: "Periytyv\xE4n rintasy\xF6v\xE4n alttiusgeenit?"
+    - questionText: "Rintasy\xF6p\xE4alttiuden t\xE4rkeimm\xE4t alttiusgeenit?"
       questionImage: {fileID: 0}
       correctCount: 2
       answers:
@@ -674,6 +674,670 @@ MonoBehaviour:
         isCorrect: 1
     - questionText: "Sy\xF6v\xE4n syntyyn riitt\xE4\xE4 ituradan geenimuutokset,
         eik\xE4 sen syntyyn tarvita kudostason geenimuutoksia."
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 0
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 1
+    - questionText: "Mitk\xE4 seuraavista ovat mutaatiotyyppej\xE4?"
+      questionImage: {fileID: 0}
+      correctCount: 2
+      answers:
+      - answerText: Deleetio
+        isCorrect: 1
+      - answerText: Inhibitio
+        isCorrect: 0
+      - answerText: Transversio
+        isCorrect: 1
+      - answerText: Interfaasi
+        isCorrect: 0
+    - questionText: "Hiljainen mutaatio tarkoittaa, ett\xE4"
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: "Proteiinisynteesi p\xE4\xE4ttyy liian aikaisin"
+        isCorrect: 0
+      - answerText: Aminohappo vaihtuu
+        isCorrect: 0
+      - answerText: Aminohappo ei vaihdu
+        isCorrect: 1
+    - questionText: "Mikrosatelliiteissa on em\xE4ksi\xE4,"
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Alle sata
+        isCorrect: 1
+      - answerText: Satoja tuhansia
+        isCorrect: 0
+      - answerText: "Kymmeni\xE4 tuhansia"
+        isCorrect: 0
+      - answerText: Yli sata
+        isCorrect: 0
+    - questionText: Homologinen rekombinaatio korjaa DNA:n
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: "Yhden juosteen virheet spesifisill\xE4 glykosylaasiproteiineilla"
+        isCorrect: 0
+      - answerText: "Molempien juosteiden katkeamisen k\xE4ytt\xE4en sisarkromatidia
+          mallina"
+        isCorrect: 1
+      - answerText: "Yhden juosteen virheet, jotka v\xE4\xE4rist\xE4v\xE4t kaksoiskierrerakennetta"
+        isCorrect: 0
+    - questionText: "DNA-polymeerasin replikaatiossa tekemi\xE4 virheit\xE4 korjaa"
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Mismatch repair (MMR) systeemi
+        isCorrect: 1
+      - answerText: Nukleotidinpoistokorjaus (NER)
+        isCorrect: 0
+      - answerText: "Ei-homologinen p\xE4iden yhdist\xE4minen (NHEJ)"
+        isCorrect: 0
+    - questionText: "Mik\xE4/mitk\xE4 vastaavat solusyklin s\xE4\xE4telyst\xE4?"
+      questionImage: {fileID: 0}
+      correctCount: 2
+      answers:
+      - answerText: Sykliinit
+        isCorrect: 1
+      - answerText: Adeniinit
+        isCorrect: 0
+      - answerText: CDK (cyclin-dependent kinase)
+        isCorrect: 1
+      - answerText: ATP
+        isCorrect: 0
+    - questionText: "Mik\xE4 on p53-geenin rooli solusyklin tarkistuspisteell\xE4?"
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: CDK aktivaatio fosforyloimalla
+        isCorrect: 0
+      - answerText: CDK-sykliini-kompleksien inaktivaatio tuottamalla p21 proteiinia
+        isCorrect: 1
+      - answerText: "P53 ei ole roolia solusykliss\xE4"
+        isCorrect: 0
+    - questionText: "Miss\xE4 solusyklin vaiheessa tapahtuu replikaatio?"
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Mitoosi
+        isCorrect: 0
+      - answerText: "G1 (v\xE4litila 1)"
+        isCorrect: 0
+      - answerText: S (synteesivaihe)
+        isCorrect: 1
+      - answerText: "G2 (v\xE4litila 2)"
+        isCorrect: 0
+    - questionText: "Kuinka monta tarkistuspistett\xE4 solusykliss\xE4 on?"
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: 2, ennen mitoosia ja synteesivaihetta
+        isCorrect: 0
+      - answerText: "4, juuri ennen ja j\xE4lkeen mitoosia ja molemmin puolin synteesivaihetta"
+        isCorrect: 0
+      - answerText: 3, ennen synteesivaihetta, ennen mitoosia ja mitoosissa
+        isCorrect: 1
+    - questionText: "Kaikki mutaatiot periytyv\xE4t suvussa"
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 0
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 1
+    - questionText: "Kahden em\xE4ksen paikkaa vaihtavaa mutaatioita kutsutaan translokaatioksi"
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 1
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 0
+    - questionText: "Pahanlaatuiset mutaatiot tapahtuvat joko geenin proteiinia koodaavassa
+        osassa tai geenin s\xE4\xE4telyalueella"
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 1
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 0
+    - questionText: Nonsense-mutaatio vaihtaa aminohapon toiseen
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 0
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 1
+    - questionText: "Toistojaksot ovat DNA-p\xE4tki\xE4, jotka toistuvat useaan kertaan
+        per\xE4kk\xE4in"
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 1
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 0
+    - questionText: "Solussa ei yleens\xE4 tapahdu DNA muutoksia"
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 0
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 1
+    - questionText: "Mismatch repair korjaa replikaation aikana syntyneet virheelliset
+        em\xE4sparit sek\xE4 pienet insertiot ja deleetiot"
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 1
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 0
+    - questionText: "Yhden DNA-juosteen korjauksessa ei k\xE4ytet\xE4 ehj\xE4\xE4
+        juostetta mallina"
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 0
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 1
+    - questionText: Solusykli koostuu mitoosista ja interfaasista
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 1
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 0
+    - questionText: "Solun ep\xE4onnistuessa l\xE4p\xE4isem\xE4\xE4n solusyklin tarkastuspisteen,
+        se pys\xE4htyy, korjaa virheet tai ajautuu apoptoosiin"
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 1
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 0
+    - questionText: "Homologiselle rekombinaatiolle keskeisimpi\xE4 geenej\xE4 ovat?"
+      questionImage: {fileID: 0}
+      correctCount: 2
+      answers:
+      - answerText: BRCA 1
+        isCorrect: 1
+      - answerText: KRAS
+        isCorrect: 0
+      - answerText: HER2
+        isCorrect: 0
+      - answerText: BRCA 2
+        isCorrect: 1
+    - questionText: "Solusyklin G2-M-tarkastuspisteell\xE4 p53 geenin aktivaatio
+        on v\xE4ltt\xE4m\xE4t\xF6n"
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 0
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 1
+    - questionText: "Mitk\xE4 geeneist\xE4 ovat keskeisi\xE4 mismatch repair systeemin
+        toiminnalle?"
+      questionImage: {fileID: 0}
+      correctCount: 2
+      answers:
+      - answerText: BRCA 1
+        isCorrect: 0
+      - answerText: MSH 2
+        isCorrect: 1
+      - answerText: MLH 1
+        isCorrect: 1
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 0
+    - questionText: "Mitk\xE4 seuraavista ovat sy\xF6p\xE4solulle tunnusomaisia piirteit\xE4?"
+      questionImage: {fileID: 0}
+      correctCount: 4
+      answers:
+      - answerText: "Kykenev\xE4t monistumaan rajattomasti"
+        isCorrect: 1
+      - answerText: "Kykenev\xE4t v\xE4ltt\xE4m\xE4\xE4n apoptoosin"
+        isCorrect: 1
+      - answerText: Riippumattomia kasvua rajoittavista signaaleista
+        isCorrect: 1
+      - answerText: "Tuottavat itse solunjakautumista edist\xE4vi\xE4 signaaleja"
+        isCorrect: 1
+      - answerText: "On l\xE4ht\xF6isin useasta eri solutyypist\xE4"
+        isCorrect: 0
+    - questionText: "Mit\xE4 Knudsonin teoria tarkoittaa?"
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: "Solu tarvitsee perinn\xF6llisen mutaation muuttuakseen sy\xF6p\xE4soluksi"
+        isCorrect: 0
+      - answerText: "Knudsonin hiukkanen aiheuttaa sy\xF6v\xE4n synnyn"
+        isCorrect: 0
+      - answerText: "Solu tarvitsee geeniin ainakin kaksi \u201Dosumaa\u201D eli
+          mutaatiota muuttuakseen sy\xF6p\xE4soluksi"
+        isCorrect: 1
+    - questionText: "Mitk\xE4 seuraavista voivat olla onkogeenien proteiinituotteita?"
+      questionImage: {fileID: 0}
+      correctCount: 3
+      answers:
+      - answerText: "Apoptoosin est\xE4j\xE4"
+        isCorrect: 1
+      - answerText: "Kasvutekij\xE4t"
+        isCorrect: 1
+      - answerText: "Solusyklin edist\xE4ji\xE4"
+        isCorrect: 1
+      - answerText: DNA vaurioiden korjaaja
+        isCorrect: 0
+    - questionText: "Mitk\xE4 ovat perinn\xF6llist\xE4 sy\xF6p\xE4alttiutta aiheuttavia
+        onkogeenej\xE4?"
+      questionImage: {fileID: 0}
+      correctCount: 2
+      answers:
+      - answerText: MET
+        isCorrect: 1
+      - answerText: BRCA1
+        isCorrect: 0
+      - answerText: RET
+        isCorrect: 1
+      - answerText: HER2
+        isCorrect: 0
+    - questionText: Millaisia kasvunrajoitegeenit voivat olla?
+      questionImage: {fileID: 0}
+      correctCount: 3
+      answers:
+      - answerText: Portinvartijoita
+        isCorrect: 1
+      - answerText: Huoltojoukkoja
+        isCorrect: 1
+      - answerText: "Kasvuymp\xE4rist\xF6\xF6n vaikuttavia"
+        isCorrect: 1
+      - answerText: "Solunjakautumista kiihdytt\xE4vi\xE4"
+        isCorrect: 0
+    - questionText: "Mitk\xE4 ovat portinvartija geenej\xE4?"
+      questionImage: {fileID: 0}
+      correctCount: 2
+      answers:
+      - answerText: APC
+        isCorrect: 1
+      - answerText: BRCA 1
+        isCorrect: 0
+      - answerText: MLH 1
+        isCorrect: 0
+      - answerText: P53
+        isCorrect: 1
+    - questionText: Miten kromosomitason instabiliteetti (CIN) ilmenee?
+      questionImage: {fileID: 0}
+      correctCount: 2
+      answers:
+      - answerText: "Kromosomien lukum\xE4\xE4r\xE4n muutoksina"
+        isCorrect: 1
+      - answerText: "Pienentyneen\xE4 mutaatioiden m\xE4\xE4r\xE4n\xE4"
+        isCorrect: 0
+      - answerText: Kromosomien rakennepoikkeavuuksina
+        isCorrect: 1
+      - answerText: Replikaatiovirheiden loppumisena
+        isCorrect: 0
+    - questionText: "Mist\xE4 postiivinen v\xE4rj\xE4ystulos immunohistokemiallisessa
+        v\xE4rj\xE4yksess\xE4 kertoo?"
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: "Sy\xF6v\xE4st\xE4"
+        isCorrect: 0
+      - answerText: Geenin normaalista toiminnasta
+        isCorrect: 1
+      - answerText: Proteiinin puutoksesta
+        isCorrect: 0
+      - answerText: "Ei mist\xE4\xE4n n\xE4ist\xE4"
+        isCorrect: 0
+    - questionText: "Kuinka suuri osa Suomessa todetuista paksu- ja per\xE4suolisy\xF6vist\xE4
+        on selke\xE4sti perinn\xF6llisi\xE4?"
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Noin 50 %
+        isCorrect: 0
+      - answerText: Noin 20 %
+        isCorrect: 0
+      - answerText: Noin 5 %
+        isCorrect: 1
+    - questionText: "Mihin kahteen luokkaa paksusuolisy\xF6p\xE4oireyhtym\xE4t jaetaan?"
+      questionImage: {fileID: 0}
+      correctCount: 2
+      answers:
+      - answerText: Tulehduksellisiin
+        isCorrect: 0
+      - answerText: "Lis\xE4\xE4ntynyt polyyppien m\xE4\xE4r\xE4"
+        isCorrect: 1
+      - answerText: Ei tulehduksellisiin
+        isCorrect: 0
+      - answerText: "Polyyppien m\xE4\xE4r\xE4 ei lis\xE4\xE4ntynyt"
+        isCorrect: 1
+    - questionText: "Mitk\xE4 ovat Lynchin oireyhtym\xE4n alttiusgeenej\xE4?"
+      questionImage: {fileID: 0}
+      correctCount: 3
+      answers:
+      - answerText: MLH1
+        isCorrect: 1
+      - answerText: APC
+        isCorrect: 0
+      - answerText: BRCA 1
+        isCorrect: 0
+      - answerText: MSH 2
+        isCorrect: 1
+      - answerText: PMS 2
+        isCorrect: 1
+    - questionText: "Mit\xE4 sy\xF6p\xE4riskej\xE4 kuuluu Lynchin oireyhtym\xE4\xE4n?"
+      questionImage: {fileID: 0}
+      correctCount: 3
+      answers:
+      - answerText: "Kohdun runko-osan sy\xF6p\xE4"
+        isCorrect: 1
+      - answerText: "Mahalaukun sy\xF6p\xE4"
+        isCorrect: 1
+      - answerText: "Silm\xE4sy\xF6p\xE4"
+        isCorrect: 0
+      - answerText: "Paksusuolisy\xF6p\xE4"
+        isCorrect: 1
+      - answerText: Sarkooma
+        isCorrect: 0
+    - questionText: "Miss\xE4 solusyklin vaiheessa mismatch repair-systeemin aktivaatio
+        on suurinta?"
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: G1
+        isCorrect: 0
+      - answerText: Mitoosi
+        isCorrect: 0
+      - answerText: G2
+        isCorrect: 0
+      - answerText: S
+        isCorrect: 1
+    - questionText: "Mitk\xE4 seuraavista geeneist\xE4 osallistuvat solusyklin s\xE4\xE4telyyn?"
+      questionImage: {fileID: 0}
+      correctCount: 3
+      answers:
+      - answerText: P53
+        isCorrect: 1
+      - answerText: RB1
+        isCorrect: 1
+      - answerText: BRCA1
+        isCorrect: 0
+      - answerText: MLH1
+        isCorrect: 0
+      - answerText: CDK4
+        isCorrect: 1
+    - questionText: "Mitk\xE4 seuraavista selitt\xE4v\xE4t mutaatioiden kertymist\xE4
+        ja sy\xF6v\xE4n kehittymist\xE4?"
+      questionImage: {fileID: 0}
+      correctCount: 3
+      answers:
+      - answerText: Genomin stabiliteetti
+        isCorrect: 0
+      - answerText: Genomin instabiliteetti
+        isCorrect: 1
+      - answerText: Driver-geenit
+        isCorrect: 1
+      - answerText: Passenger-geenit
+        isCorrect: 0
+      - answerText: Valintaetu
+        isCorrect: 1
+    - questionText: "Mik\xE4 seuraavista on tunneituin mikrosatelliitti instabiliteetin
+        aiheuttaja?"
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: "Mismatch repair-systeemin h\xE4iri\xF6"
+        isCorrect: 1
+      - answerText: "Nukleotidinpoistokorjauksen h\xE4iri\xF6"
+        isCorrect: 0
+      - answerText: Mitoosi
+        isCorrect: 0
+      - answerText: Homologinen rekombinaatio
+        isCorrect: 0
+    - questionText: "Mik\xE4 on yleinen sy\xF6v\xE4ss\xE4 mutatoitunut geeni?"
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: P53
+        isCorrect: 1
+      - answerText: SMADA4
+        isCorrect: 0
+      - answerText: MYH
+        isCorrect: 0
+      - answerText: STK11
+        isCorrect: 0
+    - questionText: "Mik\xE4 on BRCA1:n normaali teht\xE4v\xE4 solussa?"
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: "Aiheuttaa rintasy\xF6p\xE4\xE4"
+        isCorrect: 0
+      - answerText: DNA:n korjaus homologisella rekombinaatiolla
+        isCorrect: 1
+      - answerText: DNA:n mismatch repair
+        isCorrect: 0
+      - answerText: DNA:n nukleotidinpoistokorjaus
+        isCorrect: 0
+    - questionText: "Mik\xE4 on P53:n normaali toiminta solussa?"
+      questionImage: {fileID: 0}
+      correctCount: 2
+      answers:
+      - answerText: DNA:n korjaus homologisella rekombinaatiolla
+        isCorrect: 0
+      - answerText: DNA:n mismatch repair
+        isCorrect: 0
+      - answerText: "K\xE4ynnist\xE4\xE4 apoptoosi"
+        isCorrect: 1
+      - answerText: Solusyklin jarru
+        isCorrect: 1
+    - questionText: "Sy\xF6p\xE4 on aina geneettinen sairaus, muttei aina perinn\xF6llinen"
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 1
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 0
+    - questionText: "Knudsonin kahdenosuman teorian mukaan sy\xF6v\xE4n syntymiseen
+        yksil\xF6 tarvitsee aina kaksi hankinnaista mutaatiota"
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 0
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 1
+    - questionText: "Solutasolla vain toisen alleelin onkogeenin mutaatio riitt\xE4\xE4
+        tuottamaan virheellist\xE4 proteiinia."
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 1
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 0
+    - questionText: "Proto-onkogeeniss\xE4 tapahtuva mutaatio onkogeeniksi on aktivoiva
+        mutaatio"
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 1
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 0
+    - questionText: "Onkogeenit ovat useammin perinn\xF6llisten sy\xF6p\xE4alttiusoireyhtymien
+        takana kuin kasvunrajoitegeenit"
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 0
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 1
+    - questionText: "Kasvunrajoitegeeniss\xE4 tapahtuva, mahdollisesti sy\xF6v\xE4n
+        k\xE4ynnist\xE4v\xE4, mutaatio on aktivoiva."
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 0
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 1
+    - questionText: "Kasvuymp\xE4rist\xF6\xF6n vaikuttavat geenit yll\xE4pit\xE4v\xE4t
+        optimaalia ymp\xE4rist\xF6\xE4 soluille ja portinvartijageenit kontrolloivat
+        solujen kasvua."
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 1
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 0
+    - questionText: "Huoltojoukkogeenit korjaavat genomin vaurioita, kuten my\xF6s
+        muiden kasvunrajoitegeenien vaurioita"
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 1
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 0
+    - questionText: Esimerkiksi MLH 1, BRCA 1 JA BRCA 2 kuuluvat huoltojoukkogeeneihin.
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 1
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 0
+    - questionText: "Huoltojoukkogeeniin kohdistuva inaktivoiva mutaatio ei aiheuta
+        spontaanien mutaatioiden lukum\xE4\xE4r\xE4n kasvua solussa. "
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 0
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 1
+    - questionText: "Driver-geenit antavat sy\xF6p\xE4solulle kasvuedun ja ohjaavat
+        sen kehityst\xE4 aiheuttaen genomin instabiliteettia."
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 1
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 0
+    - questionText: "Genomisessa instabiliteetissa mutaatioiden m\xE4\xE4r\xE4 pienentyy,
+        mutta replikaatiovirheiden m\xE4\xE4r\xE4 kasvaa."
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 0
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 1
+    - questionText: Mikrosatelliitti instabiliteetti ilmenee DNA:n toistojaksojen
+        pituusvaiheteluna.
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 1
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 0
+    - questionText: "Sy\xF6p\xE4alttiusoireyhtym\xE4t altistavat aina vain yhdelle
+        sy\xF6v\xE4lle."
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 0
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 1
+    - questionText: "Kasvainkudoksen immunohistokemiallisell\xE4 v\xE4rj\xE4yksell\xE4
+        pystyt\xE4\xE4n kohdentamaan verest\xE4 teht\xE4v\xE4\xE4 geenitestausta"
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 1
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 0
+    - questionText: "Rintasy\xF6p\xE4 on naisten yleisin sy\xF6p\xE4"
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 1
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 0
+    - questionText: "BRCA 1 geenivirheen kantajalla on pienempi riski munasarjasy\xF6p\xE4\xE4n
+        kuin BRCA 2 kantajalla."
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 0
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 1
+    - questionText: "Virhe APC geeniss\xE4 on ensimm\xE4isi\xE4 polyypin syntyyn
+        vaikuttavia mutaatioita satunnaisessa suolistosy\xF6v\xE4ss\xE4."
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 1
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 0
+    - questionText: "Familiaalisessa adenomatoottisessa polypoosissa sairastumisriski
+        paksusuolensy\xF6p\xE4\xE4n on l\xE4hes 100 % ja hoitona on paksusuolen poisto."
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 1
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 0
+    - questionText: "Lynchin oireyhtym\xE4ss\xE4 polyyppien m\xE4\xE4r\xE4 paksusuolessa
+        on lis\xE4\xE4ntynyt."
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 0
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 1
+    - questionText: "Suuren riskin rintasy\xF6p\xE4alttiutta aiheuttavat geenivirheet
+        ovat yleisi\xE4 v\xE4est\xF6ss\xE4."
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 0
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 1
+    - questionText: "P53 on kasvunrajoitegeeni, jonka ituradan mutaatio aiheuttaa
+        Li-Fraumenin oireyhtym\xE4."
+      questionImage: {fileID: 0}
+      correctCount: 1
+      answers:
+      - answerText: Oikein
+        isCorrect: 1
+      - answerText: "V\xE4\xE4rin"
+        isCorrect: 0
+    - questionText: "Mit\xE4 suurempi riski sy\xF6p\xE4alttiusgeenin kantajalla on
+        sairastua sy\xF6p\xE4\xE4n, sit\xE4 yleisempi\xE4 geenimutaatiot ovat v\xE4est\xF6ss\xE4."
       questionImage: {fileID: 0}
       correctCount: 1
       answers:
