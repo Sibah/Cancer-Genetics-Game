@@ -34,7 +34,7 @@ public class ModeSelector : MonoBehaviour
     // Values Item1 == time
     // Values Item2 == score
     // Values Item3 == correct connection count
-    public void ActivateResultScreen(System.Tuple<int, int, int> values)
+    public void ActivateResultScreen(System.Tuple<int, int> values)
     {
         wordInit.roundCounter = 0;
         wordInit.ClearOldWords();
@@ -44,7 +44,6 @@ public class ModeSelector : MonoBehaviour
         ResultHandler result = resultScreen.GetComponentInChildren<ResultHandler>();
         result.scoreValue = values.Item2;
         result.timeValue = values.Item1;
-        result.connectionValue = values.Item3;
 
         wordInit.pairs = new List<WordPair>();
     }

@@ -6,19 +6,9 @@ using UnityEngine.UI;
 public class ResultHandler : MonoBehaviour
 {
     [SerializeField]
-    private Text correctConnections;
-    [SerializeField]
     private Text score;
     [SerializeField]
     private Text time;
-
-    public int connectionValue
-    {
-        set
-        {
-            correctConnections.text = $"Oikeita yhdistämisiä: {value}";
-        }
-    }
 
     public int scoreValue
     {

@@ -34,6 +34,7 @@ public class LineDrawer : MonoBehaviour
                         word.AddConnectedWord(currentWord);
                         currentWord.AddConnectedLine(line.gameObject);
                         word.AddConnectedLine(line.gameObject);
+                        currentWord.SelectWord(true);
 
                         if(currentWord.CheckIfFullyConnected())
                         {
@@ -50,10 +51,6 @@ public class LineDrawer : MonoBehaviour
                         {
                             currentWord.SelectWord(false);
                             currentWord = null;
-                        }
-                        else
-                        {
-                            currentWord.SelectWord(true);
                         }
                     }
                     else

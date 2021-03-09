@@ -30,8 +30,8 @@ public class FinishHandler : MonoBehaviour
     {
         // Values Item1 == time
         // Values Item2 == score
-        // Values Item3 == correct connection count
-        System.Tuple<int, int, int> values = new System.Tuple<int, int, int>((int)(startTime-time), scorePoints, scorePoints/pointGain);
+        print(time);
+        System.Tuple<int, int> values = new System.Tuple<int, int>((int)(startTime-time), scorePoints);
         print(values);
 
         SendMessageUpwards("ActivateResultScreen", values, SendMessageOptions.RequireReceiver);

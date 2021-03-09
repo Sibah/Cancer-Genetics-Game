@@ -1,5 +1,5 @@
-﻿using UnityEngine.UIElements;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -9,6 +9,10 @@ public class WordHandler : MonoBehaviour
     private RectTransform linePoint;
     private List<WordHandler> connectedWords = new List<WordHandler>();
     private List<GameObject> connectedLine = new List<GameObject>();
+    public Color previousColor;
+    public Color normalColor = Color.white;
+    public Color wrongColor = Color.red;
+    public Color correctColor = Color.green;
     public float waitTimer = 1f;
     public bool onRightSide { get{ return transform.parent.name.Equals("RightSide"); } set{}}
     public bool animationEnded = false;
@@ -25,6 +29,10 @@ public class WordHandler : MonoBehaviour
         {
             GetComponentInChildren<UnityEngine.UI.Text>().text = value;
         }
+    }
+
+    private void Start() {
+        print(GetComponent<Image>());
     }
 
     public void SendPositionData()
@@ -75,37 +83,15 @@ public class WordHandler : MonoBehaviour
     {
         if(isJoinableToMultiple || savedWordPair.GetSecondWords().Count == 1)
         {
-            SelectWord(false);
+            // SelectWord(false);
             yield return new WaitForSeconds(waitTimer);
-            StartEndAnimation();
-            foreach(WordHandler word in connectedWords)
-            {
-                word.StartEndAnimation();
-            }
-            foreach(GameObject line in connectedLine)
-            {
-                line.SetActive(false);
-            }
-
-            yield return new WaitUntil(() => animationEnded == true);
             DestroyWords(this);
         }
         else
         {
             WordHandler mainWord = connectedWords[0];
-            mainWord.SelectWord(false);
+            // mainWord.SelectWord(false);
             yield return new WaitForSeconds(waitTimer);
-            mainWord.StartEndAnimation();
-            foreach(WordHandler word in connectedWords)
-            {
-                word.StartEndAnimation();
-            }
-            foreach(GameObject line in connectedLine)
-            {
-                line.SetActive(false);
-            }
-
-            yield return new WaitUntil(() => mainWord.animationEnded == true);
             DestroyWords(mainWord);
         }
     }
@@ -125,52 +111,60 @@ public class WordHandler : MonoBehaviour
         }
         Destroy(currentWord.gameObject);
     }
-
-    // Given to Animation event
-    public void SetAnimationEndedTrue()
-    {
-        animationEnded = true;
-        GetComponent<Animator>().runtimeAnimatorController.animationClips[0].events = System.Array.Empty<AnimationEvent>();
-    }
     
     public void SelectWord(bool selected)
     {
-        GetComponent<Animator>().SetBool("isSelected", selected);
-        foreach(WordHandler word in connectedWords)
+        if(selected)
         {
-            word.GetComponent<Animator>().SetBool("isSelected", selected);
+            ChangeColor(correctColor);
         }
-    }
-
-    public void StartEndAnimation()
-    {
-        Animator animator = GetComponent<Animator>();
-        AnimationEvent e = new AnimationEvent();
-        e.functionName = "SetAnimationEndedTrue";
-        e.time = animator.runtimeAnimatorController.animationClips[0].length;
-        animator.runtimeAnimatorController.animationClips[0].AddEvent(e);
-        animator.SetBool("isConnected", true);
+        else
+        {
+            ChangeColor(normalColor);
+        }
+        ChangeInteractability(!selected);
     }
 
     public void WronglyConnected(bool isMultiConnectable)
     {
-        Animator animator = GetComponent<Animator>();
-        AnimationEvent e = new AnimationEvent();
-        e.functionName = "SetIsWrongSelectionToFalse";
-        e.time = animator.runtimeAnimatorController.animationClips[3].length;
-        animator.runtimeAnimatorController.animationClips[3].AddEvent(e);
-        animator.SetBool("isWrongSelection", true);
-        if(!isMultiConnectable)
+        ChangeColor(wrongColor);
+        ChangeInteractability(false);
+        StartCoroutine(ReturnToNormalColor());
+    }
+
+    private IEnumerator ReturnToNormalColor()
+    {
+        yield return new WaitForSeconds(1);
+        ChangeInteractability(true);
+        if(isJoinableToMultiple)
         {
-            SelectWord(false);
+            ChangeColor(correctColor);
+        }
+        else
+        {
+            ChangeColor(normalColor);
         }
     }
 
-    public void SetIsWrongSelectionToFalse()
+    private void ChangeColor(Color color)
     {
-        Animator animator = GetComponent<Animator>();
-        animator.SetBool("isWrongSelection", false);
-        animator.runtimeAnimatorController.animationClips[0].events = System.Array.Empty<AnimationEvent>();
+        previousColor = GetComponent<Image>().color;
+        GetComponent<Image>().color = color;
+        foreach(WordHandler word in connectedWords)
+        {
+            word.previousColor = GetComponent<Image>().color;
+            word.GetComponent<Image>().color = color;
+        }
+    }
+
+    private void ChangeInteractability(bool value)
+    {
+        GetComponent<Button>().interactable = value;
+        foreach(WordHandler word in connectedWords)
+        {
+            word.GetComponent<Button>().interactable = value;
+        }
+
     }
 
     public bool CheckIfFullyConnected()
