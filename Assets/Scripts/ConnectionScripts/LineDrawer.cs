@@ -7,7 +7,6 @@ public class LineDrawer : MonoBehaviour
     public Transform lines;
     public Camera mainCamera;
     public WordHandler currentWord;
-    public float removalTime = 0.25f;
 
     private void Update() 
     {
@@ -40,7 +39,7 @@ public class LineDrawer : MonoBehaviour
                         {
                             if(currentWord.CheckIfCorrectlyFinished())
                             {
-                                IEnumerator coroutine = currentWord.RemoveWordPair(removalTime);
+                                IEnumerator coroutine = currentWord.RemoveWordPair();
                                 StartCoroutine(coroutine);
                             }
                             currentWord = null;

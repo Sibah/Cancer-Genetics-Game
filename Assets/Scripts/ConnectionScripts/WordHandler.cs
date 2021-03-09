@@ -79,7 +79,7 @@ public class WordHandler : MonoBehaviour
         connectedWords = null;
     }
 
-    public IEnumerator RemoveWordPair(float time)
+    public IEnumerator RemoveWordPair()
     {
         if(isJoinableToMultiple || savedWordPair.GetSecondWords().Count == 1)
         {

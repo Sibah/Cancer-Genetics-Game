@@ -11,16 +11,18 @@ public class FinishHandler : MonoBehaviour
     public Text score;
     public Text timer;
     public float startTime = 5;
-    public float time;
+    public float roundTime;
     public int scorePoints;
     public int pointGain = 5;
     public WordLineInitializer initializer;
+    private float totalTime;
 
     private void Update() 
     {
-        time -= Time.deltaTime;
-        timer.text = ((int)time).ToString();  
-        if((int)time <= 0)
+        roundTime -= Time.deltaTime;
+        totalTime += Time.deltaTime;
+        timer.text = ((int)roundTime).ToString();  
+        if((int)roundTime <= 0)
         {
             FinishGame();
         }  
@@ -28,10 +30,9 @@ public class FinishHandler : MonoBehaviour
 
     public void FinishGame()
     {
-        // Values Item1 == time
+        // Values Item1 == totalTime
         // Values Item2 == score
-        print(time);
-        System.Tuple<int, int> values = new System.Tuple<int, int>((int)(startTime-time), scorePoints);
+        System.Tuple<int, int> values = new System.Tuple<int, int>((int)(totalTime), scorePoints);
         print(values);
 
         SendMessageUpwards("ActivateResultScreen", values, SendMessageOptions.RequireReceiver);
@@ -56,7 +57,8 @@ public class FinishHandler : MonoBehaviour
         {
             Destroy(leftSide.GetChild(0).gameObject);
         }
-
+        
+        ResetTime();
         initializer.PlaceWordsInSides();
     }
 
@@ -69,7 +71,7 @@ public class FinishHandler : MonoBehaviour
 
     public void ResetTime()
     {
-        time = startTime;
+        roundTime = startTime;
     }
 
     public void ResetScore()
@@ -80,6 +82,6 @@ public class FinishHandler : MonoBehaviour
 
     public void ReduceTime(int value)
     {
-        time -= value;
+        roundTime -= value;
     }
 }
