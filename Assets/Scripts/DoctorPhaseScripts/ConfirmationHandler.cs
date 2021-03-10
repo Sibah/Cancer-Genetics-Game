@@ -1,18 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ConfirmationHandler : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public TextMeshProUGUI titleText;
+    private string changableText = "";
+
+    public void ChangeTitleText(string text)
     {
-        
+        changableText = text;
+        titleText.text = $"Tarkoititko: {text}";
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public void Confirm()
     {
-        
+        SendMessageUpwards("CheckConfirmationText", changableText, SendMessageOptions.RequireReceiver);
+    } 
+
+    public void Decline()
+    {
+        gameObject.SetActive(false);
     }
 }

@@ -11,19 +11,36 @@ public class FinishHandler : MonoBehaviour
     public Text score;
     public Text timer;
     public float startTime = 5;
-    public float time;
+    public float roundTime;
     public int scorePoints;
+    public int pointGain = 5;
     public WordLineInitializer initializer;
+    private float totalTime;
 
     private void Update() 
     {
-        time -= Time.deltaTime;
-        timer.text = ((int)time).ToString();  
-        if((int)time <= 0)
+        roundTime -= Time.deltaTime;
+        totalTime += Time.deltaTime;
+        timer.text = ((int)roundTime).ToString();  
+        if((int)roundTime <= 0)
         {
-            //UPDATE TO CONNECT TO MAIN PROJECT!
-            SendMessageUpwards("BackToModeSelect", SendMessageOptions.RequireReceiver);
+            FinishGame();
         }  
+    }
+
+    public void FinishGame()
+    {
+        // Values Item1 == totalTime
+        // Values Item2 == score
+        System.Tuple<int, int> values = new System.Tuple<int, int>((int)(totalTime), scorePoints);
+
+        int connectionScore = PlayerPrefs.GetInt("ConnectionScore");
+        if(scorePoints > connectionScore)
+        {
+            PlayerPrefs.SetInt("ConnectionScore", scorePoints);
+        }
+
+        SendMessageUpwards("ActivateResultScreen", values, SendMessageOptions.RequireReceiver);
     }
 
     public void FinishRound()
@@ -45,20 +62,21 @@ public class FinishHandler : MonoBehaviour
         {
             Destroy(leftSide.GetChild(0).gameObject);
         }
-
+        
+        ResetTime();
         initializer.PlaceWordsInSides();
     }
 
     public void IncrementScore()
     {
-        scorePoints += 5;
+        scorePoints += pointGain;
 
         score.text = scorePoints.ToString();
     }
 
     public void ResetTime()
     {
-        time = startTime;
+        roundTime = startTime;
     }
 
     public void ResetScore()
@@ -69,6 +87,6 @@ public class FinishHandler : MonoBehaviour
 
     public void ReduceTime(int value)
     {
-        time -= value;
+        roundTime -= value;
     }
 }

@@ -6,9 +6,11 @@ public class AnswerButton : MonoBehaviour
     public Text answerText;
     public AnswerData answerData;
     private GameController gameController;
+    public QuizAudio quizAudio;
 
     void Start()
     {
+        quizAudio = FindObjectOfType<QuizAudio>();
         gameController = FindObjectOfType<GameController>();
     }
 
@@ -32,11 +34,13 @@ public class AnswerButton : MonoBehaviour
             ButtonClick();
             GetComponent<Button>().image.color = Color.green;
             GetComponent<Button>().interactable = false;
+            quizAudio.CorrectClick();
         } else if (!answerData.isCorrect)
         {
             gameController.timeRemaining -= 5f;
             GetComponent<Button>().image.color = Color.red;
             GetComponent<Button>().interactable = false;
+            quizAudio.InCorrectClick();
         }
     }
 }

@@ -45,6 +45,12 @@ EditorBuildSettings:
     path: Assets/minigame3Scenes/SecondRound.unity
     guid: 31a862c315b7a4a69ac4940452daa963
   - enabled: 1
+    path: Assets/Scenes/DoctorPhase.unity
+    guid: e5fd93c0fc20ffb4a8dbb23bd4d894d5
+  - enabled: 1
+    path: Assets/Scenes/DinoGame.unity
+    guid: d9a03cc6e6799e6479e68177f4667129
+  - enabled: 1
     path: Assets/Scenes/InteractiveImages/PointMutationScene.unity
     guid: b507861369f55e94e8063ee57b1d4675
   - enabled: 1
