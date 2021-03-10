@@ -95,6 +95,7 @@ public class ModeSelector : MonoBehaviour
     public void BackToModeSelect()
     {
         resultScreen.SetActive(false);
+        connectionMode.SetActive(false);
         startScreen.SetActive(true);
     }
 

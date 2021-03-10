@@ -12,7 +12,8 @@ public class WordLineInitializer : MonoBehaviour
     public List<GameObject> leftSideWords = new List<GameObject>();
     public List<WordPair> pairs = new List<WordPair>();
     public Object wordPrefab;
-    public int maxWordCount = 4, roundAmount = 2, roundCounter = 0;
+    public int maxWordCount = 4, roundAmount = 2, roundCounter = 0,
+               rightSideWordCount = 0, leftSideWordCount = 0;
 
     public void PlaceWordsInSides()
     {
@@ -31,6 +32,8 @@ public class WordLineInitializer : MonoBehaviour
     private void HandleWordCreation()
     {
         int count = 0;
+        rightSideWordCount = 0;
+        leftSideWordCount = 0;
 
         if(pairs.Count > maxWordCount)
         {
@@ -49,14 +52,14 @@ public class WordLineInitializer : MonoBehaviour
         {
             for(int i = 0; i < count; i++)
             {
+                if(maxWordCount < leftSideWordCount || maxWordCount < rightSideWordCount)
+                {
+                    break;
+                }
                 int index = Random.Range(0, pairs.Count);
                 WordPair pair = pairs[index];
                 pairs.RemoveAt(index);
                 CreateWords(pair);
-                if(leftSide.childCount >= count || rightSide.childCount >= count)
-                {
-                    break;
-                }
             }
         }
     }
@@ -100,20 +103,24 @@ public class WordLineInitializer : MonoBehaviour
     {
         if(isLeftside)
         {
+            leftSideWordCount++;
             firstWord.GetComponent<WordHandler>().SetLinePoint(firstWord.transform.GetChild(2).GetComponent<RectTransform>());
             leftSideWords.Add(firstWord);
             foreach(GameObject word in secondWords)
             {
+                rightSideWordCount++;
                 word.GetComponent<WordHandler>().SetLinePoint(word.transform.GetChild(1).GetComponent<RectTransform>());
                 rightSideWords.Add(word);
             }
         }
         else
         {
+            rightSideWordCount++;
             firstWord.GetComponent<WordHandler>().SetLinePoint(firstWord.transform.GetChild(1).GetComponent<RectTransform>());
             rightSideWords.Add(firstWord);
             foreach(GameObject word in secondWords)
             {
+                leftSideWordCount++;
                 word.GetComponent<WordHandler>().SetLinePoint(word.transform.GetChild(2).GetComponent<RectTransform>());
                 leftSideWords.Add(word);
             }
