@@ -27,6 +27,12 @@ public class InsertionCScript : MonoBehaviour
             drop = true;
             errors--;
             text.text = "Virheitä jäljellä: " + errors;
+
+            if (errors == 0)
+            {
+                GameObject gobj = GameObject.Find("Arrow");
+                gobj.GetComponent<SpriteRenderer>().enabled = true;
+            }
         }
     }
 }
