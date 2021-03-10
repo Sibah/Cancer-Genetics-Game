@@ -41,7 +41,7 @@ public class WordLineInitializer : MonoBehaviour
             count = pairs.Count;
         }
 
-        if(count == 0 || roundCounter >= roundAmount)
+        if(count == 0 || (roundCounter >= roundAmount && roundAmount > 0))
         {
             BroadcastMessage("FinishGame");
         }

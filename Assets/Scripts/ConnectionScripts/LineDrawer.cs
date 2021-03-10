@@ -7,7 +7,6 @@ public class LineDrawer : MonoBehaviour
     public Transform lines;
     public Camera mainCamera;
     public WordHandler currentWord;
-    public float removalTime = 0.25f;
 
     private void Update() 
     {
@@ -34,12 +33,13 @@ public class LineDrawer : MonoBehaviour
                         word.AddConnectedWord(currentWord);
                         currentWord.AddConnectedLine(line.gameObject);
                         word.AddConnectedLine(line.gameObject);
+                        currentWord.SelectWord(true);
 
                         if(currentWord.CheckIfFullyConnected())
                         {
                             if(currentWord.CheckIfCorrectlyFinished())
                             {
-                                IEnumerator coroutine = currentWord.RemoveWordPair(removalTime);
+                                IEnumerator coroutine = currentWord.RemoveWordPair();
                                 StartCoroutine(coroutine);
                             }
                             currentWord = null;
@@ -50,10 +50,6 @@ public class LineDrawer : MonoBehaviour
                         {
                             currentWord.SelectWord(false);
                             currentWord = null;
-                        }
-                        else
-                        {
-                            currentWord.SelectWord(true);
                         }
                     }
                     else
