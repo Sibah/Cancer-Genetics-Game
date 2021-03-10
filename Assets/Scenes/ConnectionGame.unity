@@ -2255,7 +2255,7 @@ MonoBehaviour:
   lines: {fileID: 1310105426}
   score: {fileID: 14717156}
   timer: {fileID: 29803886}
-  startTime: 30
+  startTime: 45
   roundTime: 0
   scorePoints: 0
   pointGain: 5
@@ -3675,8 +3675,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 125, y: -0.00039673}
-  m_SizeDelta: {x: 250, y: 450.08865}
+  m_AnchoredPosition: {x: 125, y: 12.9}
+  m_SizeDelta: {x: 250, y: 475.8292}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &735400244
 MonoBehaviour:
@@ -7922,9 +7922,11 @@ MonoBehaviour:
   pairs: []
   wordPrefab: {fileID: 1747927966545431384, guid: ded7d1ad9114a464fa5740069fecff3a,
     type: 3}
-  maxWordCount: 4
+  maxWordCount: 5
   roundAmount: 2
   roundCounter: 0
+  leftSideWordCount: 0
+  rightSideWordCount: 0
 --- !u!114 &1519257268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8438,8 +8440,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -125, y: -0.17799}
-  m_SizeDelta: {x: 250, y: 450.44412}
+  m_AnchoredPosition: {x: -125, y: 12.7}
+  m_SizeDelta: {x: 250, y: 476.205}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1620403578
 MonoBehaviour:
