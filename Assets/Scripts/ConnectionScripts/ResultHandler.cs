@@ -9,6 +9,7 @@ public class ResultHandler : MonoBehaviour
     private Text score;
     [SerializeField]
     private Text time;
+    public GameObject highScoreText;
 
     public int scoreValue
     {

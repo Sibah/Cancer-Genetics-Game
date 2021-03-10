@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class MainMenuController : MonoBehaviour
 {
     public Text quizScoreDisplayText;
-    //public Text connectionScoreDisplayText;
+    public Text connectionScoreDisplayText;
     //public Text sentenceScoreDisplayText;
     public Button doctorPhaseButton;
 

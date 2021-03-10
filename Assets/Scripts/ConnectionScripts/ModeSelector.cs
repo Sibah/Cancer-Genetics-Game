@@ -109,7 +109,19 @@ public class ModeSelector : MonoBehaviour
         connectionMode.SetActive(false);
         resultScreen.SetActive(true);
 
+        
+        int connectionScore = PlayerPrefs.GetInt("ConnectionScore");
+
         ResultHandler result = resultScreen.GetComponentInChildren<ResultHandler>();
+
+        if(connectionScore < values.Item2)
+        {
+            result.highScoreText.SetActive(true);
+        }
+        else
+        {
+            result.highScoreText.SetActive(false);
+        }
         result.scoreValue = values.Item2;
         result.timeValue = values.Item1;
 

@@ -281,6 +281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quizScoreDisplayText: {fileID: 1612683077}
+  connectionScoreDisplayText: {fileID: 874079853}
   doctorPhaseButton: {fileID: 1381979233}
 --- !u!4 &39854182
 Transform:
