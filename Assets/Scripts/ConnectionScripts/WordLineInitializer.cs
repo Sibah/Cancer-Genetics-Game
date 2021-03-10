@@ -73,7 +73,7 @@ public class WordLineInitializer : MonoBehaviour
             secondWords.Add(CreateWord(pair, secondWord));
         }
 
-        if(Random.Range(0, 2) == 0 || firstWord.GetComponent<WordHandler>().isJoinableToMultiple)
+        if(true || Random.Range(0, 2) == 0 || firstWord.GetComponent<WordHandler>().isJoinableToMultiple)
         {
             AddWordsToSides(firstWord, secondWords, true);
         }

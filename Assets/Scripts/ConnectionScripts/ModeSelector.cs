@@ -75,6 +75,7 @@ public class ModeSelector : MonoBehaviour
                 Debug.LogError($"Unknown value given from dropdown field in start screen phase 2: {amount}");
                 break;
         }
+        startPhase2.GetComponentInChildren<UnityEngine.UI.Dropdown>().value = 0;
         GoToPhase3();
     }
 
@@ -94,7 +95,9 @@ public class ModeSelector : MonoBehaviour
     
     public void BackToModeSelect()
     {
+        GoToPhase1();
         resultScreen.SetActive(false);
+        connectionMode.SetActive(false);
         startScreen.SetActive(true);
     }
 
