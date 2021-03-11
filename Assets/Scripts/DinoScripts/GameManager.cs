@@ -28,4 +28,9 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("DinoGame");
     }
+
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 }

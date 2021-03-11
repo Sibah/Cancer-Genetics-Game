@@ -12,8 +12,8 @@ public class WordLineInitializer : MonoBehaviour
     public List<GameObject> leftSideWords = new List<GameObject>();
     public List<WordPair> pairs = new List<WordPair>();
     public Object wordPrefab;
-    public int maxWordCount = 4, roundAmount = 2, roundCounter = 0,
-               rightSideWordCount = 0, leftSideWordCount = 0;
+    public int maxWordCount = 5, roundAmount = 2, roundCounter = 0,
+               leftSideWordCount = 0, rightSideWordCount = 0;
 
     public void PlaceWordsInSides()
     {
@@ -32,8 +32,8 @@ public class WordLineInitializer : MonoBehaviour
     private void HandleWordCreation()
     {
         int count = 0;
-        rightSideWordCount = 0;
         leftSideWordCount = 0;
+        rightSideWordCount = 0;
 
         if(pairs.Count > maxWordCount)
         {
@@ -52,7 +52,7 @@ public class WordLineInitializer : MonoBehaviour
         {
             for(int i = 0; i < count; i++)
             {
-                if(maxWordCount < leftSideWordCount || maxWordCount < rightSideWordCount)
+                if(leftSideWordCount >= maxWordCount || rightSideWordCount >= maxWordCount)
                 {
                     break;
                 }
@@ -76,12 +76,13 @@ public class WordLineInitializer : MonoBehaviour
             secondWords.Add(CreateWord(pair, secondWord));
         }
 
-        if(Random.Range(0, 2) == 0 || firstWord.GetComponent<WordHandler>().isJoinableToMultiple)
+        if(true || Random.Range(0, 2) == 0 || firstWord.GetComponent<WordHandler>().isJoinableToMultiple)
         {
             AddWordsToSides(firstWord, secondWords, true);
         }
         else
         {
+            print("222222");
             AddWordsToSides(firstWord,secondWords, false);
         }
     }
@@ -103,9 +104,9 @@ public class WordLineInitializer : MonoBehaviour
     {
         if(isLeftside)
         {
-            leftSideWordCount++;
             firstWord.GetComponent<WordHandler>().SetLinePoint(firstWord.transform.GetChild(2).GetComponent<RectTransform>());
             leftSideWords.Add(firstWord);
+            leftSideWordCount++;
             foreach(GameObject word in secondWords)
             {
                 rightSideWordCount++;
@@ -115,12 +116,10 @@ public class WordLineInitializer : MonoBehaviour
         }
         else
         {
-            rightSideWordCount++;
             firstWord.GetComponent<WordHandler>().SetLinePoint(firstWord.transform.GetChild(1).GetComponent<RectTransform>());
             rightSideWords.Add(firstWord);
             foreach(GameObject word in secondWords)
             {
-                leftSideWordCount++;
                 word.GetComponent<WordHandler>().SetLinePoint(word.transform.GetChild(2).GetComponent<RectTransform>());
                 leftSideWords.Add(word);
             }

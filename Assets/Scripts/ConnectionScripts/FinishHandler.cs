@@ -32,13 +32,13 @@ public class FinishHandler : MonoBehaviour
     {
         // Values Item1 == totalTime
         // Values Item2 == score
-        System.Tuple<int, int> values = new System.Tuple<int, int>((int)(totalTime), scorePoints);
-
         int connectionScore = PlayerPrefs.GetInt("ConnectionScore");
-        if(scorePoints > connectionScore)
+        if(connectionScore < scorePoints)
         {
             PlayerPrefs.SetInt("ConnectionScore", scorePoints);
         }
+        System.Tuple<int, int> values = new System.Tuple<int, int>((int)(totalTime), scorePoints);
+        print(values);
 
         SendMessageUpwards("ActivateResultScreen", values, SendMessageOptions.RequireReceiver);
     }

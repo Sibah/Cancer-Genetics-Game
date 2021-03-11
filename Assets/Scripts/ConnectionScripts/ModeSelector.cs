@@ -75,6 +75,7 @@ public class ModeSelector : MonoBehaviour
                 Debug.LogError($"Unknown value given from dropdown field in start screen phase 2: {amount}");
                 break;
         }
+        startPhase2.GetComponentInChildren<UnityEngine.UI.Dropdown>().value = 0;
         GoToPhase3();
     }
 
@@ -94,6 +95,7 @@ public class ModeSelector : MonoBehaviour
     
     public void BackToModeSelect()
     {
+        GoToPhase1();
         resultScreen.SetActive(false);
         connectionMode.SetActive(false);
         startScreen.SetActive(true);
@@ -109,19 +111,7 @@ public class ModeSelector : MonoBehaviour
         connectionMode.SetActive(false);
         resultScreen.SetActive(true);
 
-        
-        int connectionScore = PlayerPrefs.GetInt("ConnectionScore");
-
         ResultHandler result = resultScreen.GetComponentInChildren<ResultHandler>();
-
-        if(connectionScore < values.Item2)
-        {
-            result.highScoreText.SetActive(true);
-        }
-        else
-        {
-            result.highScoreText.SetActive(false);
-        }
         result.scoreValue = values.Item2;
         result.timeValue = values.Item1;
 

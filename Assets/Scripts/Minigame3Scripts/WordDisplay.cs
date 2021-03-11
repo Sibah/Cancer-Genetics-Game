@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class WordDisplay : MonoBehaviour
 {
     public Text text;
-    public float fallSpeed = 1f;
+    public float fallSpeed = 0.5f;
 
 
     //public WordSpawner wordSpawner;
