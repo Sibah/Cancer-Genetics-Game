@@ -1814,7 +1814,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Rakenna l\xE4hetti-RNA-juoste\nDNA-juosteen rinnalle"
+  m_Text: "Rakenna l\xE4hetti-RNA-juoste\nDNA-juosteen rinnalle raahaamalla em\xE4ksi\xE4"
 --- !u!222 &2146998348
 CanvasRenderer:
   m_ObjectHideFlags: 0
