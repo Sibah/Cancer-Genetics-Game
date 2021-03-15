@@ -17,16 +17,14 @@ public class ModeSelector : MonoBehaviour
 
     public void SelectBasisOfGenetics()
     {
-        GoToPhase1();
         currentDatabase = dataObjects.transform.GetChild(1).GetComponent<WordDatabase>();
-        SelectConnectionMode();
+        GoToPhase3();
     }
 
     public void SelectCancerGenetics()
     {
-        GoToPhase1();
         currentDatabase = dataObjects.transform.GetChild(0).GetComponent<WordDatabase>();
-        SelectConnectionMode();
+        GoToPhase3();
     }
 
     public void GoToPhase1()
@@ -75,8 +73,8 @@ public class ModeSelector : MonoBehaviour
                 Debug.LogError($"Unknown value given from dropdown field in start screen phase 2: {amount}");
                 break;
         }
-        startPhase2.GetComponentInChildren<UnityEngine.UI.Dropdown>().value = 0;
-        GoToPhase3();
+        startPhase3.GetComponentInChildren<UnityEngine.UI.Dropdown>().value = 0;
+        GoToPhase1();
     }
 
     public void SelectConnectionMode()
