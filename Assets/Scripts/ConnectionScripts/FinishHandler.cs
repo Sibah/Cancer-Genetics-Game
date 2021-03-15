@@ -38,30 +38,29 @@ public class FinishHandler : MonoBehaviour
             PlayerPrefs.SetInt("ConnectionScore", scorePoints);
         }
         System.Tuple<int, int> values = new System.Tuple<int, int>((int)(totalTime), scorePoints);
-        print(values);
 
         SendMessageUpwards("ActivateResultScreen", values, SendMessageOptions.RequireReceiver);
     }
 
     public void FinishRound()
     {
-        int lineCount = lines.childCount;
-        int rightCount = rightSide.childCount;
-        int leftCount = leftSide.childCount;
-        for(int i = 0; i < lineCount; i++)
-        {
-            Destroy(lines.GetChild(0).gameObject);
-        }
+        // int lineCount = lines.childCount;
+        // int rightCount = rightSide.childCount;
+        // int leftCount = leftSide.childCount;
+        // for(int i = 0; i < lineCount; i++)
+        // {
+        //     Destroy(lines.GetChild(0).gameObject);
+        // }
         
-        for(int i = 0; i < rightCount; i++)
-        {
-            Destroy(rightSide.GetChild(0).gameObject);
-        }
+        // for(int i = 0; i < rightCount; i++)
+        // {
+        //     Destroy(rightSide.GetChild(0).gameObject);
+        // }
 
-        for(int i = 0; i < leftCount; i++)
-        {
-            Destroy(leftSide.GetChild(0).gameObject);
-        }
+        // for(int i = 0; i < leftCount; i++)
+        // {
+        //     Destroy(leftSide.GetChild(0).gameObject);
+        // }
         
         ResetTime();
         initializer.PlaceWordsInSides();

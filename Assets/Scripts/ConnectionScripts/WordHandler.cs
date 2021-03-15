@@ -31,10 +31,6 @@ public class WordHandler : MonoBehaviour
         }
     }
 
-    private void Start() {
-        print(GetComponent<Image>());
-    }
-
     public void SendPositionData()
     {
         SendMessageUpwards("DrawLine", this, SendMessageOptions.RequireReceiver);

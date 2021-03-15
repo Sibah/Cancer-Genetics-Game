@@ -44,7 +44,7 @@ public class WordLineInitializer : MonoBehaviour
             count = pairs.Count;
         }
 
-        if(count == 0 || (roundCounter >= roundAmount && roundAmount > 0))
+        if(count == 0 || (roundCounter > roundAmount && roundAmount > 0))
         {
             BroadcastMessage("FinishGame");
         }
@@ -82,7 +82,6 @@ public class WordLineInitializer : MonoBehaviour
         }
         else
         {
-            print("222222");
             AddWordsToSides(firstWord,secondWords, false);
         }
     }
