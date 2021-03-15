@@ -6,7 +6,7 @@ public class MainMenuController : MonoBehaviour
 {
     public Text quizScoreDisplayText;
     public Text connectionScoreDisplayText;
-    //public Text sentenceScoreDisplayText;
+    public Text sentenceScoreDisplayText;
     public Button doctorPhaseButton;
 
     public void StartQuizGame()
@@ -59,13 +59,12 @@ public class MainMenuController : MonoBehaviour
     {
         int quizScore = PlayerPrefs.GetInt("QuizScore");
         int connectionScore = PlayerPrefs.GetInt("ConnectionScore");
-        //int sentenceScore = PlayerPrefs.GetInt("SentenceScore");
+        int sentenceScore = PlayerPrefs.GetInt("HighScore");
 
         quizScoreDisplayText.text = "Quiz: " + quizScore.ToString();
         connectionScoreDisplayText.text = "Connection: " + connectionScore.ToString();
-        //sentenceScoreDisplayText.text = "Quiz: " + sentenceScore.ToString();
 
-        if (quizScore >= 0) // (quizScore >= 200 && connectionScore >= 100 && sentenceScore >= 15) What are the high enough highscores?
+        if (quizScore >= 0 && sentenceScore >= 1) // (quizScore >= 200 && connectionScore >= 100 && sentenceScore >= 15) What are the high enough highscores?
         {
             doctorPhaseButton.interactable = true;
         } else
