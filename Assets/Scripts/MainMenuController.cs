@@ -12,6 +12,7 @@ public class MainMenuController : MonoBehaviour
     private void Start()
     {
         SetSoundState();
+        DontDestroyOnLoad(this.gameObject);
     }
 
     public void StartQuizGame()

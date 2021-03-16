@@ -5,10 +5,12 @@ public class QuizAudio : MonoBehaviour
     public AudioSource source;
     public AudioClip correctClick;
     public AudioClip inCorrectClick;
+    private MainMenuController mainMenuController;
 
     void Start()
     {
         source = GetComponent<AudioSource>();
+        mainMenuController = FindObjectOfType<MainMenuController>();
     }
 
     public void CorrectClick()
@@ -23,6 +25,7 @@ public class QuizAudio : MonoBehaviour
 
     public void Mute()
     {
-        source.mute = !source.mute;
+        mainMenuController.GetComponent<MainMenuController>().ToggleSound();
     }
+
 }
