@@ -258,7 +258,7 @@ MonoBehaviour:
       - answerText: "Resessiivinen geeni hypp\xE4\xE4 sukupolven yli"
         isCorrect: 0
     - questionText: "Miksi X-kromosomissa dominoivasti periytyv\xE4 sairaus voi olla
-        lievempi oireinen naisilla?"
+        lievempioireinen naisilla?"
       questionImage: {fileID: 0}
       correctCount: 1
       answers:
@@ -268,7 +268,7 @@ MonoBehaviour:
         isCorrect: 0
       - answerText: Testosteroni vahvistaa geeeniekspressiota
         isCorrect: 0
-      - answerText: Mikrodeletion takia
+      - answerText: Mikrodeleetion takia
         isCorrect: 0
     - questionText: "X-kromosomissa dominoivasti periytyv\xE4\xE4 tautia sairastavan
         miehen.."
@@ -436,8 +436,8 @@ MonoBehaviour:
         isCorrect: 1
       - answerText: "V\xE4\xE4rin"
         isCorrect: 0
-    - questionText: "Resessiivinen alleeli voi ilmenty\xE4 fenotyypiss\xE4, jos se
-        on genotyypiss\xE4 heterotsygoottina."
+    - questionText: "Autosomissa resessiivisesti periytyv\xE4 alleeli ilmenee aina
+        fenotyypiss\xE4 esiintyess\xE4\xE4n heterotsygoottisena"
       questionImage: {fileID: 0}
       correctCount: 1
       answers:
@@ -509,8 +509,9 @@ MonoBehaviour:
         isCorrect: 0
       - answerText: "V\xE4\xE4rin"
         isCorrect: 1
-    - questionText: "Y-kromosomissa olevat mikrodeleetiot voivat periyty\xE4 vain
-        is\xE4lt\xE4 pojalle."
+    - questionText: "Teoriassa Y-kromosomissa olevat mikrodeleetiot voivat periyty\xE4
+        vain is\xE4lt\xE4 pojalle, mutta ne yleens\xE4 aiheuttavat infertiliteetti\xE4
+        ja lapsettomuutta"
       questionImage: {fileID: 0}
       correctCount: 1
       answers:
@@ -788,7 +789,8 @@ MonoBehaviour:
         isCorrect: 0
       - answerText: "V\xE4\xE4rin"
         isCorrect: 1
-    - questionText: "Kahden em\xE4ksen paikkaa vaihtavaa mutaatioita kutsutaan translokaatioksi"
+    - questionText: "Kahden DNA-p\xE4tk\xE4n paikkaa vaihtavaa mutaatioita kutsutaan
+        translokaatioksi"
       questionImage: {fileID: 0}
       correctCount: 1
       answers:
@@ -796,8 +798,8 @@ MonoBehaviour:
         isCorrect: 1
       - answerText: "V\xE4\xE4rin"
         isCorrect: 0
-    - questionText: "Pahanlaatuiset mutaatiot tapahtuvat joko geenin proteiinia koodaavassa
-        osassa tai geenin s\xE4\xE4telyalueella"
+    - questionText: "Pahanlaatuiset mutaatiot tapahtuvat yleens\xE4 geenin proteiinia
+        koodaavassa osassa tai geenin s\xE4\xE4telyalueella"
       questionImage: {fileID: 0}
       correctCount: 1
       answers:
@@ -886,7 +888,7 @@ MonoBehaviour:
         isCorrect: 0
       - answerText: "V\xE4\xE4rin"
         isCorrect: 1
-    - questionText: "Mitk\xE4 geeneist\xE4 ovat keskeisi\xE4 mismatch repair systeemin
+    - questionText: "Mitk\xE4 geeneist\xE4 ovat keskeisi\xE4 mismatch repair-systeemin
         toiminnalle?"
       questionImage: {fileID: 0}
       correctCount: 2
@@ -897,7 +899,7 @@ MonoBehaviour:
         isCorrect: 1
       - answerText: MLH 1
         isCorrect: 1
-      - answerText: "V\xE4\xE4rin"
+      - answerText: MUTYH
         isCorrect: 0
     - questionText: "Mitk\xE4 seuraavista ovat sy\xF6p\xE4solulle tunnusomaisia piirteit\xE4?"
       questionImage: {fileID: 0}
@@ -921,8 +923,8 @@ MonoBehaviour:
         isCorrect: 0
       - answerText: "Knudsonin hiukkanen aiheuttaa sy\xF6v\xE4n synnyn"
         isCorrect: 0
-      - answerText: "Solu tarvitsee geeniin ainakin kaksi \u201Dosumaa\u201D eli
-          mutaatiota muuttuakseen sy\xF6p\xE4soluksi"
+      - answerText: Kasvunrajoitegeenin kummankin alleelin on inaktivoiduttava solun
+          muuntuessa pahanlaatuiseksi
         isCorrect: 1
     - questionText: "Mitk\xE4 seuraavista voivat olla onkogeenien proteiinituotteita?"
       questionImage: {fileID: 0}
@@ -992,7 +994,7 @@ MonoBehaviour:
       answers:
       - answerText: "Sy\xF6v\xE4st\xE4"
         isCorrect: 0
-      - answerText: Geenin normaalista toiminnasta
+      - answerText: Geenin ekspressiosta
         isCorrect: 1
       - answerText: Proteiinin puutoksesta
         isCorrect: 0
@@ -1091,7 +1093,7 @@ MonoBehaviour:
         isCorrect: 0
       - answerText: Valintaetu
         isCorrect: 1
-    - questionText: "Mik\xE4 seuraavista on tunneituin mikrosatelliitti instabiliteetin
+    - questionText: "Mik\xE4 seuraavista on tunnetuin mikrosatelliitti-instabiliteetin
         aiheuttaja?"
       questionImage: {fileID: 0}
       correctCount: 1
@@ -1247,8 +1249,8 @@ MonoBehaviour:
         isCorrect: 0
       - answerText: "V\xE4\xE4rin"
         isCorrect: 1
-    - questionText: Mikrosatelliitti instabiliteetti ilmenee DNA:n toistojaksojen
-        pituusvaiheteluna.
+    - questionText: Mikrosatelliitti-instabiliteetti ilmenee DNA:n toistojaksojen
+        pituusvaiheteluna
       questionImage: {fileID: 0}
       correctCount: 1
       answers:
@@ -1291,8 +1293,8 @@ MonoBehaviour:
         isCorrect: 0
       - answerText: "V\xE4\xE4rin"
         isCorrect: 1
-    - questionText: "Virhe APC geeniss\xE4 on ensimm\xE4isi\xE4 polyypin syntyyn
-        vaikuttavia mutaatioita satunnaisessa suolistosy\xF6v\xE4ss\xE4."
+    - questionText: "Virhe APC geeniss\xE4 on yleens\xE4 ensimm\xE4isi\xE4 polyypin
+        syntyyn vaikuttavia mutaatioita satunnaisessa suolistosy\xF6v\xE4ss\xE4"
       questionImage: {fileID: 0}
       correctCount: 1
       answers:
@@ -1301,7 +1303,8 @@ MonoBehaviour:
       - answerText: "V\xE4\xE4rin"
         isCorrect: 0
     - questionText: "Familiaalisessa adenomatoottisessa polypoosissa sairastumisriski
-        paksusuolensy\xF6p\xE4\xE4n on l\xE4hes 100 % ja hoitona on paksusuolen poisto."
+        paksusuolensy\xF6p\xE4\xE4n on l\xE4hes 100 % ja hoitona on usein lopulta
+        paksusuolen poisto"
       questionImage: {fileID: 0}
       correctCount: 1
       answers:
@@ -1310,7 +1313,7 @@ MonoBehaviour:
       - answerText: "V\xE4\xE4rin"
         isCorrect: 0
     - questionText: "Lynchin oireyhtym\xE4ss\xE4 polyyppien m\xE4\xE4r\xE4 paksusuolessa
-        on lis\xE4\xE4ntynyt."
+        on aina voimakkaasti lis\xE4\xE4ntynyt"
       questionImage: {fileID: 0}
       correctCount: 1
       answers:
@@ -1319,7 +1322,7 @@ MonoBehaviour:
       - answerText: "V\xE4\xE4rin"
         isCorrect: 1
     - questionText: "Suuren riskin rintasy\xF6p\xE4alttiutta aiheuttavat geenivirheet
-        ovat yleisi\xE4 v\xE4est\xF6ss\xE4."
+        ovat yleisi\xE4 suomalaisessa v\xE4est\xF6ss\xE4"
       questionImage: {fileID: 0}
       correctCount: 1
       answers:
