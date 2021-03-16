@@ -282,6 +282,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quizScoreDisplayText: {fileID: 1612683077}
   connectionScoreDisplayText: {fileID: 874079853}
+  sentenceScoreDisplayText: {fileID: 0}
   doctorPhaseButton: {fileID: 1381979233}
 --- !u!4 &39854182
 Transform:
@@ -769,8 +770,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 918774072}
-        m_MethodName: Mute
+      - m_Target: {fileID: 39854181}
+        m_MethodName: ToggleSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1671,7 +1672,6 @@ GameObject:
   m_Component:
   - component: {fileID: 918774070}
   - component: {fileID: 918774071}
-  - component: {fileID: 918774072}
   m_Layer: 0
   m_Name: AudioController
   m_TagString: Untagged
@@ -1789,19 +1789,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &918774072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 918774069}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd31b7b2f23e84d698d688120a42f851, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  source: {fileID: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0

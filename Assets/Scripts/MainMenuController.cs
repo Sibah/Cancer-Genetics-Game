@@ -9,6 +9,11 @@ public class MainMenuController : MonoBehaviour
     public Text sentenceScoreDisplayText;
     public Button doctorPhaseButton;
 
+    private void Start()
+    {
+        SetSoundState();
+    }
+
     public void StartQuizGame()
     {
         SceneManager.LoadScene("Persistent");
@@ -53,6 +58,29 @@ public class MainMenuController : MonoBehaviour
     public void DoctorPhase()
     {
         SceneManager.LoadScene("DoctorPhase");
+    }
+
+    public void ToggleSound()
+    {
+        if (PlayerPrefs.GetInt("Muted", 0) == 0)
+        {
+            PlayerPrefs.SetInt("Muted", 1);
+        } else
+        {
+            PlayerPrefs.SetInt("Muted", 0);
+        }
+        SetSoundState();
+    }
+
+    private void SetSoundState()
+    {
+        if(PlayerPrefs.GetInt("Muted", 0) == 0)
+        {
+            AudioListener.volume = 1;
+        } else
+        {
+            AudioListener.volume = 0;
+        }
     }
 
     private void Update()
