@@ -84,8 +84,6 @@ public class ModeSelector : MonoBehaviour
         BroadcastMessage("ResetTime", SendMessageOptions.RequireReceiver);
         BroadcastMessage("ResetScore", SendMessageOptions.RequireReceiver);
 
-        //CHANGE TO BE EASIER TO CHANGE "DATABASE"
-        // currentDatabase = database.GetChild(0).GetComponent<WordDatabase>();
         wordInit.pairs = currentDatabase.GetWordPairs();
 
         wordInit.PlaceWordsInSides();
@@ -101,7 +99,6 @@ public class ModeSelector : MonoBehaviour
 
     // Values Item1 == time
     // Values Item2 == score
-    // Values Item3 == correct connection count
     public void ActivateResultScreen(System.Tuple<int, int> values)
     {
         wordInit.roundCounter = 0;

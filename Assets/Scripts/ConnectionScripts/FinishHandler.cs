@@ -43,25 +43,7 @@ public class FinishHandler : MonoBehaviour
     }
 
     public void FinishRound()
-    {
-        // int lineCount = lines.childCount;
-        // int rightCount = rightSide.childCount;
-        // int leftCount = leftSide.childCount;
-        // for(int i = 0; i < lineCount; i++)
-        // {
-        //     Destroy(lines.GetChild(0).gameObject);
-        // }
-        
-        // for(int i = 0; i < rightCount; i++)
-        // {
-        //     Destroy(rightSide.GetChild(0).gameObject);
-        // }
-
-        // for(int i = 0; i < leftCount; i++)
-        // {
-        //     Destroy(leftSide.GetChild(0).gameObject);
-        // }
-        
+    {        
         ResetTime();
         initializer.PlaceWordsInSides();
     }
