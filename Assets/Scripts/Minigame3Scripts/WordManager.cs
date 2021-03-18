@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WordManager : MonoBehaviour
 {
@@ -19,10 +20,11 @@ public class WordManager : MonoBehaviour
 
     public void AddWord() 
     {
-        Word word = new Word(WordGenerator.GetRandomWord(), wordSpawner.SpawnWord());
-        //Debug.Log(word.word);
 
-        words.Add(word);
+            Word word = new Word(WordGenerator.GetRandomWord(), wordSpawner.SpawnWord());
+            words.Add(word);
+    
+        //Debug.Log(word.word);
     }
 
     public void TypeLetter (char letter)

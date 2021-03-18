@@ -13,6 +13,8 @@ public class Answer : MonoBehaviour
     public static int sentencenumb;
     public Text pressedText;
     public Text wrongText;
+    public static int randomizer;
+    public static int stopNumber;
 
     
     
@@ -100,9 +102,9 @@ public class Answer : MonoBehaviour
 
     "<color=yellow>?</color> saa ribosomilla aikaan veden liittämisen peptidi ketjuun ja translaation loppumisen", "<color=green>Lopetuskodoni</color> saa ribosomilla aikaan veden liittämisen peptidi ketjuun ja translaation loppumisen",
 
-    "<color=yellow>?</color> sekä proteiinia koodaavan osan mutaatiot voivat olla <color=yellow>?</color>", "<color=green>Säätelyalueen</color> sekä proteiinia koodaavan osan mutaatiot voivat olla <color=yellow>?</color>",
+    "<color=yellow>?</color> sekä proteiinia koodaavan osan mutaatiot ovat useimmiten <color=yellow>?</color>", "<color=green>Säätelyalueen</color> sekä proteiinia koodaavan osan mutaatiot ovat useimmiten <color=yellow>?</color>",
 
-    "Säätelyalueen sekä proteiinia koodaavan osan mutaatiot voivat olla <color=yellow>?</color>", "<color=green>Säätelyalueen</color> sekä proteiinia koodaavan osan mutaatiot voivat olla <color=green>patologisia</color>",
+    "Säätelyalueen sekä proteiinia koodaavan osan mutaatiot ovat useimmiten <color=yellow>?</color>", "<color=green>Säätelyalueen</color> sekä proteiinia koodaavan osan mutaatiot ovat useimmiten <color=green>patogeenisia</color>",
 
     "Suvussa eteenpäin periytyvät mutaatiot tapahtuvat <color=yellow>?</color>", "Suvussa eteenpäin periytyvät mutaatiot tapahtuvat <color=green>ituradassa</color>",
 
@@ -138,9 +140,9 @@ public class Answer : MonoBehaviour
 
     "<color=yellow>?</color> tunnistaa replikaation virheet sekä muutaman emäksen insertiot ja deleetiot ja korjaa ne", "<color=green>Mismatch-repair</color> tunnistaa replikaation virheet sekä muutaman emäksen insertiot ja deleetiot ja korjaa ne",
 
-    "Replikaatio virheen sisältävän juosteen purun aloittaa MutLa proteiinikompleksi, joka sisältää geenit <color=yellow>?</color> tai <color=yellow>?</color>", "Replikaatio virheen sisältävän juosteen purun aloittaa MutLa proteiinikompleksi, joka sisältää geenit <color=green>MLH1</color> tai <color=yellow>?</color>",
+    "Replikaatiovirheen sisältävän juosteen purkamisen aloittaa MutLa proteiinikompleksi, joka sisältää geenien <color=yellow>?</color> tai <color=yellow>?</color> proteiinituotteet", "Replikaatiovirheen sisältävän juosteen purkamisen aloittaa MutLa proteiinikompleksi, joka sisältää geenit <color=green>MLH1</color> tai <color=yellow>?</color> proteiinituotteet",
 
-    "Replikaatio virheen sisältävän juosteen purun aloittaa MutLa proteiinikompleksi, joka sisältää geenit MLH1 tai <color=yellow>?</color>", "Replikaatio virheen sisältävän juosteen purun aloittaa MutLa proteiinikompleksi, joka sisältää geenit MLH1 tai <color=green>PMS2</color>",
+    "Replikaatiovirheen sisältävän juosteen purkamisen aloittaa MutLa proteiinikompleksi, joka sisältää geenien MLH1 tai <color=yellow>?</color> proteiinituotteet", "Replikaatiovirheen sisältävän juosteen purkamisen aloittaa MutLa proteiinikompleksi, joka sisältää geenit MLH1 tai <color=green>PMS2</color> proteiinituotteet",
 
     "Solusyklin <color=yellow>?</color> mismatch-repair systeemin aktivaatio on suurinta", "Solusyklin <color=green>synteesivaiheessa</color> mismatch-repair systeemin aktivaatio on suurinta",
 
@@ -217,7 +219,7 @@ public class Answer : MonoBehaviour
     "E", "40",
     "Lopetuskodoni", "41",
     "Säätelyalueen", "42",
-    "patologisia", "43",
+    "patogeenisia", "43",
     "ituradassa", "44",
     "aktivoiva", "45",
     "inaktivoiva", "46",
@@ -259,11 +261,26 @@ public class Answer : MonoBehaviour
     {
         sentencenumb = 0;
         answernumb = 1;
-        answerText.text = answers[0];
         answerText.color = Color.black;
-        wrongText.color = Color.black;
+        stopNumber = 10;
 
-        sentence.text = sentenceList[0];
+        int randomizer = Random.Range(0, sentenceList.Length-1);
+        if (randomizer % 2 != 0)
+        {
+            randomizer += 1;
+        }
+
+        sentence.text = sentenceList[sentencenumb];
+        answerText.text = answers[0];
+
+
+
+        
+        //using the following two lines makes the sentence randomized 
+        //sentence.text = sentenceList[randomizer];
+        //answerText.text = answers[randomizer];
+
+
     }
 
     // Update is called once per frame
@@ -274,9 +291,12 @@ public class Answer : MonoBehaviour
         {
             if (pressedText.text == answerText.text)
             {
-                //answerText.color = Color.green;
+            
                 answernumb += 1;
                 sentencenumb += 1;
+                randomizer += 1;
+                
+                //change sentencenumb to randomizer to make randomized
                 sentence.text = sentenceList[sentencenumb];
                 sentencenumb +=1;
                 
@@ -284,15 +304,18 @@ public class Answer : MonoBehaviour
             else
             {
                 Score.scoreAmount -= 2;
-                //answerText.color = Color.red;
-                wrongText.color = Color.red;
+                wrongText.gameObject.SetActive(true);
+
                 answernumb -= 1;
+
+                // If randomized set this to +1
                 sentencenumb +=2;
             }
 
             //update sentence and change answer back to black
             StartCoroutine(CoroutineChangeVariables());
         }
+
     }
 
 
@@ -304,6 +327,7 @@ public class Answer : MonoBehaviour
 
     //cheks if it was the last sentence of the array, if was returns to mini game 3 main screen
     //otherwise gives next sentence
+    //change ==stopnumber it sentences are randomized
     if (sentencenumb == sentenceList.Length)
     {
         
@@ -311,17 +335,21 @@ public class Answer : MonoBehaviour
     }
     else
     {
+        int randomizer = Random.Range(0, sentenceList.Length-1);
+        if (randomizer % 2 != 0)
+        {
+            randomizer += 1;
+        }
         
+
+        //could change to randomizer
         sentence.text = sentenceList[sentencenumb];
-        //answerText.color = Color.black;
-        wrongText.color = Color.black;
+       wrongText.gameObject.SetActive(false);
+       //could change to randomizer
         answerText.text = answers[sentencenumb];
     
     }
 }
-
-
-
 
 
 }

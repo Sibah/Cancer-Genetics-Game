@@ -29,8 +29,8 @@ public class Answer2 : MonoBehaviour
     "Syöpä on <color=yellow>?</color> sairaus, joka yleensä kehittyy hankinnaisen perimän <color=yellow>?</color> kautta", "Syöpä on <color=green>geneettinen</color> sairaus, joka yleensä kehittyy hankinnaisen perimän <color=yellow>?</color> kautta",
     "Syöpä on geneettinen sairaus, joka yleensä kehittyy hankinnaisen perimän <color=yellow>?</color> kautta", "Syöpä on geneettinen sairaus, joka yleensä kehittyy hankinnaisen perimän <color=green>mutaation</color> kautta",
 
-    "Knudsonin teorian mukaan solu tarvitsee ainakin <color=yellow>?</color> osumaa eli <color=yellow>?</color> muuttuakseen syöpäsoluksi", "Knudsonin teorian mukaan solu tarvitsee ainakin <color=green>kaksi</color> osumaa eli <color=yellow>?</color> muuttuakseen syöpäsoluksi",
-    "Knudsonin teorian mukaan solu tarvitsee ainakin kaksi osumaa eli <color=yellow>?</color> muuttuakseen syöpäsoluksi", "Knudsonin teorian mukaan solu tarvitsee ainakin kaksi osumaa eli <color=green>mutaatiota</color> muuttuakseen syöpäsoluksi",
+    "Knudsonin teorian mukaan solu tarvitsee ainakin <color=yellow>?</color> osumaa eli <color=yellow>?</color> kasvunrajoitegeenissä muuttuakseen syöpäsoluksi", "Knudsonin teorian mukaan solu tarvitsee ainakin <color=green>kaksi</color> osumaa eli <color=yellow>?</color> kasvunrajoitegeenissä muuttuakseen syöpäsoluksi",
+    "Knudsonin teorian mukaan solu tarvitsee ainakin kaksi osumaa eli <color=yellow>?</color> kasvunrajoitegeenissä muuttuakseen syöpäsoluksi", "Knudsonin teorian mukaan solu tarvitsee ainakin kaksi osumaa eli <color=green>mutaatiota</color> kasvunrajoitegeenissä muuttuakseen syöpäsoluksi",
 
     "<color=yellow>?</color> syövässä Knudsonin teorian ensimmäinen mutaatio on <color=yellow>?</color>, kun hankinnaisessa molemmat mutaatiot syntyvät elämän aikana", "<color=green>Perinnöllisessä</color> syövässä Knudsonin teorian ensimmäinen mutaatio on <color=yellow>?</color>, kun hankinnaisessa molemmat mutaatiot syntyvät elämän aikana",
     "Perinnöllisessä syövässä Knudsonin teorian ensimmäinen mutaatio on <color=yellow>?</color>, kun hankinnaisessa molemmat mutaatiot syntyvät elämän aikana", "Perinnöllisessä syövässä Knudsonin teorian ensimmäinen mutaatio on <color=green>ituradassa</color>, kun hankinnaisessa molemmat mutaatiot syntyvät elämän aikana",
@@ -45,13 +45,13 @@ public class Answer2 : MonoBehaviour
     "Esimerkki perinnöllisestä onkogeenistä on <color=yellow>?</color>, joka altistaa papillaariselle munuaissyövälle, HER2 taas on hankinnainen <color=yellow>?</color> onkogeeni", "Esimerkki perinnöllisestä onkogeenistä on <color=green>MET</color>, joka altistaa papillaariselle munuaissyövälle, HER2 taas on hankinnainen <color=yellow>?</color> onkogeeni",
     "Esimerkki perinnöllisestä onkogeenistä on MET, joka altistaa papillaariselle munuaissyövälle, HER2 taas on hankinnainen <color=yellow>?</color> onkogeeni", "Esimerkki perinnöllisestä onkogeenistä on MET, joka altistaa papillaariselle munuaissyövälle, HER2 taas on hankinnainen <color=green>rintasyövän</color> onkogeeni",
 
-    "<color=yellow>?</color> ovat useammin perinnöllisten syöpäalttiuksien takan kuin <color=yellow>?</color>", "<color=green>Kasvunrajoitegeenit</color> ovat useammin perinnöllisten syöpäalttiuksien takan kuin <color=yellow>?</color>",
-    "Kasvunrajoitegeenit ovat useammin perinnöllisten syöpäalttiuksien takan kuin <color=yellow>?</color>", "Kasvunrajoitegeenit ovat useammin perinnöllisten syöpäalttiuksien takan kuin <color=green>onkogeenit</color>",
+    "<color=yellow>?</color> ovat useammin perinnöllisten syöpäalttiuksien takana kuin <color=yellow>?</color>", "<color=green>Kasvunrajoitegeenit</color> ovat useammin perinnöllisten syöpäalttiuksien takana kuin <color=yellow>?</color>",
+    "Kasvunrajoitegeenit ovat useammin perinnöllisten syöpäalttiuksien takana kuin <color=yellow>?</color>", "Kasvunrajoitegeenit ovat useammin perinnöllisten syöpäalttiuksien takana kuin <color=green>onkogeenit</color>",
 
     "Kasvunrajoitegeenissä tapahtuva <color=yellow>?</color> mutaatio poistaa solun kasvun jarrun", "Kasvunrajoitegeenissä tapahtuva <color=green>inaktivoiva</color> mutaatio poistaa solun kasvun jarrun",
 
-    "Solutasolla kasvunrajoitegeenien molempien <color=yellow>?</color> on inaktivoiduttava geenin toiminnan muuttumiseen eli ne toimitavat <color=yellow>?</color>", "Solutasolla kasvunrajoitegeenien molempien <color=green>alleelien</color> on inaktivoiduttava geenin toiminnan muuttumiseen eli ne toimitavat <color=yellow>?</color>",
-    "Solutasolla kasvunrajoitegeenien molempien alleelien on inaktivoiduttava geenin toiminnan muuttumiseen eli ne toimitavat <color=yellow>?</color>", "Solutasolla kasvunrajoitegeenien molempien alleelien on inaktivoiduttava geenin toiminnan muuttumiseen eli ne toimitavat <color=green>resessiivisesti</color>",
+    "Solutasolla kasvunrajoitegeenien molempien <color=yellow>?</color> on inaktivoiduttava geenin toiminnan muuttumiseen eli ne toimivat <color=yellow>?</color>", "Solutasolla kasvunrajoitegeenien molempien <color=green>alleelien</color> on inaktivoiduttava geenin toiminnan muuttumiseen eli ne toimivat <color=yellow>?</color>",
+    "Solutasolla kasvunrajoitegeenien molempien alleelien on inaktivoiduttava geenin toiminnan muuttumiseen eli ne toimivat <color=yellow>?</color>", "Solutasolla kasvunrajoitegeenien molempien alleelien on inaktivoiduttava geenin toiminnan muuttumiseen eli ne toimivat <color=green>resessiivisesti</color>",
 
     "Ituradassa kasvunrajoitegeenien syöpäalttius periytyy <color=yellow>?</color> eli elinaikana geenin toiminnan muuttumiseen tarvitaan enää <color=yellow>?</color> mutaatio", "Ituradassa kasvunrajoitegeenien syöpäalttius periytyy <color=green>vallitsevasti</color> eli elinaikana geenin toiminnan muuttumiseen tarvitaan enää <color=yellow>?</color> mutaatio",
     "Ituradassa kasvunrajoitegeenien syöpäalttius periytyy vallitsevasti eli elinaikana geenin toiminnan muuttumiseen tarvitaan enää <color=yellow>?</color> mutaatio", "Ituradassa kasvunrajoitegeenien syöpäalttius periytyy vallitsevasti eli elinaikana geenin toiminnan muuttumiseen tarvitaan enää <color=green>yksi</color> mutaatio",
@@ -89,36 +89,35 @@ public class Answer2 : MonoBehaviour
     "Syöpäsolussa kromosomeja voi olla <color=yellow>?</color> kuin normaalisti ja niissä voi olla rakennevikoja, tämä johtuu <color=yellow>?</color> instabiliteetista", "Syöpäsolussa kromosomeja voi olla <color=green>enemmän</color> kuin normaalisti ja niissä voi olla rakennevikoja, tämä johtuu <color=yellow>?</color> instabiliteetista",
     "Syöpäsolussa kromosomeja voi olla enemmän kuin normaalisti ja niissä voi olla rakennevikoja, tämä johtuu <color=yellow>?</color> instabiliteetista", "Syöpäsolussa kromosomeja voi olla enemmän kuin normaalisti ja niissä voi olla rakennevikoja, tämä johtuu <color=green>kromosomitason</color> instabiliteetista",
 
-    "Genomin instabiliteetin toinen tyyppi <color=yellow>?</color> instabiliteetti ilmenee toistojaksojen <color=yellow>?</color> ja pistemutaatioina", "Genomin instabiliteetin toinen tyyppi <color=green>mikrosatelliitti</color> instabiliteetti ilmenee toistojaksojen <color=yellow>?</color> ja pistemutaatioina",
-    "Genomin instabiliteetin toinen tyyppi mikrosatelliitti instabiliteetti ilmenee toistojaksojen <color=yellow>?</color> ja pistemutaatioina", "Genomin instabiliteetin toinen tyyppi mikrosatelliitti instabiliteetti ilmenee toistojaksojen <color=green>pituusvaihteluna</color> ja pistemutaatioina",
+    "Genomin instabiliteetin toinen tyyppi <color=yellow>?</color> ilmenee toistojaksojen <color=yellow>?</color> ja pistemutaatioina", "Genomin instabiliteetin toinen tyyppi <color=green>mikrosatelliitti-instabiliteetti</color> ilmenee toistojaksojen <color=yellow>?</color> ja pistemutaatioina",
+    "Genomin instabiliteetin toinen tyyppi mikrosatelliitti-instabiliteetti ilmenee toistojaksojen <color=yellow>?</color> ja pistemutaatioina", "Genomin instabiliteetin toinen tyyppi mikrosatelliitti instabiliteetti ilmenee toistojaksojen <color=green>pituusvaihteluna</color> ja pistemutaatioina",
 
-    "<color=yellow>?</color> järjestelmän vika on yleinen syy mikrosatellittii instabiliteetille", "<color=green>Mismatch-repair</color> järjestelmän vika on yleinen syy mikrosatellittii instabiliteetille",
+    "<color=yellow>?</color> järjestelmän vika on yleinen syy mikrosatellittii-instabiliteetille", "<color=green>Mismatch-repair</color> järjestelmän vika on yleinen syy mikrosatellittii-instabiliteetille",
 
-    "Mikrosatelliitti instabiliteettia esiintyy noin <color=yellow>?</color> syövistä ja se voi olla osana <color=yellow>?</color> monisyöpäoireyhtymää", "Mikrosatelliitti instabiliteettia esiintyy noin <color=green>15 %</color> syövistä ja se voi olla osana <color=yellow>?</color> monisyöpäoireyhtymää",
-    "Mikrosatelliitti instabiliteettia esiintyy noin 15 % syövistä ja se voi olla osana <color=yellow>?</color> monisyöpäoireyhtymää", "Mikrosatelliitti instabiliteettia esiintyy noin 15 % syövistä ja se voi olla osana <color=green>periytyvää</color> monisyöpäoireyhtymää",
+    "Mikrosatelliitti-instabiliteettia esiintyy noin <color=yellow>?</color> syövistä ja se voi olla osana <color=yellow>?</color> monisyöpäoireyhtymää", "Mikrosatelliitti-instabiliteettia esiintyy noin <color=green>15 %</color> syövistä ja se voi olla osana <color=yellow>?</color> monisyöpäoireyhtymää",
+    "Mikrosatelliitti-instabiliteettia esiintyy noin 15 % syövistä ja se voi olla osana <color=yellow>?</color> monisyöpäoireyhtymää", "Mikrosatelliitti-instabiliteettia esiintyy noin 15 % syövistä ja se voi olla osana <color=green>periytyvää</color> monisyöpäoireyhtymää",
 
     "Harva syöpäalttiusoireyhtymä altistaa vain <color=yellow>?</color> syövälle, mutta jokaisella oireyhtymällä on kuitenkin sille tyypillisiä syöpiä", "Harva syöpäalttiusoireyhtymä altistaa vain <color=green>yhdelle</color> syövälle, mutta jokaisella oireyhtymällä on kuitenkin sille tyypillisiä syöpiä",
 
     "Li-Fraumenin oireyhtymässä on mutaatio <color=yellow>?</color> geenissä, ja se altistaa esimerkiksi <color=yellow>?</color>- ja luustosyövälle", "Li-Fraumenin oireyhtymässä on mutaatio <color=green>P53</color> geenissä, ja se altistaa esimerkiksi <color=yellow>?</color>- ja luustosyövälle",
     "Li-Fraumenin oireyhtymässä on mutaatio P53 geenissä, ja se altistaa esimerkiksi <color=yellow>?</color>- ja luustosyövälle", "Li-Fraumenin oireyhtymässä on mutaatio P53 geenissä, ja se altistaa esimerkiksi <color=green>rinta</color>- ja luustosyövälle",
 
-    "Syöpäalttius voidaan tunnistaa <color=yellow>?</color> tarkastelemalla, <color=yellow>?</color> värjäyksestä ja <color=yellow>?</color>", "Syöpäalttius voidaan tunnistaa <color=green>sukupuuta</color> tarkastelemalla, <color=yellow>?</color> värjäyksestä ja <color=yellow>?</color>",
-    "Syöpäalttius voidaan tunnistaa sukupuuta tarkastelemalla, <color=yellow>?</color> värjäyksestä ja <color=yellow>?</color>", "Syöpäalttius voidaan tunnistaa sukupuuta tarkastelemalla, <color=green>immunohistokemiallisesta</color> värjäyksestä ja <color=yellow>?</color>",
-    "Syöpäalttius voidaan tunnistaa sukupuuta tarkastelemalla, immunohistokemiallisesta värjäyksestä ja <color=yellow>?</color>", "Syöpäalttius voidaan tunnistaa sukupuuta tarkastelemalla, immunohistokemiallisesta värjäyksestä ja <color=green>geenitestillä</color>",
+    "Syöpäalttiusoireyhtymä voidaan tunnistaa <color=yellow>?</color> tarkastelemalla ja <color=yellow>?</color>", "Syöpäalttiusoireyhtymä voidaan tunnistaa <color=green>sukupuuta</color> tarkastelemalla ja <color=yellow>?</color>",
+    "Syöpäalttiusoireyhtymä voidaan tunnistaa sukupuuta tarkastelemalla ja <color=yellow>?</color>", "Syöpäalttiusoireyhtymä voidaan tunnistaa sukupuuta tarkastelemalla ja <color=green>geenitestillä</color>",
 
-    "Tunnistetuista syöpäalttiusoireyhtymistä suurin osa on <color=yellow>?</color>, mutta ei ole epätavallista, että niissä esiintyy epätäydellistä <color=yellow>?</color>", "Tunnistetuista syöpäalttiusoireyhtymistä suurin osa on <color=green>dominoivia</color>, mutta ei ole epätavallista, että niissä esiintyy epätäydellistä <color=yellow>?</color>",
-    "Tunnistetuista syöpäalttiusoireyhtymistä suurin osa on dominoivia, mutta ei ole epätavallista, että niissä esiintyy epätäydellistä <color=yellow>?</color>", "Tunnistetuista syöpäalttiusoireyhtymistä suurin osa on dominoivia, mutta ei ole epätavallista, että niissä esiintyy epätäydellistä <color=green>penetranssia</color>",
+    "Tunnistetuista syöpäalttiusoireyhtymistä suurin osa on <color=yellow>?</color> ja niille on tyypillistä epätäydellinen <color=yellow>?</color>", "Tunnistetuista syöpäalttiusoireyhtymistä suurin osa on <color=green>dominoivia</color> ja niille on tyypillistä epätäydellinen <color=yellow>?</color>",
+    "Tunnistetuista syöpäalttiusoireyhtymistä suurin osa on dominoivia, ja niille on tyypillistä epätäydellinen <color=yellow>?</color>", "Tunnistetuista syöpäalttiusoireyhtymistä suurin osa on dominoivia ja niille on tyypillistä epätäydellinen <color=green>penetranssi</color>",
 
     "<color=yellow>?</color> värjäystulos kudoksen immunohistokemiallisessa värjäyksessä osoittaa geenin inaktivoitumisen", "<color=green>Negatiivinen</color> värjäystulos kudoksen immunohistokemiallisessa värjäyksessä osoittaa geenin inaktivoitumisen",
 
     "Naisten yleisin syöpä on <color=yellow>?</color> ja jokaisella naisella on noin <color=yellow>?</color> riski sairastua siihen", "Naisten yleisin syöpä on <color=green>rintasyöpä</color> ja jokaisella naisella on noin <color=yellow>?</color> riski sairastua siihen",
-    "Naisten yleisin syöpä on rintasyöpä ja jokaisella naisella on noin <color=yellow>?</color> riski sairastua siihen", "Naisten yleisin syöpä on rintasyöpä ja jokaisella naisella on noin <color=green>10 %</color> riski sairastua siihen",
+    "Naisten yleisin syöpä on rintasyöpä ja jokaisella naisella on noin <color=yellow>?</color> riski sairastua siihen", "Naisten yleisin syöpä on rintasyöpä ja jokaisella naisella on noin <color=green>10-15%</color> riski sairastua siihen",
 
-    "<color=yellow>?</color> rintasyövän osuus Suomessa todetuista rintasyövistä on noin <color=yellow>?</color>", "<color=green>Periytyvän</color> rintasyövän osuus Suomessa todetuista rintasyövistä on noin <color=yellow>?</color>",
-    "Periytyvän rintasyövän osuus Suomessa todetuista rintasyövistä on noin <color=yellow>?</color>", "Periytyvän rintasyövän osuus Suomessa todetuista rintasyövistä on noin <color=green>5–10 %</color>",
+    "Korkean riskin <color=yellow>?</color> alttiudesta johtuvan rintasyövän osuus Suomessa todetuista rintasyövistä on noin <color=yellow>?</color>", "Korkean riskin <color=green>perinnöllisestä</color> alttiudesta johtuvan rintasyövän osuus Suomessa todetuista rintasyövistä on noin <color=yellow>?</color>",
+    "Korkean riskin perinnöllisestä alttiudesta johtuvan rintasyövän osuus Suomessa todetuista rintasyövistä on noin <color=yellow>?</color>", "Korkean riskin perinnöllisestä alttiudesta johtuvan rintasyövän osuus Suomessa todetuista rintasyövistä on noin <color=green>5–10 %</color>",
 
-    "Suuren riskin rintasyöpägeenin, kuten <color=green>BRCA 1</color> kantajilla katsotaan olevan <color=yellow>?</color> riski sairastua rintasyöpään", "Suuren riskin rintasyöpägeenin, kuten <color=green>BRCA 1</color> kantajilla katsotaan olevan <color=yellow>?</color> riski sairastua rintasyöpään",
-    "Suuren riskin rintasyöpägeenin, kuten BRCA 1 kantajilla katsotaan olevan <color=yellow>?</color> riski sairastua rintasyöpään", "Suuren riskin rintasyöpägeenin, kuten BRCA 1 kantajilla katsotaan olevan <color=green>yli 50 %</color> riski sairastua rintasyöpään",
+    "Suuren riskin geenivirheen, kuten <color=green>BRCA 1</color> kantajilla katsotaan olevan <color=yellow>?</color> riski sairastua rintasyöpään", "Suuren riskin geenivirheen, kuten <color=green>BRCA 1</color> kantajilla katsotaan olevan <color=yellow>?</color> riski sairastua rintasyöpään",
+    "Suuren riskin geenivirheen, kuten BRCA 1 kantajilla katsotaan olevan <color=yellow>?</color> riski sairastua rintasyöpään", "Suuren riskin geenivirheen, kuten BRCA 1 kantajilla katsotaan olevan <color=green>yli 50 %</color> riski sairastua rintasyöpään",
 
     "<color=yellow>?</color> riskin perinnöllisen syöpäalttiuden geenimutaatiot ovat harvinaisia väestössä", "<color=green>Suuren</color> riskin perinnöllisen syöpäalttiuden geenimutaatiot ovat harvinaisia väestössä",
 
@@ -129,30 +128,29 @@ public class Answer2 : MonoBehaviour
     "BRCA 1 ja BRCA 2 rintasyöpäalttiusgeenien kantajien sairastumisriskiä voidaan pienentää <color=yellow>?</color> ja <color=yellow>?</color> poistolla", "BRCA 1 ja BRCA 2 rintasyöpäalttiusgeenien kantajien sairastumisriskiä voidaan pienentää <color=green>rintojen</color> ja <color=yellow>?</color> poistolla",
     "BRCA 1 ja BRCA 2 rintasyöpäalttiusgeenien kantajien sairastumisriskiä voidaan pienentää rintojen ja <color=green>munasarjojen</color> poistolla",
 
-    "Paksu- ja peräsuolisyöpien ilmaantuvuus on suurta, mutta vain noin <color=yellow>?</color> on selkeästi perinnöllisiä", "Paksu- ja peräsuolisyöpien ilmaantuvuus on suurta, mutta vain noin <color=green> 5 %</color> on selkeästi perinnöllisiä",
+    "Paksu- ja peräsuolisyöpien ilmaantuvuus on suurta, mutta vain noin <color=yellow>?</color> on selkeästi perinnölliseen alttiuteen liittyvää", "Paksu- ja peräsuolisyöpien ilmaantuvuus on suurta, mutta vain noin <color=green> 5 %</color> on selkeästi perinnölliseen alttiuteen liittyvää",
 
-    "Sporadinen paksusuolisyöpä kehittyy, kun <color=yellow>?</color> geenin virhe johtaa polyypin syntyyn, sitten mutaatiot muissa onkogeeneissa ja kasvunrajoitegeeneissä johtavat <color=yellow>?</color> malignisoitumiseen", "Sporadinen paksusuolisyöpä kehittyy, kun <color=green>APC</color> geenin virhe johtaa polyypin syntyyn, sitten mutaatiot muissa onkogeeneissa ja kasvunrajoitegeeneissä johtavat <color=yellow>?</color> malignisoitumiseen",
-    "Sporadinen paksusuolisyöpä kehittyy, kun APC geenin virhe johtaa polyypin syntyyn, sitten mutaatiot muissa onkogeeneissa ja kasvunrajoitegeeneissä johtavat <color=yellow>?</color> malignisoitumiseen", "Sporadinen paksusuolisyöpä kehittyy, kun APC geenin virhe johtaa polyypin syntyyn, sitten mutaatiot muissa onkogeeneissa ja kasvunrajoitegeeneissä johtavat <color=green>polyypin</color> malignisoitumiseen",
+    "Sporadinen paksusuolisyöpä kehittyy usein, kun <color=yellow>?</color> geenin virhe johtaa polyypin syntyyn, sitten mutaatiot muissa onkogeeneissa ja kasvunrajoitegeeneissä johtavat <color=yellow>?</color> malignisoitumiseen", "Sporadinen paksusuolisyöpä kehittyy usein, kun <color=green>APC</color> geenin virhe johtaa polyypin syntyyn, sitten mutaatiot muissa onkogeeneissa ja kasvunrajoitegeeneissä johtavat <color=yellow>?</color> malignisoitumiseen",
+    "Sporadinen paksusuolisyöpä kehittyy usein, kun APC geenin virhe johtaa polyypin syntyyn, sitten mutaatiot muissa onkogeeneissa ja kasvunrajoitegeeneissä johtavat <color=yellow>?</color> malignisoitumiseen", "Sporadinen paksusuolisyöpä kehittyy usein, kun APC geenin virhe johtaa polyypin syntyyn, sitten mutaatiot muissa onkogeeneissa ja kasvunrajoitegeeneissä johtavat <color=green>polyypin</color> malignisoitumiseen",
 
-    "Paksusuolisyöpäoireyhtymiä on sellaisia, joissa polyyppien lukumäärä on <color=yellow>?</color> ja sillaisia, joissa <color=yellow>?</color> esiintyy saman verran kuin <color=yellow>?</color>", "Paksusuolisyöpäoireyhtymiä on sellaisia, joissa polyyppien lukumäärä on <color=green>kasvanut</color> ja sillaisia, joissa <color=yellow>?</color> esiintyy saman verran kuin <color=yellow>?</color>",
-    "Paksusuolisyöpäoireyhtymiä on sellaisia, joissa polyyppien lukumäärä on kasvanut ja sillaisia, joissa <color=yellow>?</color> esiintyy saman verran kuin <color=yellow>?</color>",  "Paksusuolisyöpäoireyhtymiä on sellaisia, joissa polyyppien lukumäärä on kasvanut ja sillaisia, joissa <color=green>polyyppeja</color> esiintyy saman verran kuin <color=yellow>?</color>",
-    "Paksusuolisyöpäoireyhtymiä on sellaisia, joissa polyyppien lukumäärä on kasvanut ja sillaisia, joissa polyyppeja esiintyy saman verran kuin <color=yellow>?</color>", "Paksusuolisyöpäoireyhtymiä on sellaisia, joissa polyyppien lukumäärä on kasvanut ja sillaisia, joissa polyyppeja esiintyy saman verran kuin <color=green>yleisväestössä</color>",
+    "Perinnöllistä kohonnutta <color=yellow>?</color> aiheuttavat oireyhtymät voidaan karkeasti jakaa <color=yellow>?</color> ja ei-polypoottisiin", "Perinnöllistä kohonnutta <color=green>perä- ja paksusuolisyöpäalttiutta</color> aiheuttavat oireyhtymät voidaan karkeasti jakaa <color=yellow>?</color> ja ei-polypoottisiin",
+    "Perinnöllistä kohonnutta perä- ja paksusuolisyöpäalttiutta aiheuttavat oireyhtymät voidaan karkeasti jakaa <color=yellow>?</color> ja ei-polypoottisiin", "Perinnöllistä kohonnutta perä- ja paksusuolisyöpäalttiutta aiheuttavat oireyhtymät voidaan karkeasti jakaa <color=green>polypoottisiin</color> ja ei-polypoottisiin",
 
-    "Portinvartijageeni APC:n perinnöllinen geenivirhe johtaa <color=yellow>?</color> (FAP), jossa sairastumisriski paksusuolisyöpään on lähes <color=yellow>?</color>", "Portinvartijageeni APC:n perinnöllinen geenivirhe johtaa <color=green>familiaaliseen adenomatoottiseen polypoosiin</color> (FAP), jossa sairastumisriski paksusuolisyöpään on lähes <color=yellow>?</color>",
-    "Portinvartijageeni APC:n perinnöllinen geenivirhe johtaa familiaaliseen adenomatoottiseen polypoosiin (FAP), jossa sairastumisriski paksusuolisyöpään on lähes <color=yellow>?</color>", "Portinvartijageeni APC:n perinnöllinen geenivirhe johtaa familiaaliseen adenomatoottiseen polypoosiin (FAP), jossa sairastumisriski paksusuolisyöpään on lähes <color=green>100 %</color>",
+    "Portinvartijageeni APC:n perinnöllinen geenivirhe johtaa <color=yellow>?</color> (FAP), jossa elinikäinen sairastumisriski paksusuolisyöpään voi olla jopa <color=yellow>?</color>", "Portinvartijageeni APC:n perinnöllinen geenivirhe johtaa <color=green>familiaaliseen adenomatoottiseen polypoosiin</color> (FAP), jossa elinikäinen sairastumisriski paksusuolisyöpään voi olla jopa <color=yellow>?</color>",
+    "Portinvartijageeni APC:n perinnöllinen geenivirhe johtaa familiaaliseen adenomatoottiseen polypoosiin (FAP), jossa elinikäinen sairastumisriski paksusuolisyöpään voi olla jopa <color=yellow>?</color>", "Portinvartijageeni APC:n perinnöllinen geenivirhe johtaa familiaaliseen adenomatoottiseen polypoosiin (FAP), jossa elinikäinen sairastumisriski paksusuolisyöpään voi olla jopa <color=green>100 %</color>",
 
-    "Ei-polypoottisen paksusuolisyövän eli HNPCCA eli <color=yellow>?</color> oireyhtymän alttiusgeenejä ovat <color=yellow>?</color> geenit, esimerkiksi <color=yellow>?</color>, MSH2, <color=yellow>?</color>", "Ei-polypoottisen paksusuolisyövän eli HNPCCA eli <color=green>Lynchin</color> oireyhtymän alttiusgeenejä ovat <color=yellow>?</color> geenit, esimerkiksi <color=yellow>?</color>, MSH2, <color=yellow>?</color>",
-    "Ei-polypoottisen paksusuolisyövän eli HNPCCA eli Lynchin oireyhtymän alttiusgeenejä ovat <color=yellow>?</color> geenit, esimerkiksi <color=yellow>?</color>, MSH2, <color=yellow>?</color>", "Ei-polypoottisen paksusuolisyövän eli HNPCCA eli Lynchin oireyhtymän alttiusgeenejä ovat <color=green>mismatch-repair</color> geenit, esimerkiksi <color=yellow>?</color>, MSH2, <color=yellow>?</color>",
-    "Ei-polypoottisen paksusuolisyövän eli HNPCCA eli Lynchin oireyhtymän alttiusgeenejä ovat mismatch-repair geenit, esimerkiksi <color=yellow>?</color>, MSH2, <color=yellow>?</color>", "Ei-polypoottisen paksusuolisyövän eli HNPCCA eli Lynchin oireyhtymän alttiusgeenejä ovat mismatch-repair geenit, esimerkiksi <color=green>MLH1</color>, MSH2, <color=yellow>?</color>",
-    "Ei-polypoottisen paksusuolisyövän eli HNPCCA eli Lynchin oireyhtymän alttiusgeenejä ovat mismatch-repair geenit, esimerkiksi MLH1, MSH2, <color=yellow>?</color>", "Ei-polypoottisen paksusuolisyövän eli HNPCCA eli Lynchin oireyhtymän alttiusgeenejä ovat mismatch-repair geenit, esimerkiksi MLH1, MSH2, <color=green>PMS2</color>",
+    "Ei-polypoottisen paksusuolisyövän eli HNPCC eli <color=yellow>?</color> oireyhtymän alttiusgeenejä ovat <color=yellow>?</color> geenit, esimerkiksi <color=yellow>?</color>, MSH2, MSH6 ja <color=yellow>?</color>", "Ei-polypoottisen paksusuolisyövän eli HNPCC eli <color=green>Lynchin</color> oireyhtymän alttiusgeenejä ovat <color=yellow>?</color> geenit, esimerkiksi <color=yellow>?</color>, MSH2, MSH6 ja <color=yellow>?</color>",
+    "Ei-polypoottisen paksusuolisyövän eli HNPCC eli Lynchin oireyhtymän alttiusgeenejä ovat <color=yellow>?</color> geenit, esimerkiksi <color=yellow>?</color>, MSH2, MSH6 ja <color=yellow>?</color>", "Ei-polypoottisen paksusuolisyövän eli HNPCC eli Lynchin oireyhtymän alttiusgeenejä ovat <color=green>mismatch-repair</color> geenit, esimerkiksi <color=yellow>?</color>, MSH2, MSH6 ja <color=yellow>?</color>",
+    "Ei-polypoottisen paksusuolisyövän eli HNPCC eli Lynchin oireyhtymän alttiusgeenejä ovat mismatch-repair geenit, esimerkiksi <color=yellow>?</color>, MSH2, MSH6 ja <color=yellow>?</color>", "Ei-polypoottisen paksusuolisyövän eli HNPCC eli Lynchin oireyhtymän alttiusgeenejä ovat mismatch-repair geenit, esimerkiksi <color=green>MLH1</color>, MSH2, MSH6 ja <color=yellow>?</color>",
+    "Ei-polypoottisen paksusuolisyövän eli HNPCC eli Lynchin oireyhtymän alttiusgeenejä ovat mismatch-repair geenit, esimerkiksi MLH1, MSH2, MSH6 ja <color=yellow>?</color>", "Ei-polypoottisen paksusuolisyövän eli HNPCC eli Lynchin oireyhtymän alttiusgeenejä ovat mismatch-repair geenit, esimerkiksi MLH1, MSH2, MSH6 ja <color=green>PMS2</color>",
 
     "Lynchin oireyhtymässä <color=yellow>?</color> kehittyminen pahanlaatuisiksi on <color=yellow>?</color>, vaikka polyyppien määrä ei ole suurempi kuin yleisväestössä", "Lynchin oireyhtymässä <color=green>polyyppien</color> kehittyminen pahanlaatuisiksi on <color=yellow>?</color>, vaikka polyyppien määrä ei ole suurempi kuin yleisväestössä",
     "Lynchin oireyhtymässä polyyppien kehittyminen pahanlaatuisiksi on <color=yellow>?</color>, vaikka polyyppien määrä ei ole suurempi kuin yleisväestössä", "Lynchin oireyhtymässä polyyppien kehittyminen pahanlaatuisiksi on <color=green>nopeutunut</color>, vaikka polyyppien määrä ei ole suurempi kuin yleisväestössä",
 
-    "Lynchin oireyhtymän geenivirheen kantajalle <color=yellow>?</color> ilmaantuu <color=yellow>?</color> aikaisemmin kuin sporadisena eli noin 40–60-vuotiaana", "Lynchin oireyhtymän geenivirheen kantajalle <color=green>paksusuolisyöpä</color> ilmaantuu <color=yellow>?</color> aikaisemmin kuin sporadisena eli noin 40–60-vuotiaana",
-    "Lynchin oireyhtymän geenivirheen kantajalle paksusuolisyöpä ilmaantuu <color=yellow>?</color> aikaisemmin kuin sporadisena eli noin 40–60-vuotiaana", "Lynchin oireyhtymän geenivirheen kantajalle paksusuolisyöpä ilmaantuu <color=green>noin 20 vuotta</color> aikaisemmin kuin sporadisena eli noin 40–60-vuotiaana",
+    "Lynchin oireyhtymän geenivirheen kantajalle <color=yellow>?</color> ilmaantuu keskimäärin <color=yellow>?</color> aikaisemmin kuin sporadisena eli noin 40–60-vuotiaana", "Lynchin oireyhtymän geenivirheen kantajalle <color=green>paksusuolisyöpä</color> ilmaantuu keskimäärin <color=yellow>?</color> aikaisemmin kuin sporadisena eli noin 40–60-vuotiaana",
+    "Lynchin oireyhtymän geenivirheen kantajalle paksusuolisyöpä ilmaantuu keskimäärin <color=yellow>?</color> aikaisemmin kuin sporadisena eli noin 40–60-vuotiaana", "Lynchin oireyhtymän geenivirheen kantajalle paksusuolisyöpä ilmaantuu keskimäärin <color=green>noin 20 vuotta</color> aikaisemmin kuin sporadisena eli noin 40–60-vuotiaana",
 
-    "Lynchin oireyhtymän potilaille tehdään <color=yellow>?</color> 2–3 vuoden välein, näin paksusuolisyövän ennuste laskee yleisväestön tasolle", "Lynchin oireyhtymän potilaille tehdään <color=green>kolonoskopia</color> 2–3 vuoden välein, näin paksusuolisyövän ennuste laskee yleisväestön tasolle"
+    "Lynchin oireyhtymän potilaille tehdään <color=yellow>?</color> 2–3 vuoden välein, näin perä- ja paksusuolisyövästä aiheutuva kuolleisuus laskee yleisen väestön tasolle", "Lynchin oireyhtymän potilaille tehdään <color=green>kolonoskopia</color> 2–3 vuoden välein, näin perä- ja paksusuolisyövästä aiheutuva kuolleisuus laskee yleisen väestön tasolle"
     };
 
 
@@ -219,39 +217,37 @@ public class Answer2 : MonoBehaviour
         "P53", "55", 
         "rinta", "56", 
         "sukupuuta", "57",
-        "immunohistokemiallisesta", "58", 
-        "geenitestillä", "59",
-        "dominoivia", "60", 
-        "penetranssia", "61",
-        "Negatiivinen", "62", 
-        "rintasyöpä", "63", 
-        "10 %", "64",
-        "Periytyvän", "65",
-        "5–10 %", "66", 
-        "BRCA 1", "67", 
-        "yli 50 %", "68",
-        "Suuren", "69",
-        "BRCA 1", "70", 
-        "BRCA 2", "71", 
-        "munasarjasyövän", "72", 
-        "rintojen", "73", 
-        "munasarjojen", "74", 
-        " 5 %", "75", 
-        "APC", "76", 
-        "polyypin", "77",
-        "kasvanut", "78", 
-        "polyyppeja", "79",
-        "yleisväestössä", "80",
-        "familiaaliseen adenomatoottiseen polypoosiin", "81",
-        "100 %", "82", 
-        "Lynchin", "83",
-        "mismatch-repair", "84",
-        "MLH1", "85", 
-        "PMS2", "86",
-        "polyyppien", "87",
-        "nopeutunut", "88",
-        "paksusuolisyöpä", "89",
-        "noin 20 vuotta", "90",
+        "geenitestillä", "58",
+        "dominoivia", "59", 
+        "penetranssi", "60",
+        "Negatiivinen", "61", 
+        "rintasyöpä", "62", 
+        "10-15%", "63",
+        "perinnöllisestä", "64",
+        "5–10 %", "65", 
+        "BRCA 1", "66", 
+        "yli 50 %", "67",
+        "Suuren", "68",
+        "BRCA 1", "69", 
+        "BRCA 2", "70", 
+        "munasarjasyövän", "71", 
+        "rintojen", "72", 
+        "munasarjojen", "73", 
+        " 5 %", "74", 
+        "APC", "75", 
+        "polyypin", "76",
+        "perä- ja paksusuolisyöpäalttiutta", "77",
+        "polypoottisiin", "78",
+        "familiaaliseen adenomatoottiseen polypoosiin", "79",
+        "100 %", "80", 
+        "Lynchin", "81",
+        "mismatch-repair", "82",
+        "MLH1", "83", 
+        "PMS2", "84",
+        "polyyppien", "85",
+        "nopeutunut", "86",
+        "paksusuolisyöpä", "87",
+        "noin 20 vuotta", "88",
         "kolonoskopia"
     };
 
@@ -264,10 +260,12 @@ public class Answer2 : MonoBehaviour
         answernumb = 1;
         answerText.text = answers[0];
         answerText.color = Color.black;
-        wrongText.color = Color.black;
-
+        
+        
         sentence.text = sentenceList[0];
-    }
+
+        
+        }
 
     // Update is called once per frame
     void Update()
@@ -287,8 +285,7 @@ public class Answer2 : MonoBehaviour
             else
             {
                 Score.scoreAmount -= 2;
-                //answerText.color = Color.red;
-                wrongText.color = Color.red;
+                wrongText.gameObject.SetActive(true);
                 answernumb -= 1;
                 sentencenumb +=2;
             }
@@ -316,12 +313,12 @@ public class Answer2 : MonoBehaviour
     {
         
         sentence.text = sentenceList[sentencenumb];
-        //answerText.color = Color.black;
-        wrongText.color = Color.black;
+        wrongText.gameObject.SetActive(false);
         answerText.text = answers[sentencenumb];
     
     }
 }
+
 
 
 
