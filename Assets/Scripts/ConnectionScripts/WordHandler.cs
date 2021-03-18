@@ -79,14 +79,12 @@ public class WordHandler : MonoBehaviour
     {
         if(isJoinableToMultiple || savedWordPair.GetSecondWords().Count == 1)
         {
-            // SelectWord(false);
             yield return new WaitForSeconds(waitTimer);
             DestroyWords(this);
         }
         else
         {
             WordHandler mainWord = connectedWords[0];
-            // mainWord.SelectWord(false);
             yield return new WaitForSeconds(waitTimer);
             DestroyWords(mainWord);
         }
