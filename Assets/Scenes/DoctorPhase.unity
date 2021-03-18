@@ -267,7 +267,7 @@ GameObject:
   - component: {fileID: 77598554}
   - component: {fileID: 77598553}
   m_Layer: 5
-  m_Name: ChoosingCancerPhase
+  m_Name: ExaminationPhase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3248,7 +3248,7 @@ GameObject:
   - component: {fileID: 1025589296}
   - component: {fileID: 1025589297}
   m_Layer: 5
-  m_Name: ChoosingCancerPhase
+  m_Name: ExaminationPhase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5190,7 +5190,7 @@ PrefabInstance:
     - target: {fileID: 1191781466164642329, guid: fb62232eaa83ae042853ddcc6275d26b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1191781466164642329, guid: fb62232eaa83ae042853ddcc6275d26b,
         type: 3}
@@ -6928,7 +6928,7 @@ PrefabInstance:
     - target: {fileID: 1191781466164642329, guid: fb62232eaa83ae042853ddcc6275d26b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1191781466164642329, guid: fb62232eaa83ae042853ddcc6275d26b,
         type: 3}

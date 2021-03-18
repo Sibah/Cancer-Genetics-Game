@@ -26,7 +26,6 @@ public class DoctorPhaseDataHandler : MonoBehaviour
 
         if(closestText == null)
         {
-            //TODO: Make wrong answer possibility
             return;
         }
         
