@@ -2017,7 +2017,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lopeta
+  m_Text: "P\xE4\xE4valikkoon"
 --- !u!222 &438456506
 CanvasRenderer:
   m_ObjectHideFlags: 0
