@@ -262,23 +262,19 @@ public class Answer : MonoBehaviour
         sentencenumb = 0;
         answernumb = 1;
         answerText.color = Color.black;
-        stopNumber = 10;
+        stopNumber = 20;
 
-        int randomizer = Random.Range(0, sentenceList.Length-1);
+
+        randomizer = Random.Range(0, sentenceList.Length-1);
         if (randomizer % 2 != 0)
         {
             randomizer += 1;
         }
 
-        sentence.text = sentenceList[sentencenumb];
-        answerText.text = answers[0];
+        sentence.text = sentenceList[randomizer];
+        answerText.text = answers[randomizer];
 
-
-
-        
-        //using the following two lines makes the sentence randomized 
-        //sentence.text = sentenceList[randomizer];
-        //answerText.text = answers[randomizer];
+        Debug.Log(randomizer);
 
 
     }
@@ -296,25 +292,29 @@ public class Answer : MonoBehaviour
                 sentencenumb += 1;
                 randomizer += 1;
                 
-                //change sentencenumb to randomizer to make randomized
-                sentence.text = sentenceList[sentencenumb];
-                sentencenumb +=1;
+                sentence.text = sentenceList[randomizer];
+                //sentencenumb +=1;
                 
             }
             else
             {
+                randomizer +=1;
                 Score.scoreAmount -= 2;
                 wrongText.gameObject.SetActive(true);
 
                 answernumb -= 1;
 
                 // If randomized set this to +1
-                sentencenumb +=2;
+                sentencenumb +=1;
             }
 
             //update sentence and change answer back to black
             StartCoroutine(CoroutineChangeVariables());
         }
+
+
+        
+
 
     }
 
@@ -328,25 +328,40 @@ public class Answer : MonoBehaviour
     //cheks if it was the last sentence of the array, if was returns to mini game 3 main screen
     //otherwise gives next sentence
     //change ==stopnumber it sentences are randomized
-    if (sentencenumb == sentenceList.Length)
+
+    string checkString = sentenceList[randomizer];
+    
+
+    if (sentencenumb == stopNumber)
     {
         
         SceneManager.LoadScene(10);
     }
+
+    else if(checkString.Contains("?"))
+    {
+        sentence.text = sentenceList[randomizer+1];
+        wrongText.gameObject.SetActive(false);
+        answerText.text = answers[randomizer+1];
+        randomizer +=1;
+
+    }
+
     else
     {
-        int randomizer = Random.Range(0, sentenceList.Length-1);
+        randomizer = Random.Range(0, sentenceList.Length-1);
         if (randomizer % 2 != 0)
         {
             randomizer += 1;
         }
+        Debug.Log(randomizer);
         
 
         //could change to randomizer
-        sentence.text = sentenceList[sentencenumb];
+        sentence.text = sentenceList[randomizer];
        wrongText.gameObject.SetActive(false);
        //could change to randomizer
-        answerText.text = answers[sentencenumb];
+        answerText.text = answers[randomizer];
     
     }
 }

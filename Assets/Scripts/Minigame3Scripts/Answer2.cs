@@ -7,15 +7,20 @@ using UnityEngine.SceneManagement;
 
 public class Answer2 : MonoBehaviour
 {
-    public Text answerText;
+
+public Text answerText;
     public static int answernumb;
     public Text sentence;
     public static int sentencenumb;
     public Text pressedText;
     public Text wrongText;
+    public static int randomizer;
+    public static int stopNumber;
+
+    
     
 
-    public static string[] sentenceList = { "Tupakka, ionisoiva säteily ja happiradikaalit ovat esimerkkejä <color=yellow>?</color>", "Tupakka, ionisoiva säteily ja happiradikaalit ovat esimerkkejä <color=green>karsinogeeneistä</color>",
+   public static string[] sentenceList = { "Tupakka, ionisoiva säteily ja happiradikaalit ovat esimerkkejä <color=yellow>?</color>", "Tupakka, ionisoiva säteily ja happiradikaalit ovat esimerkkejä <color=green>karsinogeeneistä</color>",
 
     "Emäksenkorjauksen mutaatiot altistavat <color=yellow>?</color> periytyvälle MUYTH-geeniin assosioituvalle <color=yellow>?</color>", "Emäksenkorjauksen mutaatiot altistavat <color=green>resessiivisesti</color> periytyvälle MUYTH-geeniin assosioituvalle <color=yellow>?</color>",
     "Emäksenkorjauksen mutaatiot altistavat resessiivisesti periytyvälle MUYTH-geeniin assosioituvalle <color=yellow>?</color>", "Emäksenkorjauksen mutaatiot altistavat resessiivisesti periytyvälle MUYTH-geeniin assosioituvalle <color=green>polypoosille</color>",
@@ -126,7 +131,7 @@ public class Answer2 : MonoBehaviour
     "BRCA 1 ja BRCA 2 geeneihin liittyy lähes yhtä suuri rintasyövän riski, mutta BRCA 1:ssä on huomattavasti korkeampi <color=yellow>?</color> riski", "BRCA 1 ja BRCA 2 geeneihin liittyy lähes yhtä suuri rintasyövän riski, mutta BRCA 1:ssä on huomattavasti korkeampi <color=green>munasarjasyövän</color> riski",
 
     "BRCA 1 ja BRCA 2 rintasyöpäalttiusgeenien kantajien sairastumisriskiä voidaan pienentää <color=yellow>?</color> ja <color=yellow>?</color> poistolla", "BRCA 1 ja BRCA 2 rintasyöpäalttiusgeenien kantajien sairastumisriskiä voidaan pienentää <color=green>rintojen</color> ja <color=yellow>?</color> poistolla",
-    "BRCA 1 ja BRCA 2 rintasyöpäalttiusgeenien kantajien sairastumisriskiä voidaan pienentää rintojen ja <color=green>munasarjojen</color> poistolla",
+    "BRCA 1 ja BRCA 2 rintasyöpäalttiusgeenien kantajien sairastumisriskiä voidaan pienentää rintojen ja <color=yellow>?</color> poistolla", "BRCA 1 ja BRCA 2 rintasyöpäalttiusgeenien kantajien sairastumisriskiä voidaan pienentää rintojen ja <color=green>munasarjojen</color> poistolla",
 
     "Paksu- ja peräsuolisyöpien ilmaantuvuus on suurta, mutta vain noin <color=yellow>?</color> on selkeästi perinnölliseen alttiuteen liittyvää", "Paksu- ja peräsuolisyöpien ilmaantuvuus on suurta, mutta vain noin <color=green> 5 %</color> on selkeästi perinnölliseen alttiuteen liittyvää",
 
@@ -253,19 +258,28 @@ public class Answer2 : MonoBehaviour
 
 
 
-   // Start is called before the first frame update
+    // Start is called before the first frame update
     void Start()
     {
         sentencenumb = 0;
         answernumb = 1;
-        answerText.text = answers[0];
         answerText.color = Color.black;
-        
-        
-        sentence.text = sentenceList[0];
+        stopNumber = 20;
 
-        
+
+        randomizer = Random.Range(0, sentenceList.Length-1);
+        if (randomizer % 2 != 0)
+        {
+            randomizer += 1;
         }
+
+        sentence.text = sentenceList[randomizer];
+        answerText.text = answers[randomizer];
+
+        Debug.Log(randomizer);
+
+
+    }
 
     // Update is called once per frame
     void Update()
@@ -275,24 +289,36 @@ public class Answer2 : MonoBehaviour
         {
             if (pressedText.text == answerText.text)
             {
-                //answerText.color = Color.green;
+            
                 answernumb += 1;
                 sentencenumb += 1;
-                sentence.text = sentenceList[sentencenumb];
-                sentencenumb +=1;
+                randomizer += 1;
+                
+                sentence.text = sentenceList[randomizer];
+                //sentencenumb +=1;
                 
             }
+
             else
             {
+                randomizer +=1;
                 Score.scoreAmount -= 2;
                 wrongText.gameObject.SetActive(true);
+
                 answernumb -= 1;
-                sentencenumb +=2;
+
+                // If randomized set this to +1
+                sentencenumb +=1;
             }
 
             //update sentence and change answer back to black
             StartCoroutine(CoroutineChangeVariables());
         }
+
+
+        
+
+
     }
 
 
@@ -304,23 +330,44 @@ public class Answer2 : MonoBehaviour
 
     //cheks if it was the last sentence of the array, if was returns to mini game 3 main screen
     //otherwise gives next sentence
-    if (sentencenumb == sentenceList.Length)
+    //change ==stopnumber it sentences are randomized
+
+    string checkString = sentenceList[randomizer];
+    
+
+    if (sentencenumb == stopNumber)
     {
         
         SceneManager.LoadScene(10);
     }
+
+     else if(checkString.Contains("?"))
+            {
+                sentence.text = sentenceList[randomizer+1];
+                wrongText.gameObject.SetActive(false);
+                answerText.text = answers[randomizer+1];
+                randomizer +=1;
+
+            }
+
     else
     {
+        randomizer = Random.Range(0, sentenceList.Length-1);
+        if (randomizer % 2 != 0)
+        {
+            randomizer += 1;
+        }
+        Debug.Log(randomizer);
         
-        sentence.text = sentenceList[sentencenumb];
-        wrongText.gameObject.SetActive(false);
-        answerText.text = answers[sentencenumb];
+
+        //could change to randomizer
+        sentence.text = sentenceList[randomizer];
+       wrongText.gameObject.SetActive(false);
+       //could change to randomizer
+        answerText.text = answers[randomizer];
     
     }
 }
-
-
-
 
 
 }
