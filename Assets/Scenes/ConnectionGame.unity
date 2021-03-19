@@ -5671,7 +5671,7 @@ PrefabInstance:
     - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
       propertyPath: secondWords.Array.data[0]
-      value: Omkogeeni
+      value: Onkogeeni
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6dee0c60f5de654085690da8caa13f9, type: 3}
