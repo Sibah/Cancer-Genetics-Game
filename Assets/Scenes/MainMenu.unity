@@ -887,7 +887,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Mini Game 3
+  m_Text: "T\xE4ydennys"
 --- !u!222 &435184283
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1275,7 +1275,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Paina tietokoneen ruutua aloittaaksesi
+  m_Text: "Paina p\xF6yd\xE4ll\xE4 olevan tietokoneen n\xE4ytt\xF6\xE4 aloittaaksesi"
 --- !u!222 &582910450
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1445,7 +1445,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Bonus Game
+  m_Text: Bonuspeli
 --- !u!222 &721689952
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2071,7 +2071,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Interactive images
+  m_Text: Interaktiiviset kuvat
 --- !u!222 &1194906212
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2789,7 +2789,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Quiz:'
+  m_Text: 'Kysymys:'
 --- !u!222 &1612683078
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2951,7 +2951,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Mini Game 1
+  m_Text: Kysymys
 --- !u!222 &1756181739
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3429,7 +3429,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Mini Game 2
+  m_Text: Yhdistely
 --- !u!222 &1996294957
 CanvasRenderer:
   m_ObjectHideFlags: 0

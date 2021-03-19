@@ -90,8 +90,8 @@ public class MainMenuController : MonoBehaviour
         int connectionScore = PlayerPrefs.GetInt("ConnectionScore");
         int sentenceScore = PlayerPrefs.GetInt("HighScore");
 
-        quizScoreDisplayText.text = "Quiz: " + quizScore.ToString();
-        connectionScoreDisplayText.text = "Connection: " + connectionScore.ToString();
+        quizScoreDisplayText.text = "Kysymys: " + quizScore.ToString();
+        connectionScoreDisplayText.text = "Yhdistely: " + connectionScore.ToString();
 
         if (quizScore >= 0 && sentenceScore >= 1) // (quizScore >= 200 && connectionScore >= 100 && sentenceScore >= 15) What are the high enough highscores?
         {
