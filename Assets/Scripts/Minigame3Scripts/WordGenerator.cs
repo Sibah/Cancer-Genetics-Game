@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class WordGenerator : MonoBehaviour
 {
-    public static int test;
+
 
 
 
@@ -47,10 +47,9 @@ public class WordGenerator : MonoBehaviour
         {
             //kasvattamalla viimeistä numeroa lisäät ruudulle tulevien sanojen vaihtoehtojen määrää, HUOM wordList lopusta pitää
         //löytyä ylimääräisä sanoja yhtä monta kuin tässä kasvatetaan
-        int randomIndex = Random.Range(Answer.sentencenumb/2, Answer.sentencenumb/2+3);
+        int randomIndex = Random.Range(Answer.randomizer/2, Answer.randomizer/2+3);
         string randomWord = wordList[randomIndex];
 
-        Debug.Log(Answer.randomizer);
 
         return randomWord;
         }
@@ -59,7 +58,7 @@ public class WordGenerator : MonoBehaviour
         {
                //kasvattamalla viimeistä numeroa lisäät ruudulle tulevien sanojen vaihtoehtojen määrää, HUOM wordList lopusta pitää
         //löytyä ylimääräisä sanoja yhtä monta kuin tässä kasvatetaan
-        int randomIndex = Random.Range(Answer2.sentencenumb/2, Answer2.sentencenumb/2+3);
+        int randomIndex = Random.Range(Answer2.randomizer/2, Answer2.randomizer/2+3);
         string randomWord = wordList2[randomIndex];
 
         return randomWord;
@@ -70,11 +69,13 @@ public class WordGenerator : MonoBehaviour
 
     void Update()
     {
-        test = Answer.randomizer;
+        
+
     }
 
     void Start() 
     {
+        
 
     }
 }
