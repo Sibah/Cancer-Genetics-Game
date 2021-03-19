@@ -1548,6 +1548,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WordPair (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 2003701269675015992, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1802,6 +1807,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WordPair (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2003701269675015992, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1860,7 +1870,7 @@ PrefabInstance:
     - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
       propertyPath: firstWord
-      value: MLH1, MSH2, MSH6, PMS2, EPCAM altistavat etenkin
+      value: MLH1-, MSH2-, MSH6-, PMS2-, EPCAM-geenivirhe altistavat etenkin
       objectReference: {fileID: 0}
     - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
@@ -2027,6 +2037,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WordPair (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003701269675015992, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
@@ -2429,6 +2444,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WordPair (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2003701269675015992, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2487,7 +2507,7 @@ PrefabInstance:
     - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
       propertyPath: firstWord
-      value: P53 altistaa etenkin
+      value: P53-geenivirhe altistaa etenkin
       objectReference: {fileID: 0}
     - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
@@ -2826,6 +2846,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 538889125}
   m_CullTransparentMesh: 0
+--- !u!1001 &547277184
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1201660353}
+    m_Modifications:
+    - target: {fileID: 2003701269675015992, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_Name
+      value: WordPair (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: firstWord
+      value: G2-M-checkpoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: secondWords.Array.data[0]
+      value: Varmistetaan replikaation onnistuminen ja ettei ole DNA:n vauriota
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c6dee0c60f5de654085690da8caa13f9, type: 3}
 --- !u!1001 &555886225
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2916,6 +3015,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WordPair (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003701269675015992, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
@@ -3479,6 +3583,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WordPair (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2003701269675015992, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3537,7 +3646,7 @@ PrefabInstance:
     - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
       propertyPath: firstWord
-      value: APC altistaa etenkin
+      value: APC-geenivirhe altistaa etenkin
       objectReference: {fileID: 0}
     - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
@@ -3644,6 +3753,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!4 &712512667 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+    type: 3}
+  m_PrefabInstance: {fileID: 547277184}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &735400242
 GameObject:
   m_ObjectHideFlags: 0
@@ -3716,6 +3831,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WordPair (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003701269675015992, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
@@ -3802,6 +3922,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WordPair (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 2003701269675015992, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3860,12 +3985,12 @@ PrefabInstance:
     - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
       propertyPath: firstWord
-      value: "S (synteesivaihe) liittyvi\xE4 geenej\xE4 ovat"
+      value: "S (synteesivaihe) aktiivisia geenej\xE4"
       objectReference: {fileID: 0}
     - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
       propertyPath: secondWords.Array.data[0]
-      value: Esim MLH1, MSH2
+      value: Esim P53
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6dee0c60f5de654085690da8caa13f9, type: 3}
@@ -3886,6 +4011,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WordPair
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003701269675015992, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
@@ -3945,7 +4075,7 @@ PrefabInstance:
     - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
       propertyPath: firstWord
-      value: BRCA1 altistaa etenkin
+      value: BRCA1-geenivirhe altistaa etenkin
       objectReference: {fileID: 0}
     - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
@@ -5192,6 +5322,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WordPair (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 2003701269675015992, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5250,12 +5385,12 @@ PrefabInstance:
     - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
       propertyPath: firstWord
-      value: "G1-S-checkpointiin liittyvi\xE4 geenej\xE4 ovat"
+      value: "G1-S-checkpointissa aktiivisia geenej\xE4"
       objectReference: {fileID: 0}
     - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
       propertyPath: secondWords.Array.data[0]
-      value: Esim P53, RB1
+      value: P53, RB1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6dee0c60f5de654085690da8caa13f9, type: 3}
@@ -5360,8 +5495,8 @@ PrefabInstance:
     - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
       propertyPath: secondWords.Array.data[3]
-      value: "Sy\xF6p\xE4alttiuden osalta vallitsevasti periytyv\xE4, mutta toinen
-        mutaatio tarvitaan elinaikana"
+      value: "Sy\xF6p\xE4alttiuden osalta vallitsevasti periytyv\xE4, mutta sy\xF6v\xE4n
+        synnyss\xE4 toinenkin alleeli inaktivoituu"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6dee0c60f5de654085690da8caa13f9, type: 3}
@@ -5467,6 +5602,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WordPair (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003701269675015992, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
@@ -5828,7 +5968,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd31b7b2f23e84d698d688120a42f851, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  source: {fileID: 0}
 --- !u!82 &1193653236
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5995,6 +6134,9 @@ Transform:
   - {fileID: 1621461565}
   - {fileID: 1509206741}
   - {fileID: 572937906}
+  - {fileID: 1557609342}
+  - {fileID: 712512667}
+  - {fileID: 1361695616}
   m_Father: {fileID: 1909021914}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6348,6 +6490,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WordPair (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003701269675015992, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
@@ -6703,6 +6850,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WordPair (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 2003701269675015992, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6761,12 +6913,12 @@ PrefabInstance:
     - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
       propertyPath: firstWord
-      value: "G1:een liittyvi\xE4 geenej\xE4 ovat"
+      value: "G1:ss\xE4 ja G2:ssa aktiivisia geenej\xE4"
       objectReference: {fileID: 0}
     - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
       propertyPath: secondWords.Array.data[0]
-      value: Esim CDK4
+      value: Ras, Myc
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6dee0c60f5de654085690da8caa13f9, type: 3}
@@ -6787,6 +6939,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WordPair (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003701269675015992, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
@@ -6861,6 +7018,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1357167878}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1361695616 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+    type: 3}
+  m_PrefabInstance: {fileID: 2117245258}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1369289077
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6872,6 +7035,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WordPair (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003701269675015992, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
@@ -6936,7 +7104,7 @@ PrefabInstance:
     - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
       propertyPath: firstWord
-      value: "Keskisuuren riskin rintasy\xF6p\xE4 geenej\xE4"
+      value: "Yleens\xE4 keskisuuren riskin rintasy\xF6p\xE4 geenej\xE4"
       objectReference: {fileID: 0}
     - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
@@ -7288,6 +7456,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WordPair (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 2003701269675015992, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7346,7 +7519,7 @@ PrefabInstance:
     - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
       propertyPath: firstWord
-      value: PTEN altistaa etenkin
+      value: PTEN-geenivirhe altistaa etenkin
       objectReference: {fileID: 0}
     - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
@@ -7458,6 +7631,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WordPair (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 2003701269675015992, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7553,6 +7731,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WordPair (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 2003701269675015992, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7611,12 +7794,12 @@ PrefabInstance:
     - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
       propertyPath: secondWords.Array.size
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
       propertyPath: firstWord
-      value: "Suuren riskin rintasy\xF6p\xE4 geenej\xE4"
+      value: "Suuren riskin rintasy\xF6p\xE4 geenej\xE4 ocat etenkin"
       objectReference: {fileID: 0}
     - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
@@ -7837,6 +8020,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WordPair (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003701269675015992, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
@@ -8126,6 +8314,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WordPair (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 2003701269675015992, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8184,12 +8377,12 @@ PrefabInstance:
     - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
       propertyPath: secondWords.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
       propertyPath: firstWord
-      value: "Lynchin oireyhtym\xE4 altistaa"
+      value: "Lynchin oireyhtym\xE4 altistaa etenkin"
       objectReference: {fileID: 0}
     - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
@@ -8210,6 +8403,11 @@ PrefabInstance:
         type: 3}
       propertyPath: secondWords.Array.data[3]
       value: "Munasarjojen sy\xF6p\xE4"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: secondWords.Array.data[4]
+      value: "Virtsateiden sy\xF6v\xE4t"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6dee0c60f5de654085690da8caa13f9, type: 3}
@@ -8304,6 +8502,92 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1546921272}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1557609342 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1590045726}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1590045726
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1201660353}
+    m_Modifications:
+    - target: {fileID: 2003701269675015992, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_Name
+      value: WordPair (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: firstWord
+      value: G1-S-checkpoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: secondWords.Array.data[0]
+      value: Varmistetaan ettei DNA:ssa ole vaurioita, solu on kasvanut tarpeeksi
+        ja solulla on tarpeeksi ravinteita
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c6dee0c60f5de654085690da8caa13f9, type: 3}
 --- !u!1001 &1604682536
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8315,6 +8599,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WordPair (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003701269675015992, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
@@ -8374,7 +8663,7 @@ PrefabInstance:
     - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
       propertyPath: secondWords.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
@@ -8384,7 +8673,7 @@ PrefabInstance:
     - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
       propertyPath: secondWords.Array.data[0]
-      value: Tarvitaan ainakin kaksi mutaatiota elinaikana
+      value: "Korkea sairastumisik\xE4"
       objectReference: {fileID: 0}
     - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
@@ -8634,6 +8923,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WordPair (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 2003701269675015992, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8697,7 +8991,7 @@ PrefabInstance:
     - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
       propertyPath: firstWord
-      value: "Li-Fraumenin oireyhtym\xE4 altistaa"
+      value: "Li-Fraumenin oireyhtym\xE4 altistaa etenkin"
       objectReference: {fileID: 0}
     - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
@@ -8868,6 +9162,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WordPair (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003701269675015992, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
@@ -9294,6 +9593,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WordPair (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 2003701269675015992, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9642,6 +9946,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WordPair (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 2003701269675015992, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9700,7 +10009,7 @@ PrefabInstance:
     - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
       propertyPath: secondWords.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
@@ -9710,12 +10019,12 @@ PrefabInstance:
     - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
       propertyPath: secondWords.Array.data[0]
-      value: 'Tarvitaan ainakin yksi mutaatio elinaikana '
+      value: "Poikkeavan nuori sairastumisik\xE4"
       objectReference: {fileID: 0}
     - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
       propertyPath: secondWords.Array.data[1]
-      value: "Nuorempi toteamisik\xE4"
+      value: Kahden tai useamman primaarikasvaimen esiintyminen
       objectReference: {fileID: 0}
     - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
@@ -9898,6 +10207,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WordPair (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 2003701269675015992, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9981,7 +10295,7 @@ PrefabInstance:
     - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
       propertyPath: secondWords.Array.data[3]
-      value: "Vallitsevasti periytyv\xE4"
+      value: "Yleens\xE4 vallitsevasti periytyv\xE4"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6dee0c60f5de654085690da8caa13f9, type: 3}
@@ -10002,6 +10316,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WordPair (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003701269675015992, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
@@ -10061,7 +10380,7 @@ PrefabInstance:
     - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
       propertyPath: firstWord
-      value: BRCA2 altistaa etenkin
+      value: BRCA2-geenivirhe altistaa etenkin
       objectReference: {fileID: 0}
     - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
         type: 3}
@@ -10736,6 +11055,85 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2102141139}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2117245258
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1201660353}
+    m_Modifications:
+    - target: {fileID: 2003701269675015992, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_Name
+      value: WordPair (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077050540240744433, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: firstWord
+      value: Mitoosin checkpoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 8417628131565755954, guid: c6dee0c60f5de654085690da8caa13f9,
+        type: 3}
+      propertyPath: secondWords.Array.data[0]
+      value: Varmistaa sukkularihmojen kiinnittyminen kromosomeihin
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c6dee0c60f5de654085690da8caa13f9, type: 3}
 --- !u!1001 &4874229084598569075
 PrefabInstance:
   m_ObjectHideFlags: 0
