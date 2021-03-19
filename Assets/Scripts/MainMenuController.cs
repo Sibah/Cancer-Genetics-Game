@@ -93,7 +93,7 @@ public class MainMenuController : MonoBehaviour
         quizScoreDisplayText.text = "Kysymys: " + quizScore.ToString();
         connectionScoreDisplayText.text = "Yhdistely: " + connectionScore.ToString();
 
-        if (quizScore >= 0 && sentenceScore >= 1) // (quizScore >= 200 && connectionScore >= 100 && sentenceScore >= 15) What are the high enough highscores?
+        if (quizScore >= 0 && sentenceScore >= 0 && connectionScore >= 0)
         {
             doctorPhaseButton.interactable = true;
         } else
