@@ -13,6 +13,10 @@ public class MainMenuController : MonoBehaviour
     {
         SetSoundState();
         DontDestroyOnLoad(this.gameObject);
+        if(FindObjectsOfType<MainMenuController>().Length > 1)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     public void StartQuizGame()
