@@ -8,11 +8,34 @@ public class MainMenuController : MonoBehaviour
     public Text connectionScoreDisplayText;
     public Text sentenceScoreDisplayText;
     public Button doctorPhaseButton;
+    static MainMenuController instance;
+
+    public int quizScore = 0;
+    public int connectionScore = 0;
+    public int sentenceScore = 0;
+    public string sceneName = "MainMenu";
 
     private void Start()
     {
         SetSoundState();
-        DontDestroyOnLoad(this.gameObject);
+    }
+
+    void Awake()
+    {
+        quizScore = PlayerPrefs.GetInt("QuizScore");
+        connectionScore = PlayerPrefs.GetInt("ConnectionScore");
+        sentenceScore = PlayerPrefs.GetInt("HighScore");
+
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        } else if (instance != this)
+        {
+            Destroy(instance.gameObject);
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
     }
 
     public void StartQuizGame()
@@ -86,19 +109,19 @@ public class MainMenuController : MonoBehaviour
 
     private void Update()
     {
-        int quizScore = PlayerPrefs.GetInt("QuizScore");
-        int connectionScore = PlayerPrefs.GetInt("ConnectionScore");
-        int sentenceScore = PlayerPrefs.GetInt("HighScore");
-
-        quizScoreDisplayText.text = "Quiz: " + quizScore.ToString();
-        connectionScoreDisplayText.text = "Connection: " + connectionScore.ToString();
-
-        if (quizScore >= 0 && sentenceScore >= 1) // (quizScore >= 200 && connectionScore >= 100 && sentenceScore >= 15) What are the high enough highscores?
+        if (sceneName == SceneManager.GetActiveScene().name)
         {
-            doctorPhaseButton.interactable = true;
-        } else
-        {
-            doctorPhaseButton.interactable = false;
+            quizScoreDisplayText.text = "Kysymys: " + quizScore.ToString();
+            connectionScoreDisplayText.text = "Yhdistely: " + connectionScore.ToString();
+
+            if (quizScore >= 300 && sentenceScore >= 0 && connectionScore >= 0)
+            {
+                doctorPhaseButton.interactable = true;
+            }
+            else
+            {
+                doctorPhaseButton.interactable = false;
+            }
         }
     }
 }

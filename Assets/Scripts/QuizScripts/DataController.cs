@@ -5,21 +5,25 @@ using UnityEngine.SceneManagement;
 
 public class DataController : MonoBehaviour
 {
+    public static DataController instance = null;
     public RoundData[] allRoundData;
 
     void Start()
     {
-        DontDestroyOnLoad(gameObject);
         SceneManager.LoadScene("MenuScreen");
+
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        } else
+        {
+            Destroy(gameObject);
+        }
     }
 
     public RoundData GetCurrentRoundData()
     {
         return allRoundData[0];
-    }
-
-    void Update()
-    {
-        
     }
 }
