@@ -18,7 +18,6 @@ public class MainMenuController : MonoBehaviour
     private void Start()
     {
         SetSoundState();
-        //DontDestroyOnLoad(this.gameObject);
     }
 
     void Awake()
@@ -115,7 +114,7 @@ public class MainMenuController : MonoBehaviour
             quizScoreDisplayText.text = "Kysymys: " + quizScore.ToString();
             connectionScoreDisplayText.text = "Yhdistely: " + connectionScore.ToString();
 
-            if (quizScore >= 0 && sentenceScore >= 0 && connectionScore >= 0)
+            if (quizScore >= 300 && sentenceScore >= 0 && connectionScore >= 0)
             {
                 doctorPhaseButton.interactable = true;
             }
