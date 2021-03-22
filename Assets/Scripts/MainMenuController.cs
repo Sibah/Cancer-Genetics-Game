@@ -65,7 +65,6 @@ public class MainMenuController : MonoBehaviour
 
     public void QuitGame()
     {
-        //PlayerPrefs.DeleteAll();
         Application.Quit();
     }
 
@@ -120,7 +119,7 @@ public class MainMenuController : MonoBehaviour
             quizScoreDisplayText.text = "Kysymys: " + quizScore.ToString();
             connectionScoreDisplayText.text = "Yhdistely: " + connectionScore.ToString();
 
-            if (quizScore >= 300 && sentenceScore >= 1 && connectionScore >= 1)
+            if (quizScore >= 1 && sentenceScore >= 1 && connectionScore >= 1)
             {
                 doctorPhaseButton.interactable = true;
             }
