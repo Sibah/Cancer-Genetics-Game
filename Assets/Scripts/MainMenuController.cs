@@ -69,9 +69,15 @@ public class MainMenuController : MonoBehaviour
         Application.Quit();
     }
 
-    private void OnApplicationQuit()
+    public void ResetPoints()
     {
-        //PlayerPrefs.DeleteAll();
+        PlayerPrefs.DeleteKey("QuizScore");
+        PlayerPrefs.DeleteKey("ConnectionScore");
+        PlayerPrefs.DeleteKey("HighScore");
+
+        quizScore = 0;
+        connectionScore = 0;
+        sentenceScore = 0;
     }
 
     public void Study()
