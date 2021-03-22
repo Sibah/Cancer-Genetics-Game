@@ -14,7 +14,7 @@ public class DragToPlaceholder1 : MonoBehaviour
 
     private float deltaX, deltaY;
 
-    public static bool locked;
+    public bool locked;
 
     // Start is called before the first frame update
     void Start() {
