@@ -65,13 +65,13 @@ public class MainMenuController : MonoBehaviour
 
     public void QuitGame()
     {
-        PlayerPrefs.DeleteAll();
+        //PlayerPrefs.DeleteAll();
         Application.Quit();
     }
 
     private void OnApplicationQuit()
     {
-        PlayerPrefs.DeleteAll();
+        //PlayerPrefs.DeleteAll();
     }
 
     public void Study()
@@ -114,7 +114,7 @@ public class MainMenuController : MonoBehaviour
             quizScoreDisplayText.text = "Kysymys: " + quizScore.ToString();
             connectionScoreDisplayText.text = "Yhdistely: " + connectionScore.ToString();
 
-            if (quizScore >= 300 && sentenceScore >= 0 && connectionScore >= 0)
+            if (quizScore >= 300 && sentenceScore >= 1 && connectionScore >= 1)
             {
                 doctorPhaseButton.interactable = true;
             }
